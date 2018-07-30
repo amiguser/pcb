@@ -1,0 +1,427 @@
+EESchema Schematic File Version 2
+LIBS:ac-dc
+LIBS:adc-dac
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:bbd
+LIBS:brooktre
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:hc11
+LIBS:infineon
+LIBS:intel
+LIBS:interface
+LIBS:intersil
+LIBS:ir
+LIBS:Lattice
+LIBS:LEM
+LIBS:linear
+LIBS:logic_programmable
+LIBS:maxim
+LIBS:memory
+LIBS:microchip
+LIBS:microcontrollers
+LIBS:modules
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:nordicsemi
+LIBS:nxp
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:power
+LIBS:powerint
+LIBS:Power_Management
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:rfcom
+LIBS:RFSolutions
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:supertex
+LIBS:texas
+LIBS:triac_thyristor
+LIBS:video
+LIBS:wiznet
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:xilinx
+LIBS:zetex
+LIBS:Zilog
+LIBS:SparkFun-Switches
+LIBS:disp_1628-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CA56-12EWA U2
+U 1 1 5A8516ED
+P 7100 1550
+F 0 "U2" H 6150 2000 50  0000 C CNN
+F 1 "CA56-12EWA" H 7930 2000 50  0000 C CNN
+F 2 "Displays_7-Segment:CA56-12SRWA" H 7100 950 50  0001 C CNN
+F 3 "" H 6720 1580 50  0001 C CNN
+	1    7100 1550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4150 1950 2    60   Input ~ 0
+seg_a
+Text GLabel 4150 2050 2    60   Input ~ 0
+seg_b
+Text GLabel 4150 2150 2    60   Input ~ 0
+seg_c
+Text GLabel 4150 2250 2    60   Input ~ 0
+seg_d
+Text GLabel 4150 2350 2    60   Input ~ 0
+seg_e
+Text GLabel 4150 2450 2    60   Input ~ 0
+seg_f
+Text GLabel 4150 2550 2    60   Input ~ 0
+seg_g
+Text GLabel 4150 2650 2    60   Input ~ 0
+seg_dp
+Text GLabel 5850 1250 0    60   Input ~ 0
+seg_a
+Text GLabel 5850 1350 0    60   Input ~ 0
+seg_b
+Text GLabel 5850 1450 0    60   Input ~ 0
+seg_c
+Text GLabel 5850 1550 0    60   Input ~ 0
+seg_d
+Text GLabel 5850 1650 0    60   Input ~ 0
+seg_e
+Text GLabel 5850 1750 0    60   Input ~ 0
+seg_f
+Text GLabel 5850 1850 0    60   Input ~ 0
+seg_g
+Text GLabel 5850 1950 0    60   Input ~ 0
+seg_dp
+Wire Wire Line
+	6000 1250 5850 1250
+Wire Wire Line
+	5850 1350 6000 1350
+Wire Wire Line
+	6000 1450 5850 1450
+Wire Wire Line
+	5850 1550 6000 1550
+Wire Wire Line
+	6000 1650 5850 1650
+Wire Wire Line
+	5850 1750 6000 1750
+Wire Wire Line
+	6000 1850 5850 1850
+Wire Wire Line
+	5850 1950 6000 1950
+Wire Wire Line
+	3750 2250 4150 2250
+Wire Wire Line
+	3750 2350 4150 2350
+Wire Wire Line
+	3750 2450 4150 2450
+Wire Wire Line
+	3750 2550 4150 2550
+Wire Wire Line
+	3750 2650 4150 2650
+Wire Wire Line
+	3750 1950 4150 1950
+Wire Wire Line
+	3750 2050 4150 2050
+Wire Wire Line
+	3750 2150 4150 2150
+Text GLabel 8500 1650 2    60   Input ~ 0
+dig_0
+Text GLabel 8500 1750 2    60   Input ~ 0
+dig_1
+Text GLabel 8500 1850 2    60   Input ~ 0
+dig_2
+Text GLabel 8500 1950 2    60   Input ~ 0
+dig_3
+Wire Wire Line
+	8500 1650 8300 1650
+Wire Wire Line
+	8300 1750 8500 1750
+Wire Wire Line
+	8500 1850 8300 1850
+Wire Wire Line
+	8300 1950 8500 1950
+Text GLabel 4000 3300 2    60   Input ~ 0
+dig_0
+Text GLabel 4000 3400 2    60   Input ~ 0
+dig_1
+Text GLabel 4000 3500 2    60   Input ~ 0
+dig_2
+Text GLabel 4000 3600 2    60   Input ~ 0
+dig_3
+Wire Wire Line
+	3750 3300 4000 3300
+Wire Wire Line
+	3750 3400 4000 3400
+$Comp
+L Conn_01x05 J1
+U 1 1 5A85281B
+P 1350 2150
+F 0 "J1" H 1350 2450 50  0000 C CNN
+F 1 "Conn_01x05" H 1350 1850 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-05_05x2.54mm_Straight" H 1350 2150 50  0001 C CNN
+F 3 "" H 1350 2150 50  0001 C CNN
+	1    1350 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 2350 1550 3150
+Wire Wire Line
+	1550 2150 2450 2150
+Wire Wire Line
+	1550 2250 2450 2250
+$Comp
+L GND #PWR1
+U 1 1 5A8535A0
+P 1550 3150
+F 0 "#PWR1" H 1550 2900 50  0001 C CNN
+F 1 "GND" H 1550 3000 50  0000 C CNN
+F 2 "" H 1550 3150 50  0001 C CNN
+F 3 "" H 1550 3150 50  0001 C CNN
+	1    1550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR2
+U 1 1 5A853624
+P 1650 1500
+F 0 "#PWR2" H 1650 1350 50  0001 C CNN
+F 1 "VCC" H 1650 1650 50  0000 C CNN
+F 2 "" H 1650 1500 50  0001 C CNN
+F 3 "" H 1650 1500 50  0001 C CNN
+	1    1650 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1500 1650 2700
+Connection ~ 1650 1850
+Connection ~ 2450 3000
+Wire Wire Line
+	3750 3500 4000 3500
+Wire Wire Line
+	3750 3600 4000 3600
+$Comp
+L TM1628 U1
+U 1 1 5A8AA23E
+P 3100 2850
+F 0 "U1" H 2850 3800 60  0000 C CNN
+F 1 "TM1628" H 3250 1950 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-28W_7.5x17.9mm_Pitch1.27mm" H 3250 1950 60  0001 C CNN
+F 3 "" H 3250 1950 60  0001 C CNN
+	1    3100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2900 2450 3000
+Wire Wire Line
+	2450 3000 1550 3000
+Connection ~ 1550 3000
+Wire Wire Line
+	1650 2700 2450 2700
+Wire Wire Line
+	1550 1950 1650 1850
+Wire Wire Line
+	1550 2050 2450 2050
+Text GLabel 2250 2350 0    60   Input ~ 0
+K1
+Wire Wire Line
+	2250 2350 2450 2350
+Text GLabel 3750 5100 0    60   Input ~ 0
+K1
+Text GLabel 4500 4350 2    60   Input ~ 0
+seg_a
+Text GLabel 5200 4350 2    60   Input ~ 0
+seg_b
+Text GLabel 5850 4350 2    60   Input ~ 0
+seg_c
+Text GLabel 6550 4350 2    60   Input ~ 0
+seg_d
+Wire Wire Line
+	5950 5100 3750 5100
+Connection ~ 4050 5100
+Connection ~ 4700 5100
+Connection ~ 5350 5100
+Wire Wire Line
+	6350 4350 6350 4850
+Wire Wire Line
+	6350 4350 6550 4350
+Connection ~ 6350 4750
+Wire Wire Line
+	5750 4350 5750 4850
+Wire Wire Line
+	5750 4350 5850 4350
+Wire Wire Line
+	5100 4350 5100 4850
+Wire Wire Line
+	5100 4350 5200 4350
+Connection ~ 5100 4750
+Wire Wire Line
+	4450 4350 4450 4850
+Wire Wire Line
+	4450 4350 4500 4350
+Connection ~ 4450 4750
+Connection ~ 5750 4750
+$Comp
+L C_Small C1
+U 1 1 5ACB50D4
+P 2050 2850
+F 0 "C1" H 2060 2920 50  0000 L CNN
+F 1 "0.1" H 2060 2770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2050 2850 50  0001 C CNN
+F 3 "" H 2050 2850 50  0001 C CNN
+	1    2050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2750 2050 2700
+Connection ~ 2050 2700
+Wire Wire Line
+	2050 2950 2050 3000
+Connection ~ 2050 3000
+$Comp
+L GND #PWR4
+U 1 1 5ACB5770
+P 2950 4050
+F 0 "#PWR4" H 2950 3800 50  0001 C CNN
+F 1 "GND" H 2950 3900 50  0000 C CNN
+F 2 "" H 2950 4050 50  0001 C CNN
+F 3 "" H 2950 4050 50  0001 C CNN
+	1    2950 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR3
+U 1 1 5ACB5873
+P 2550 4050
+F 0 "#PWR3" H 2550 3900 50  0001 C CNN
+F 1 "VCC" H 2550 4200 50  0000 C CNN
+F 2 "" H 2550 4050 50  0001 C CNN
+F 3 "" H 2550 4050 50  0001 C CNN
+	1    2550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4050 2850 4050
+Wire Wire Line
+	2850 4050 2850 4000
+Wire Wire Line
+	2950 4000 2950 4050
+$Comp
+L SW_Push SW1
+U 1 1 5ACCF991
+P 4150 4850
+F 0 "SW1" H 4200 4950 50  0000 L CNN
+F 1 "SW_Push" H 4150 4790 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS645" H 4150 5050 50  0001 C CNN
+F 3 "" H 4150 5050 50  0001 C CNN
+	1    4150 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW2
+U 1 1 5ACCFA12
+P 4800 4850
+F 0 "SW2" H 4850 4950 50  0000 L CNN
+F 1 "SW_Push" H 4800 4790 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS645" H 4800 5050 50  0001 C CNN
+F 3 "" H 4800 5050 50  0001 C CNN
+	1    4800 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW3
+U 1 1 5ACCFA4E
+P 5450 4850
+F 0 "SW3" H 5500 4950 50  0000 L CNN
+F 1 "SW_Push" H 5450 4790 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS645" H 5450 5050 50  0001 C CNN
+F 3 "" H 5450 5050 50  0001 C CNN
+	1    5450 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW4
+U 1 1 5ACCFA8D
+P 6050 4850
+F 0 "SW4" H 6100 4950 50  0000 L CNN
+F 1 "SW_Push" H 6050 4790 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_PTS645" H 6050 5050 50  0001 C CNN
+F 3 "" H 6050 5050 50  0001 C CNN
+	1    6050 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4850 6250 4850
+Wire Wire Line
+	5850 4850 5850 5100
+Connection ~ 5850 5100
+Wire Wire Line
+	5750 4850 5650 4850
+Wire Wire Line
+	5250 4850 5250 5100
+Connection ~ 5250 5100
+Wire Wire Line
+	5100 4850 5000 4850
+Wire Wire Line
+	4600 4850 4600 5100
+Connection ~ 4600 5100
+Wire Wire Line
+	4450 4850 4350 4850
+Wire Wire Line
+	3950 4850 3950 5100
+Connection ~ 3950 5100
+Text HLabel 2100 1750 1    60   Input ~ 0
+DIO
+Text HLabel 2000 1750 1    60   Input ~ 0
+SCLK
+Text HLabel 1900 1750 1    60   Input ~ 0
+STB
+Text HLabel 1800 1750 1    60   Input ~ 0
+GND
+Text HLabel 2200 1750 1    60   Input ~ 0
+VCC
+Wire Wire Line
+	1900 1750 1900 2250
+Connection ~ 1900 2250
+Wire Wire Line
+	2000 1750 2000 2150
+Connection ~ 2000 2150
+Wire Wire Line
+	2100 1750 2100 2050
+Connection ~ 2100 2050
+Wire Wire Line
+	1800 1750 1800 3000
+Connection ~ 1800 3000
+Wire Wire Line
+	1650 1850 2200 1850
+Wire Wire Line
+	2200 1850 2200 1750
+$EndSCHEMATC

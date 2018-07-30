@@ -1,0 +1,410 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mechanical
+LIBS:relays
+LIBS:MyLibrary
+LIBS:switches
+LIBS:i2c_portexpander-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "sam. 04 avril 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PCF8574 U1
+U 1 1 5B3DF605
+P 3050 1650
+F 0 "U1" H 2700 2250 50  0000 L CNN
+F 1 "PCF8574" H 3150 2250 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-16W_7.5x10.3mm_Pitch1.27mm" H 3050 1650 50  0001 C CNN
+F 3 "" H 3050 1650 50  0001 C CNN
+	1    3050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ULN2003 U2
+U 1 1 5B3DF6AE
+P 4650 1550
+F 0 "U2" H 4650 2075 50  0000 C CNN
+F 1 "ULN2003" H 4650 2000 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16W_5.3x10.2mm_Pitch1.27mm" H 4700 900 50  0001 L CNN
+F 3 "" H 4750 1450 50  0001 C CNN
+	1    4650 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1250 4250 1250
+Wire Wire Line
+	3550 1350 4250 1350
+Wire Wire Line
+	3550 1450 4250 1450
+Wire Wire Line
+	4250 1550 3550 1550
+Wire Wire Line
+	3550 1650 4250 1650
+Wire Wire Line
+	4250 1750 3550 1750
+Wire Wire Line
+	3550 1850 4250 1850
+$Comp
+L RELAY831-1A P1
+U 1 1 5B4DDE77
+P 6100 1100
+F 0 "P1" H 6300 800 60  0000 C CNN
+F 1 "RELAY831-1A" H 6750 1250 60  0000 C CNN
+F 2 "mih-library:Relay-841-1A" H 6750 1250 60  0001 C CNN
+F 3 "" H 6750 1250 60  0001 C CNN
+	1    6100 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RELAY831-1A P2
+U 1 1 5B4DE0F9
+P 6100 1850
+F 0 "P2" H 6300 1550 60  0000 C CNN
+F 1 "RELAY831-1A" H 6750 2000 60  0000 C CNN
+F 2 "mih-library:Relay-841-1A" H 6750 2000 60  0001 C CNN
+F 3 "" H 6750 2000 60  0001 C CNN
+	1    6100 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RELAY831-1A P3
+U 1 1 5B4DE1EB
+P 6100 2650
+F 0 "P3" H 6300 2350 60  0000 C CNN
+F 1 "RELAY831-1A" H 6750 2800 60  0000 C CNN
+F 2 "mih-library:Relay-841-1A" H 6750 2800 60  0001 C CNN
+F 3 "" H 6750 2800 60  0001 C CNN
+	1    6100 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RELAY831-1A P4
+U 1 1 5B4DE1F1
+P 6100 3400
+F 0 "P4" H 6300 3100 60  0000 C CNN
+F 1 "RELAY831-1A" H 6750 3550 60  0000 C CNN
+F 2 "mih-library:Relay-841-1A" H 6750 3550 60  0001 C CNN
+F 3 "" H 6750 3550 60  0001 C CNN
+	1    6100 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 1250 5700 1250
+Wire Wire Line
+	5700 1250 5700 1300
+Wire Wire Line
+	5050 1350 5600 1350
+Wire Wire Line
+	5600 1350 5600 2050
+Wire Wire Line
+	5600 2050 5700 2050
+Wire Wire Line
+	5050 1450 5500 1450
+Wire Wire Line
+	5500 1450 5500 2850
+Wire Wire Line
+	5500 2850 5700 2850
+Wire Wire Line
+	5050 1550 5450 1550
+Wire Wire Line
+	5450 1550 5450 3600
+Wire Wire Line
+	5450 3600 5700 3600
+$Comp
+L Screw_Terminal_01x02 J3
+U 1 1 5B4DE713
+P 7000 900
+F 0 "J3" H 7000 1000 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 7000 700 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 7000 900 50  0001 C CNN
+F 3 "" H 7000 900 50  0001 C CNN
+	1    7000 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J4
+U 1 1 5B4DE94C
+P 7050 1650
+F 0 "J4" H 7050 1750 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 7050 1450 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 7050 1650 50  0001 C CNN
+F 3 "" H 7050 1650 50  0001 C CNN
+	1    7050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J5
+U 1 1 5B4DEA4C
+P 7050 2450
+F 0 "J5" H 7050 2550 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 7050 2250 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 7050 2450 50  0001 C CNN
+F 3 "" H 7050 2450 50  0001 C CNN
+	1    7050 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Screw_Terminal_01x02 J6
+U 1 1 5B4DEB3A
+P 7050 3200
+F 0 "J6" H 7050 3300 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 7050 3000 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 7050 3200 50  0001 C CNN
+F 3 "" H 7050 3200 50  0001 C CNN
+	1    7050 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3200 5700 3400
+Wire Wire Line
+	5700 3400 6850 3400
+Wire Wire Line
+	6850 3400 6850 3300
+Wire Wire Line
+	6500 3200 6850 3200
+Wire Wire Line
+	5700 2450 5700 2650
+Wire Wire Line
+	5700 2650 6850 2650
+Wire Wire Line
+	6850 2650 6850 2550
+Wire Wire Line
+	6850 2450 6500 2450
+Wire Wire Line
+	5700 1650 5700 1850
+Wire Wire Line
+	5700 1850 6850 1850
+Wire Wire Line
+	6850 1850 6850 1750
+Wire Wire Line
+	6850 1650 6500 1650
+Wire Wire Line
+	5700 900  5700 1100
+Wire Wire Line
+	5700 1100 6800 1100
+Wire Wire Line
+	6800 1100 6800 1000
+Wire Wire Line
+	6800 900  6500 900 
+$Comp
+L SW_DIP_x03 SW1
+U 1 1 5B4DF104
+P 1750 1750
+F 0 "SW1" H 1750 2100 50  0000 C CNN
+F 1 "SW_DIP_x03" H 1750 1600 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_DIP_x3_W8.61mm_Slide_LowProfile" H 1750 1750 50  0001 C CNN
+F 3 "" H 1750 1750 50  0001 C CNN
+	1    1750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5B4DF180
+P 2100 2000
+F 0 "R1" V 2180 2000 50  0000 C CNN
+F 1 "R" V 2100 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2030 2000 50  0001 C CNN
+F 3 "" H 2100 2000 50  0001 C CNN
+	1    2100 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5B4DF2E9
+P 2250 2000
+F 0 "R2" V 2330 2000 50  0000 C CNN
+F 1 "R" V 2250 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2180 2000 50  0001 C CNN
+F 3 "" H 2250 2000 50  0001 C CNN
+	1    2250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5B4DF33F
+P 2400 2000
+F 0 "R3" V 2480 2000 50  0000 C CNN
+F 1 "R" V 2400 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2330 2000 50  0001 C CNN
+F 3 "" H 2400 2000 50  0001 C CNN
+	1    2400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1550 2550 1550
+Wire Wire Line
+	2550 1650 2050 1650
+Wire Wire Line
+	2050 1750 2550 1750
+Wire Wire Line
+	2100 1850 2100 1550
+Connection ~ 2100 1550
+Wire Wire Line
+	2250 1850 2250 1650
+Connection ~ 2250 1650
+Wire Wire Line
+	2400 1850 2400 1750
+Connection ~ 2400 1750
+Wire Wire Line
+	1450 1550 1450 2550
+Connection ~ 1450 1650
+Wire Wire Line
+	3050 2350 3050 2550
+Wire Wire Line
+	1450 2550 4650 2550
+Connection ~ 1450 1750
+Wire Wire Line
+	2100 2150 2400 2150
+Connection ~ 2250 2150
+$Comp
+L +VSW #PWR2
+U 1 1 5B4DF5CF
+P 3050 850
+F 0 "#PWR2" H 3050 700 50  0001 C CNN
+F 1 "+VSW" H 3050 990 50  0000 C CNN
+F 2 "" H 3050 850 50  0001 C CNN
+F 3 "" H 3050 850 50  0001 C CNN
+	1    3050 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +VSW #PWR1
+U 1 1 5B4DF5FF
+P 1850 2250
+F 0 "#PWR1" H 1850 2100 50  0001 C CNN
+F 1 "+VSW" H 1850 2390 50  0000 C CNN
+F 2 "" H 1850 2250 50  0001 C CNN
+F 3 "" H 1850 2250 50  0001 C CNN
+	1    1850 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 850  3050 950 
+Wire Wire Line
+	1850 2250 2250 2250
+Wire Wire Line
+	2250 2250 2250 2150
+$Comp
+L Conn_01x02_Male J1
+U 1 1 5B4DF7DA
+P 1600 1100
+F 0 "J1" H 1600 1200 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1600 900 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 1600 1100 50  0001 C CNN
+F 3 "" H 1600 1100 50  0001 C CNN
+	1    1600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1100 2550 1100
+Wire Wire Line
+	2550 1100 2550 1250
+Wire Wire Line
+	2550 1350 2050 1350
+Wire Wire Line
+	2050 1350 2050 1200
+Wire Wire Line
+	2050 1200 1800 1200
+Wire Wire Line
+	4650 2550 4650 2250
+Connection ~ 3050 2550
+$Comp
+L +VSW #PWR3
+U 1 1 5B4DFDFC
+P 7900 1250
+F 0 "#PWR3" H 7900 1100 50  0001 C CNN
+F 1 "+VSW" H 7900 1390 50  0000 C CNN
+F 2 "" H 7900 1250 50  0001 C CNN
+F 3 "" H 7900 1250 50  0001 C CNN
+	1    7900 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1250 7900 3600
+Wire Wire Line
+	6500 1300 7600 1300
+Wire Wire Line
+	7600 1300 7600 1350
+Wire Wire Line
+	7600 1350 7900 1350
+Wire Wire Line
+	7900 2050 6500 2050
+Connection ~ 7900 1350
+Wire Wire Line
+	7900 2850 6500 2850
+Connection ~ 7900 2050
+Wire Wire Line
+	7900 3600 6500 3600
+Connection ~ 7900 2850
+$Comp
+L Screw_Terminal_01x04 J2
+U 1 1 5B4E05FE
+P 4650 3100
+F 0 "J2" H 4650 3300 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 4650 2800 50  0000 C CNN
+F 2 "Connectors_WAGO:WAGO_734_4pin_Straight" H 4650 3100 50  0001 C CNN
+F 3 "" H 4650 3100 50  0001 C CNN
+	1    4650 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 1850 5100 1850
+Wire Wire Line
+	5100 1850 5100 2900
+Wire Wire Line
+	5100 2900 4850 2900
+Wire Wire Line
+	5050 1750 5150 1750
+Wire Wire Line
+	5150 1750 5150 3000
+Wire Wire Line
+	5150 3000 4850 3000
+Wire Wire Line
+	5050 1650 5200 1650
+Wire Wire Line
+	5200 1650 5200 3100
+Wire Wire Line
+	5200 3100 4850 3100
+Wire Wire Line
+	4850 3200 5450 3200
+Connection ~ 5450 3200
+$EndSCHEMATC
