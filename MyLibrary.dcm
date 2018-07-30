@@ -1,0 +1,22 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RELAY831-1A
+D Relay 841-1A-5VDC
+$ENDCMP
+#
+$CMP TDA1557Q
+D 2-channel amplifier
+$ENDCMP
+#
+$CMP TM1628
+D 7-segment driver
+K 7-segment, led driver
+F /home/mih/ownCloud/documents/datasheets/Display IC/TM1628english-cathode.pdf
+$ENDCMP
+#
+$CMP TM1637Module
+D TM1637 display module
+K tm1637, 7-segment
+$ENDCMP
+#
+#End Doc Library
