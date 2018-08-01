@@ -1,0 +1,416 @@
+EESchema Schematic File Version 2
+LIBS:Amplifier_Audio
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MyLibrary
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TEA2025 U1
+U 1 1 5B61704C
+P 5550 2050
+F 0 "U1" H 5600 2600 60  0000 C CNN
+F 1 "TEA2025" H 5700 1500 60  0000 C CNN
+F 2 "Housings_DIP:DIP-16_W7.62mm" H 5300 1600 60  0001 C CNN
+F 3 "" H 5300 1600 60  0001 C CNN
+	1    5550 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP_Small C5
+U 1 1 5B6171B3
+P 6450 2000
+F 0 "C5" H 6460 2070 50  0000 L CNN
+F 1 "100mF" H 6460 1920 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 6450 2000 50  0001 C CNN
+F 3 "" H 6450 2000 50  0001 C CNN
+	1    6450 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP_Small C7
+U 1 1 5B61725C
+P 6550 2100
+F 0 "C7" H 6560 2170 50  0000 L CNN
+F 1 "100mF" H 6560 2020 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 6550 2100 50  0001 C CNN
+F 3 "" H 6550 2100 50  0001 C CNN
+	1    6550 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP_Small C6
+U 1 1 5B6172B3
+P 6450 2300
+F 0 "C6" H 6460 2370 50  0000 L CNN
+F 1 "100mF" H 6460 2220 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 6450 2300 50  0001 C CNN
+F 3 "" H 6450 2300 50  0001 C CNN
+	1    6450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP_Small C4
+U 1 1 5B6172D9
+P 6350 2400
+F 0 "C4" H 6360 2470 50  0000 L CNN
+F 1 "100mF" H 6360 2320 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 6350 2400 50  0001 C CNN
+F 3 "" H 6350 2400 50  0001 C CNN
+	1    6350 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP_Small C3
+U 1 1 5B6172FC
+P 4650 2150
+F 0 "C3" H 4660 2220 50  0000 L CNN
+F 1 "100mF" H 4660 2070 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 4650 2150 50  0001 C CNN
+F 3 "" H 4650 2150 50  0001 C CNN
+	1    4650 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2200 6450 2200
+Wire Wire Line
+	6350 2300 6150 2300
+$Comp
+L GND #PWR01
+U 1 1 5B61741C
+P 6350 2900
+F 0 "#PWR01" H 6350 2650 50  0001 C CNN
+F 1 "GND" H 6350 2750 50  0000 C CNN
+F 2 "" H 6350 2900 50  0001 C CNN
+F 3 "" H 6350 2900 50  0001 C CNN
+	1    6350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2500 6350 2900
+Wire Wire Line
+	6450 2800 6450 2400
+Connection ~ 6350 2650
+Connection ~ 6450 2650
+Wire Wire Line
+	4950 2200 4950 2800
+Connection ~ 4950 2300
+Connection ~ 4950 2400
+Connection ~ 4950 2500
+Wire Wire Line
+	4650 2250 4950 2250
+Connection ~ 4950 2250
+Wire Wire Line
+	4950 2800 7650 2800
+Connection ~ 6350 2800
+Connection ~ 4950 2600
+Wire Wire Line
+	4950 2050 4650 2050
+$Comp
+L CP_Small C11
+U 1 1 5B617607
+P 7050 1800
+F 0 "C11" H 7060 1870 50  0000 L CNN
+F 1 "470mF" H 7060 1720 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 7050 1800 50  0001 C CNN
+F 3 "" H 7050 1800 50  0001 C CNN
+	1    7050 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP_Small C10
+U 1 1 5B6177CB
+P 6850 1900
+F 0 "C10" H 6860 1970 50  0000 L CNN
+F 1 "470mF" H 6860 1820 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P5.00mm" H 6850 1900 50  0001 C CNN
+F 3 "" H 6850 1900 50  0001 C CNN
+	1    6850 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 1800 6950 1800
+Wire Wire Line
+	6150 1900 6750 1900
+$Comp
+L Conn_01x02 J2
+U 1 1 5B61792F
+P 7700 1800
+F 0 "J2" H 7700 1900 50  0000 C CNN
+F 1 "SPK" H 7700 1600 50  0000 C CNN
+F 2 "Connectors_WAGO:WAGO_734_2pin_Straight_RuggedPads" H 7700 1800 50  0001 C CNN
+F 3 "" H 7700 1800 50  0001 C CNN
+	1    7700 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 J3
+U 1 1 5B617A7A
+P 7700 2150
+F 0 "J3" H 7700 2250 50  0000 C CNN
+F 1 "SPK" H 7700 1950 50  0000 C CNN
+F 2 "Connectors_WAGO:WAGO_734_2pin_Straight_RuggedPads" H 7700 2150 50  0001 C CNN
+F 3 "" H 7700 2150 50  0001 C CNN
+	1    7700 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 1900 7300 1900
+Wire Wire Line
+	7300 1900 7300 2150
+Wire Wire Line
+	7300 2150 7500 2150
+Wire Wire Line
+	7150 1800 7500 1800
+Wire Wire Line
+	7500 1900 7500 2000
+Wire Wire Line
+	7500 2000 7850 2000
+Wire Wire Line
+	7850 2000 7850 2450
+Wire Wire Line
+	7850 2450 7500 2450
+Wire Wire Line
+	7500 2450 7500 2250
+Wire Wire Line
+	7650 2800 7650 2450
+Connection ~ 7650 2450
+$Comp
+L +5V #PWR02
+U 1 1 5B617BC9
+P 6350 1250
+F 0 "#PWR02" H 6350 1100 50  0001 C CNN
+F 1 "+5V" H 6350 1390 50  0000 C CNN
+F 2 "" H 6350 1250 50  0001 C CNN
+F 3 "" H 6350 1250 50  0001 C CNN
+	1    6350 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1550 6150 1550
+Wire Wire Line
+	6350 1250 6350 1550
+$Comp
+L CP_Small C8
+U 1 1 5B617C59
+P 6600 1300
+F 0 "C8" H 6610 1370 50  0000 L CNN
+F 1 "100mF" H 6610 1220 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 6600 1300 50  0001 C CNN
+F 3 "" H 6600 1300 50  0001 C CNN
+	1    6600 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 1300 6350 1300
+Connection ~ 6350 1300
+$Comp
+L GND #PWR03
+U 1 1 5B617CF5
+P 7150 1300
+F 0 "#PWR03" H 7150 1050 50  0001 C CNN
+F 1 "GND" H 7150 1150 50  0000 C CNN
+F 2 "" H 7150 1300 50  0001 C CNN
+F 3 "" H 7150 1300 50  0001 C CNN
+	1    7150 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 1300 7150 1300
+$Comp
+L C_Small C9
+U 1 1 5B617D4C
+P 6600 1500
+F 0 "C9" H 6610 1570 50  0000 L CNN
+F 1 "100n" H 6610 1420 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D9.0mm_W5.0mm_P10.00mm" H 6600 1500 50  0001 C CNN
+F 3 "" H 6600 1500 50  0001 C CNN
+	1    6600 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6700 1500 7450 1500
+Wire Wire Line
+	6900 1500 6900 1300
+Connection ~ 6900 1300
+Wire Wire Line
+	6500 1500 6350 1500
+Connection ~ 6350 1500
+Wire Wire Line
+	6350 2000 6150 2000
+Wire Wire Line
+	6600 2000 6550 2000
+Wire Wire Line
+	6600 1700 6600 2000
+Connection ~ 6600 1800
+Wire Wire Line
+	6450 2100 6150 2100
+Wire Wire Line
+	6700 2100 6650 2100
+Wire Wire Line
+	6700 1900 6700 2100
+Connection ~ 6700 1900
+$Comp
+L C_Small C12
+U 1 1 5B618221
+P 7050 2150
+F 0 "C12" H 7060 2220 50  0000 L CNN
+F 1 "150n" H 7060 2070 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D9.0mm_W5.0mm_P10.00mm" H 7050 2150 50  0001 C CNN
+F 3 "" H 7050 2150 50  0001 C CNN
+	1    7050 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C13
+U 1 1 5B618274
+P 7450 1600
+F 0 "C13" H 7460 1670 50  0000 L CNN
+F 1 "150n" H 7460 1520 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D9.0mm_W5.0mm_P10.00mm" H 7450 1600 50  0001 C CNN
+F 3 "" H 7450 1600 50  0001 C CNN
+	1    7450 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7450 1700 6600 1700
+Connection ~ 6900 1500
+Wire Wire Line
+	7050 2050 6700 2050
+Connection ~ 6700 2050
+Wire Wire Line
+	7050 2250 7050 2800
+Connection ~ 7050 2800
+Connection ~ 6450 2800
+$Comp
+L Conn_01x03 J1
+U 1 1 5B618544
+P 3400 1850
+F 0 "J1" H 3400 2050 50  0000 C CNN
+F 1 "in" H 3400 1650 50  0000 C CNN
+F 2 "Connectors_WAGO:WAGO_734_3pin_Straight" H 3400 1850 50  0001 C CNN
+F 3 "" H 3400 1850 50  0001 C CNN
+	1    3400 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 5B618A8F
+P 4550 1750
+F 0 "C2" H 4560 1820 50  0000 L CNN
+F 1 "220n" H 4560 1670 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D9.0mm_W5.0mm_P10.00mm" H 4550 1750 50  0001 C CNN
+F 3 "" H 4550 1750 50  0001 C CNN
+	1    4550 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 5B618B49
+P 4300 1950
+F 0 "C1" H 4310 2020 50  0000 L CNN
+F 1 "220n" H 4310 1870 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D9.0mm_W5.0mm_P10.00mm" H 4300 1950 50  0001 C CNN
+F 3 "" H 4300 1950 50  0001 C CNN
+	1    4300 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5B618C90
+P 3750 2350
+F 0 "#PWR04" H 3750 2100 50  0001 C CNN
+F 1 "GND" H 3750 2200 50  0000 C CNN
+F 2 "" H 3750 2350 50  0001 C CNN
+F 3 "" H 3750 2350 50  0001 C CNN
+	1    3750 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 1850 3750 2350
+Wire Wire Line
+	3600 1850 3750 1850
+Wire Wire Line
+	4650 1750 4950 1750
+Wire Wire Line
+	4400 1950 4950 1950
+Wire Wire Line
+	4950 1950 4950 1850
+$Comp
+L POT_Dual RV1
+U 1 1 5B618EE9
+P 4000 1800
+F 0 "RV1" H 4000 1950 50  0000 C CNN
+F 1 "POT_Dual" H 4000 1875 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Alps_RK163_Double_Vertical" H 4250 1725 50  0001 C CNN
+F 3 "" H 4250 1725 50  0001 C CNN
+	1    4000 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4450 1750 4450 1550
+Wire Wire Line
+	4450 1550 4100 1550
+Wire Wire Line
+	4200 1950 4100 1950
+Wire Wire Line
+	4100 1950 4100 2050
+Wire Wire Line
+	3900 1900 3600 1900
+Wire Wire Line
+	3600 1900 3600 1950
+Wire Wire Line
+	3900 1700 3700 1700
+Wire Wire Line
+	3700 1700 3700 1850
+Connection ~ 3700 1850
+Wire Wire Line
+	3900 2200 3750 2200
+Connection ~ 3750 2200
+Wire Wire Line
+	3900 1400 3600 1400
+Wire Wire Line
+	3600 1400 3600 1750
+$EndSCHEMATC
