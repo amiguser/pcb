@@ -1,0 +1,211 @@
+EESchema Schematic File Version 2
+LIBS:pcb-01-rescue
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pcb-01-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TM1628 U5
+U 1 1 5AA67A9A
+P 7000 1700
+F 0 "U5" H 6750 2650 60  0000 C CNN
+F 1 "TM1628" H 7150 800 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-28W_7.5x17.9mm_Pitch1.27mm" H 7150 800 60  0001 C CNN
+F 3 "" H 7150 800 60  0001 C CNN
+	1    7000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CC56-12EWA U6
+U 1 1 5AA67B60
+P 9500 1100
+F 0 "U6" H 8550 1550 50  0000 C CNN
+F 1 "CC56-12EWA" H 10330 1550 50  0000 C CNN
+F 2 "Displays_7-Segment:CA56-12EWA" H 9500 500 50  0001 C CNN
+F 3 "" H 9120 1130 50  0001 C CNN
+	1    9500 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 10900 1200 2    60   Input ~ 0
+cc1
+Text GLabel 10900 1300 2    60   Input ~ 0
+cc2
+Text GLabel 10900 1400 2    60   Input ~ 0
+cc3
+Text GLabel 10900 1500 2    60   Input ~ 0
+cc4
+Wire Wire Line
+	10700 1200 10900 1200
+Wire Wire Line
+	10900 1300 10700 1300
+Wire Wire Line
+	10700 1400 10900 1400
+Wire Wire Line
+	10900 1500 10700 1500
+Text GLabel 7850 2150 2    60   Input ~ 0
+cc1
+Text GLabel 7850 2250 2    60   Input ~ 0
+cc2
+Text GLabel 7850 2350 2    60   Input ~ 0
+cc3
+Text GLabel 7850 2450 2    60   Input ~ 0
+cc4
+Wire Wire Line
+	7650 2150 7850 2150
+Wire Wire Line
+	7850 2250 7650 2250
+Wire Wire Line
+	7650 2350 7850 2350
+Wire Wire Line
+	7850 2450 7650 2450
+Wire Wire Line
+	6350 1850 6350 1750
+Text GLabel 7800 1750 3    60   Input ~ 0
+ks1
+Text GLabel 7900 1750 3    60   Input ~ 0
+ks2
+Text GLabel 8000 1750 3    60   Input ~ 0
+ks3
+Text GLabel 8100 1750 3    60   Input ~ 0
+ks4
+Wire Wire Line
+	7650 800  8400 800 
+Wire Wire Line
+	8400 900  7650 900 
+Wire Wire Line
+	7650 1000 8400 1000
+Wire Wire Line
+	8400 1100 7650 1100
+Wire Wire Line
+	7650 1200 8400 1200
+Wire Wire Line
+	8400 1300 7650 1300
+Wire Wire Line
+	7650 1400 8400 1400
+Wire Wire Line
+	8400 1500 7650 1500
+Wire Wire Line
+	7800 1750 7800 800 
+Connection ~ 7800 800 
+Wire Wire Line
+	7900 900  7900 1750
+Connection ~ 7900 900 
+Wire Wire Line
+	8000 1750 8000 1000
+Connection ~ 8000 1000
+Wire Wire Line
+	8100 1750 8100 1100
+Connection ~ 8100 1100
+$Comp
+L 1.0UF-1206-50V-10% C7
+U 1 1 5AA67EA4
+P 6050 1750
+F 0 "C7" H 6110 1865 45  0000 L BNN
+F 1 "1.0UF-1206-50V-10%" H 6110 1665 45  0000 L BNN
+F 2 "1206" H 6050 2000 20  0001 C CNN
+F 3 "" H 6050 1750 50  0001 C CNN
+F 4 "CAP-09822" H 6050 2050 60  0000 C CNN "Field4"
+	1    6050 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 1550 6350 1550
+Wire Wire Line
+	5650 1850 6350 1850
+Connection ~ 6350 1850
+Text HLabel 5700 900  0    60   Input ~ 0
+DIO
+Text HLabel 5700 1000 0    60   Input ~ 0
+CLK
+Text HLabel 5650 1550 0    60   Input ~ 0
+VCC
+Text HLabel 5650 1850 0    60   Input ~ 0
+GND
+Text HLabel 5700 1200 0    60   Input ~ 0
+keys_K1
+Wire Wire Line
+	6350 900  5700 900 
+Wire Wire Line
+	5700 1000 6350 1000
+Wire Wire Line
+	6350 1200 5700 1200
+Connection ~ 6050 1550
+Connection ~ 6050 1850
+Wire Wire Line
+	6050 1850 6050 3250
+Wire Wire Line
+	6050 3250 6850 3250
+Wire Wire Line
+	6850 3250 6850 2850
+Text HLabel 3900 2300 0    60   Input ~ 0
+ks1
+Text HLabel 3900 2400 0    60   Input ~ 0
+ks2
+Text HLabel 3900 2500 0    60   Input ~ 0
+ks3
+Text HLabel 3900 2600 0    60   Input ~ 0
+ks4
+Text GLabel 4150 2300 2    60   Input ~ 0
+ks1
+Text GLabel 4150 2400 2    60   Input ~ 0
+ks2
+Text GLabel 4150 2500 2    60   Input ~ 0
+ks3
+Text GLabel 4150 2600 2    60   Input ~ 0
+ks4
+Wire Wire Line
+	3900 2300 4150 2300
+Wire Wire Line
+	4150 2400 3900 2400
+Wire Wire Line
+	3900 2500 4150 2500
+Wire Wire Line
+	4150 2600 3900 2600
+Text HLabel 5700 1100 0    60   Input ~ 0
+STB
+Wire Wire Line
+	6350 1100 5700 1100
+$EndSCHEMATC

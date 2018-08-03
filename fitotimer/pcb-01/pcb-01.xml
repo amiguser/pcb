@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/mih/ownCloud/gr/FitoTimer/pcb-01/pcb-01.sch</source>
+    <date>Пн 26 фев 2018 16:01:38</date>
+    <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>pcb-01.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>ATMEGA8-16AU</value>
+      <footprint>Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm</footprint>
+      <libsource lib="atmel" part="ATMEGA8-16AU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93B8BA</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>NRF24L01</value>
+      <footprint>NRF24L01</footprint>
+      <libsource lib="mysensors_radios" part="NRF24L01"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93C4A3</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>1.0UF</value>
+      <footprint>1206</footprint>
+      <fields>
+        <field name="Field4">CAP-09822</field>
+      </fields>
+      <libsource lib="SparkFun-Capacitors" part="1.0UF-1206-50V-10%"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93D69D</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BC547</value>
+      <footprint>TO_SOT_Packages_THT:TO-92_Molded_Narrow</footprint>
+      <libsource lib="transistors" part="BC547"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93E20E</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>RELAY831-1A</value>
+      <footprint>mih-library:Relay-841-1A</footprint>
+      <libsource lib="MyLibrary" part="RELAY831-1A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93E5A2</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol</footprint>
+      <libsource lib="conn" part="Screw_Terminal_01x02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93EFCD</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>DIODE-PTH</value>
+      <footprint>DIODE-1N4001</footprint>
+      <fields>
+        <field name="Field4">DIO-09176</field>
+      </fields>
+      <libsource lib="SparkFun-DiscreteSemi" part="DIODE-PTH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93F059</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>RESISTOR1206</value>
+      <footprint>1206</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR1206"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93F123</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>22mF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <libsource lib="device" part="CP1_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93F1A2</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>DS1307Z</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="SparkFun-Clocks" part="DS1307Z"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93FC84</tstamp>
+    </comp>
+    <comp ref="BT1">
+      <value>3V</value>
+      <footprint>Batteries:BATTCOM_20MM_PTH</footprint>
+      <libsource lib="SparkFun-Batteries" part="BATTERY-20MM_SMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A93FD64</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>Crystal</value>
+      <footprint>Crystals:Crystal_C38-LF_d3.0mm_l8.0mm_Horizontal_1EP_style2</footprint>
+      <libsource lib="device" part="Crystal"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A9412C5</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="SparkFun-Capacitors" part="1.0UF-1206-50V-10%">
+      <description>1uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field. </description>
+      <footprints>
+        <fp>*1206*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1.0UF-1206-50V-10%</field>
+        <field name="Footprint">1206</field>
+        <field name="Field4">CAP-09822</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="atmel" part="ATMEGA8-16AU">
+      <aliases>
+        <alias>ATMEGA8A-AU</alias>
+      </aliases>
+      <description>TQFP32, 8k Flash, 1k SRAM, 512B EEPROM</description>
+      <docs>http://www.atmel.com/images/atmel-2486-8-bit-avr-microcontroller-atmega8_l_datasheet.pdf</docs>
+      <footprints>
+        <fp>TQFP32</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATMEGA8-16AU</field>
+        <field name="Footprint">TQFP32</field>
+      </fields>
+      <pins>
+        <pin num="1" name="(INT1)PD3" type="BiDi"/>
+        <pin num="2" name="(XCK/T0)PD4" type="BiDi"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="VCC" type="power_in"/>
+        <pin num="7" name="PB6(XTAL1/TOSC1)" type="BiDi"/>
+        <pin num="8" name="PB7(XTAL2/TOSC2)" type="BiDi"/>
+        <pin num="9" name="(T1)PD5" type="BiDi"/>
+        <pin num="10" name="(AIN0)PD6" type="BiDi"/>
+        <pin num="11" name="(AIN1)PD7" type="BiDi"/>
+        <pin num="12" name="(ICP)PB0" type="BiDi"/>
+        <pin num="13" name="(OC1A)PB1" type="BiDi"/>
+        <pin num="14" name="(~SS~/OC1B)PB2" type="BiDi"/>
+        <pin num="15" name="(MOSI/OC2)PB3" type="BiDi"/>
+        <pin num="16" name="(MISO)PB4" type="BiDi"/>
+        <pin num="17" name="(SCK)PB5" type="BiDi"/>
+        <pin num="18" name="AVCC" type="power_in"/>
+        <pin num="19" name="ADC6" type="BiDi"/>
+        <pin num="20" name="AREF" type="BiDi"/>
+        <pin num="21" name="AGND" type="power_in"/>
+        <pin num="22" name="ADC7" type="BiDi"/>
+        <pin num="23" name="(ADC0)PC0" type="BiDi"/>
+        <pin num="24" name="(ADC1)PC1" type="BiDi"/>
+        <pin num="25" name="(ADC2)PC2" type="BiDi"/>
+        <pin num="26" name="(ADC3)PC3" type="BiDi"/>
+        <pin num="27" name="(ADC4/SDA)PC4" type="BiDi"/>
+        <pin num="28" name="(ADC5/SCL)PC5" type="BiDi"/>
+        <pin num="29" name="PC6(~RESET~)" type="BiDi"/>
+        <pin num="30" name="(RXD)PD0" type="BiDi"/>
+        <pin num="31" name="(TXD)PD1" type="BiDi"/>
+        <pin num="32" name="(INT0)PD2" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Batteries" part="BATTERY-20MM_SMD">
+      <description>Battery - Single Cell A variety of battery chemistries, sizes, and footprints. Device List:&lt;ul&gt;&lt;li&gt;&lt;b&gt;20MM_PTH - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/783"&gt;Coin Cell Battery Holder - 20mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;6.8MM_PTH - &lt;/b&gt; &lt;a href="https://www.digikey.com/product-detail/en/seiko-instruments/MS621FE-FL11E/728-1057-ND/1889208?WT.srch=1&amp;gclid=CNOQ5a6LzdQCFZS2wAodXCkE0g"&gt;Coin Cell Battery Holder - 6.8MM(SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;12MM_SMD - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/10592"&gt;Coin Cell Battery Holder - 12mm (SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;12MM_PTH - &lt;/b&gt;&lt;a href="https://www.sparkfun.com/products/7948"&gt;Coin Cell Battery Holder - 12mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;20MM_SMD - &lt;/b&gt; 20mm Coin Cell Battery Holder (SMD) (2 legs)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Used on the &lt;a href="https://www.sparkfun.com/products/11734"&gt;Big Time Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;20MM_SMD_4LEGS - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/11892"&gt;Coin Cell Battery Holder - 20mm (SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;20MM_SMD_4LEGS_OVERPASTE - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/11892"&gt;Coin Cell Battery Holder - 20mm (SMD)&lt;/a&gt; (Over-paste on the legs)&lt;/li&gt;&lt;li&gt;&lt;b&gt;24.5MM_PTH - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/8863"&gt;Coin Cell Battery Holder - 24.5mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;9V - &lt;/b&gt; 9V Battery Holder - PC Mount &lt;/li&gt;&lt;ul&gt;&lt;li&gt;Used on the &lt;a href="https://www.sparkfun.com/products/11177"&gt;SparkFun SparkPunk Sound Kit &lt;/a&gt; and &lt;a href="https://www.sparkfun.com/products/12707"&gt;SparkFun SparkPunk Sequencer Kit &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;18650 - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/13113"&gt;Battery Holder - 18650 (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AA - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7949"&gt;Battery Holder - 1xAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AAA - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/12718"&gt;Battery Holder - 1xAAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AA_KIT - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7949"&gt;Battery Holder - 1xAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Special kit package - pads only have exposed copper on one side of the board.&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;AAA_KIT - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/12718"&gt;Battery Holder - 1xAAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Special kit package - pads only have exposed copper on one side of the board.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt; </description>
+      <footprints>
+        <fp>*BATTCON_20MM*</fp>
+        <fp>*BATTCON_20MM_4LEGS_OVERPASTE*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">BATTERY-20MM_SMD</field>
+        <field name="Footprint">BATTCON_20MM</field>
+        <field name="Field4">BATT-11519</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="power_in"/>
+        <pin num="2" name="-" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="transistors" part="BC547">
+      <aliases>
+        <alias>BC546</alias>
+        <alias>BC548</alias>
+        <alias>BC549</alias>
+        <alias>BC550</alias>
+        <alias>BC337</alias>
+        <alias>BC338</alias>
+      </aliases>
+      <description>45V Vce, 0.1A Ic, NPN, Small Signal Transistor, TO-92</description>
+      <docs>http://www.fairchildsemi.com/ds/BC/BC547.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC547</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-92_Molded_Narrow</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP1_Small">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Crystal">
+      <description>Two pin crystal</description>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-DiscreteSemi" part="DIODE-PTH">
+      <description>Diode These are standard reverse protection diodes and small signal diodes. &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/11177 &gt;SparkFun SparkPunk Sound Kit&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13231 &gt;SparkFun ESP8266 Thing&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt; </description>
+      <footprints>
+        <fp>*DIODE-1N4001*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODE-PTH</field>
+        <field name="Footprint">DIODE-1N4001</field>
+        <field name="Field4">DIO-09176</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Clocks" part="DS1307Z">
+      <description>Maxim DS1307 - I2C Real-time clock (RTC) The  DS1307  serial  real-time  clock  (RTC)  is  a  low-power, full binary-coded decimal (BCD) clock/calendar plus  56  bytes  of  NV  SRAM.  Address  and  data  are transferred  serially  through  an  I2C,  bidirectional  bus. The clock/calendar provides seconds, minutes, hours, day,  date,  month,  and  year  information. SparkFun Products:&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/12708"&gt;Real Time Clock Module&lt;/a&gt; (BOB-12708)&lt;/li&gt;&lt;/ul&gt;&lt;a href="https://cdn.sparkfun.com/datasheets/BreakoutBoards/DS1307.pdf"&gt;Datasheet&lt;/a&gt; </description>
+      <footprints>
+        <fp>*SO08-TIGHT*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DS1307Z</field>
+        <field name="Footprint">SO08-TIGHT</field>
+        <field name="Field4">IC-08138</field>
+      </fields>
+      <pins>
+        <pin num="1" name="X1" type="BiDi"/>
+        <pin num="2" name="X2" type="BiDi"/>
+        <pin num="3" name="VBATT" type="BiDi"/>
+        <pin num="4" name="GND" type="BiDi"/>
+        <pin num="5" name="SDA" type="BiDi"/>
+        <pin num="6" name="SCL" type="BiDi"/>
+        <pin num="7" name="SQW" type="BiDi"/>
+        <pin num="8" name="VCC" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="mysensors_radios" part="NRF24L01">
+      <description>NRF24L01+</description>
+      <footprints>
+        <fp>NRF24L01</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NRF24L01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="CE" type="input"/>
+        <pin num="4" name="CSN" type="input"/>
+        <pin num="5" name="SCK" type="input"/>
+        <pin num="6" name="MOSI" type="input"/>
+        <pin num="7" name="MISO" type="input"/>
+        <pin num="8" name="IRQ" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="MyLibrary" part="RELAY831-1A">
+      <description>Relay 841-1A-5VDC</description>
+      <footprints>
+        <fp>Relay-841-1A</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">RELAY831-1A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+        <pin num="3" name="3" type="output"/>
+        <pin num="4" name="4" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Resistors" part="RESISTOR1206">
+      <description>Generic Resistor Package</description>
+      <footprints>
+        <fp>*1206*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RESISTOR1206</field>
+        <field name="Footprint">1206</field>
+        <field name="Field4"> </field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="Screw_Terminal_01x02">
+      <description>Generic screw terminal, single row, 01x02</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*Terminal*Block*:*</fp>
+        <fp>TerminalBlock*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="transistors">
+      <uri>/usr/share/kicad/library/transistors.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="SparkFun-Resistors">
+      <uri>/home/mih/develop/pcb/kiCAD/sparkfun/SparkFun-KiCad-Libraries/Libraries/SparkFun-Resistors.lib</uri>
+    </library>
+    <library logical="SparkFun-Batteries">
+      <uri>/home/mih/develop/pcb/kiCAD/sparkfun/SparkFun-KiCad-Libraries/Libraries/SparkFun-Batteries.lib</uri>
+    </library>
+    <library logical="SparkFun-DiscreteSemi">
+      <uri>/home/mih/develop/pcb/kiCAD/sparkfun/SparkFun-KiCad-Libraries/Libraries/SparkFun-DiscreteSemi.lib</uri>
+    </library>
+    <library logical="atmel">
+      <uri>/usr/share/kicad/library/atmel.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="mysensors_radios">
+      <uri>/home/mih/develop/pcb/kiCAD/mysensors/mysensors_symbols/mysensors_radios.lib</uri>
+    </library>
+    <library logical="SparkFun-Capacitors">
+      <uri>/home/mih/develop/pcb/kiCAD/sparkfun/SparkFun-KiCad-Libraries/Libraries/SparkFun-Capacitors.lib</uri>
+    </library>
+    <library logical="MyLibrary">
+      <uri>/home/mih/develop/pcb/kiCAD/MyLibrary.lib</uri>
+    </library>
+    <library logical="SparkFun-Clocks">
+      <uri>/home/mih/develop/pcb/kiCAD/sparkfun/SparkFun-KiCad-Libraries/Libraries/SparkFun-Clocks.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D1-PadA)">
+      <node ref="D1" pin="A"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="2" name="+5VD">
+      <node ref="U2" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U3" pin="8"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U1" pin="18"/>
+      <node ref="C1" pin="1"/>
+      <node ref="D1" pin="C"/>
+    </net>
+    <net code="3" name="Net-(Q1-Pad2)">
+      <node ref="Q1" pin="2"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="4" name="pd3">
+      <node ref="U1" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="5" name="Net-(J1-Pad2)">
+      <node ref="P1" pin="4"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="6" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="7" name="3.3V">
+      <node ref="BT1" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="U2" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U1" pin="21"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="5"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="C2" pin="2"/>
+    </net>
+    <net code="8" name="SCL">
+      <node ref="U1" pin="28"/>
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="9" name="SDA">
+      <node ref="U3" pin="5"/>
+      <node ref="U1" pin="27"/>
+    </net>
+    <net code="13" name="Net-(U3-Pad1)">
+      <node ref="Y1" pin="1"/>
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="14" name="Net-(U3-Pad2)">
+      <node ref="U3" pin="2"/>
+      <node ref="Y1" pin="2"/>
+    </net>
+    <net code="15" name="Net-(U3-Pad7)">
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="16" name="Net-(BT1-Pad1)">
+      <node ref="U3" pin="3"/>
+      <node ref="BT1" pin="1"/>
+    </net>
+    <net code="17" name="Net-(U1-Pad25)">
+      <node ref="U1" pin="25"/>
+    </net>
+    <net code="18" name="Net-(U1-Pad26)">
+      <node ref="U1" pin="26"/>
+    </net>
+    <net code="19" name="Net-(U1-Pad19)">
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="20" name="Net-(U1-Pad29)">
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="21" name="SCK">
+      <node ref="U2" pin="5"/>
+      <node ref="U1" pin="17"/>
+    </net>
+    <net code="22" name="Net-(U1-Pad30)">
+      <node ref="U1" pin="30"/>
+    </net>
+    <net code="23" name="Net-(U1-Pad2)">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="24" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="25" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="26" name="Net-(U1-Pad9)">
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="27" name="Net-(U1-Pad10)">
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="28" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad31)">
+      <node ref="U1" pin="31"/>
+    </net>
+    <net code="31" name="Net-(U1-Pad22)">
+      <node ref="U1" pin="22"/>
+    </net>
+    <net code="32" name="Net-(U1-Pad32)">
+      <node ref="U1" pin="32"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad23)">
+      <node ref="U1" pin="23"/>
+    </net>
+    <net code="34" name="Net-(U1-Pad24)">
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="35" name="PB1">
+      <node ref="U1" pin="13"/>
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="36" name="MOSI">
+      <node ref="U1" pin="15"/>
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="37" name="MISO">
+      <node ref="U2" pin="7"/>
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="38" name="PB0">
+      <node ref="U1" pin="12"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="39" name="PB2">
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="14"/>
+    </net>
+  </nets>
+</export>

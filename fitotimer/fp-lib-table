@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name relay831)(type KiCad)(uri /home/mih/develop/pcb/kiCAD/relay831.pretty)(options "")(descr ""))
+)
