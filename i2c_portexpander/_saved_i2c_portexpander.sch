@@ -506,4 +506,38 @@ Wire Wire Line
 Wire Wire Line
 	4850 3800 7900 3800
 Connection ~ 7900 3600
+$Comp
+L R R4
+U 1 1 5B6975AF
+P 2200 900
+F 0 "R4" V 2280 900 50  0000 C CNN
+F 1 "4k7" V 2200 900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2130 900 50  0001 C CNN
+F 3 "" H 2200 900 50  0001 C CNN
+	1    2200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5B69785D
+P 2400 900
+F 0 "R5" V 2480 900 50  0000 C CNN
+F 1 "4k7" V 2400 900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2330 900 50  0001 C CNN
+F 3 "" H 2400 900 50  0001 C CNN
+	1    2400 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 750  2200 700 
+Connection ~ 2200 700 
+Wire Wire Line
+	2400 750  2400 700 
+Connection ~ 2400 700 
+Wire Wire Line
+	2200 1050 2200 1100
+Connection ~ 2200 1100
+Wire Wire Line
+	2400 1050 2400 1350
+Connection ~ 2400 1350
 $EndSCHEMATC
