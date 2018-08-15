@@ -31,6 +31,8 @@ LIBS:contrib
 LIBS:valves
 LIBS:Amplifier_Audio
 LIBS:Audio
+LIBS:MyLibrary
+LIBS:Усилитель1557q-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -51,7 +53,7 @@ U 1 1 5B5ECE19
 P 5600 2700
 F 0 "U1" H 5100 3800 60  0000 C CNN
 F 1 "TDA1557Q" H 5250 2200 60  0000 C CNN
-F 2 "TO_SOT_Packages_THT:Multiwatt-15_Horizontal_StaggeredType1" H 5250 2200 60  0001 C CNN
+F 2 "TO_SOT_Packages_THT:Multiwatt_15_Vertical" H 5250 2200 60  0001 C CNN
 F 3 "" H 5250 2200 60  0001 C CNN
 	1    5600 2700
 	1    0    0    -1  
@@ -217,13 +219,13 @@ F 3 "" H 6700 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 1050 5150 1050
+	5150 1050 5500 1050
 Wire Wire Line
 	5150 650  5150 1100
 Wire Wire Line
-	6850 1050 6500 1050
+	6500 1050 6850 1050
 Wire Wire Line
-	6500 1050 6500 750 
+	6500 750  6500 1050
 Wire Wire Line
 	6500 650  5150 650 
 Connection ~ 5150 1050
@@ -247,13 +249,9 @@ Wire Wire Line
 	3450 2500 3450 2050
 Connection ~ 3450 2050
 Wire Wire Line
-	3900 2350 4250 2350
-Wire Wire Line
 	4250 2350 4250 2200
 Wire Wire Line
 	4250 2200 4450 2200
-Wire Wire Line
-	3900 1850 4450 1850
 Wire Wire Line
 	4450 1850 4450 1950
 Wire Wire Line
@@ -280,4 +278,34 @@ Connection ~ 5300 1050
 Wire Wire Line
 	5700 800  6500 800 
 Connection ~ 6500 800 
+$Comp
+L R_Small R2
+U 1 1 5B74120C
+P 4150 1850
+F 0 "R2" H 4180 1870 50  0000 L CNN
+F 1 "220k" H 4180 1810 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal" H 4150 1850 50  0001 C CNN
+F 3 "" H 4150 1850 50  0001 C CNN
+	1    4150 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 1850 4450 1850
+Wire Wire Line
+	4050 1850 3900 1850
+$Comp
+L R_Small R1
+U 1 1 5B741358
+P 4050 2350
+F 0 "R1" H 4080 2370 50  0000 L CNN
+F 1 "220k" H 4080 2310 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal" H 4050 2350 50  0001 C CNN
+F 3 "" H 4050 2350 50  0001 C CNN
+	1    4050 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 2350 3950 2350
+Wire Wire Line
+	4150 2350 4250 2350
 $EndSCHEMATC
