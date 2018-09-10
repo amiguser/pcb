@@ -14,7 +14,6 @@
 #define BTN1 PB0
 #define BUZZ PB1
 
-
 //PORTC
 #define LINE1 PC0
 #define LINE2 PC1
@@ -28,7 +27,5 @@
 #define M3A PD6
 #define M4A PD5
 #define EN34 PD7
-
-
 
 #endif /* PORTS_H_ */

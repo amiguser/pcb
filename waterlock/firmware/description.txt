@@ -1,0 +1,11 @@
+description.txt
+ Created on: Sep 10, 2018
+     Author: mih
+Water Lock descriptions
+1. Functions
+Detect water leaks
+Sound alarm (peep-peep)
+Light alarm (blinking LED)
+Turn valve - lock water sources (2 valves)
+Profilactic valves lock\unlock (every week? month? day?)
+Manual lock\unlock valve (by button switch)
