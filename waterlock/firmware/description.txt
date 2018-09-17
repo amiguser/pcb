@@ -4,6 +4,7 @@ description.txt
 Water Lock descriptions
 1. Functions
 Detect water leaks
+Detect power fail
 Sound alarm (peep-peep)
 Light alarm (blinking LED)
 Turn valve - lock water sources (2 valves)
