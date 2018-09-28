@@ -47,9 +47,9 @@ uint8_t detectLeakage(){
 	_delay_ms(1000);
 	r=ReadADC(LINE1);
 	uint8_t v=1;
-	if (r<200) v=0;
+	if (r>500) v=0;
 	r=ReadADC(LINE2);
-	if (r<200) v=0;
+	if (r>500) v=0;
 	return v;
 }
 
@@ -69,6 +69,9 @@ uint8_t detectBATPower(){
 	return v;
 }
 
+void turnMotorOff(){
+
+}
 
 int main() {
 	DDRB = 0xFF;

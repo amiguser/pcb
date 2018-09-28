@@ -10,3 +10,11 @@ Light alarm (blinking LED)
 Turn valve - lock water sources (2 valves)
 Profilactic valves lock\unlock (every week? month? day?)
 Manual lock\unlock valve (by button switch)
+
+2. Hardware
+MCU - Atmega8
+High current driver - L293D
+DC-DC converter 12V->5V
+Button switch
+2xLED (red, green)
+2xLeakage sensor
