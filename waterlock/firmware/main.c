@@ -10,6 +10,15 @@
 #include <util/delay.h>
 
 void setup(){
+	DDRB= (1<<LED1)|(1<<LED2)|(1<<BUZZ);
+	DDRB &=~(1<<BTN1);
+	PORTB |=(1<<BTN1);//pull up BTN1
+	PORTB &=~(1<<LED1);
+	PORTB &=~(1<<LED2); //LEDs off
+
+	DDRD = 0b11111100;
+
+	DDRC = 0b11110000;
 
 }
 
@@ -74,12 +83,14 @@ void turnMotorOff(){
 }
 
 int main() {
-	DDRB = 0xFF;
-	while (1 == 1) {
-		PORTB = 0xFF;
-		_delay_ms(1400);
-		PORTB = 0x00;
-		_delay_ms(1400);
+	setup();
+	while(1){
+		if (detectLeakage()) {
+			PORTB |=(1<<LED1);
+		} else {
+			PORTB &=~(1<<LED1);
+		}
+		_delay_ms(1000);
 	}
 
 	return 0;
