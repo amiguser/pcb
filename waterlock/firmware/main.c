@@ -9,6 +9,9 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+void blinkOff();
+void blinkOn();
+
 void setup(){
 	DDRB= (1<<LED1)|(1<<LED2)|(1<<BUZZ);
 	DDRB &=~(1<<BTN1);
@@ -19,6 +22,8 @@ void setup(){
 	DDRD = 0b11111100;
 
 	DDRC = 0b11110000;
+
+	ADCSRA |=(1<<ADEN)|(1<<ADIE);
 
 }
 
@@ -47,9 +52,14 @@ uint16_t ReadADC(uint8_t ch)
 uint8_t detectLeakage(){
 	uint16_t r=0;
 	//charge remote capacitor
+	blinkOn();
 	DDRC |= (1<<LINE1)|(1<<LINE2);
 	PORTC |=(1<<LINE1)|(1<<LINE2);
 	_delay_ms(250);
+	blinkOff();
+	_delay_ms(250);
+	blinkOn();
+	PORTC &=~(1<<LINE1);
 	//check voltage
 	DDRC &=~(1<<LINE1);
 	DDRC &=~(1<<LINE2);
@@ -57,8 +67,9 @@ uint8_t detectLeakage(){
 	r=ReadADC(LINE1);
 	uint8_t v=1;
 	if (r>500) v=0;
-	r=ReadADC(LINE2);
+	//r=ReadADC(LINE2);
 	if (r>500) v=0;
+	blinkOff();
 	return v;
 }
 
@@ -82,15 +93,30 @@ void turnMotorOff(){
 
 }
 
+void blinkOn(){
+	PORTB |=(1<<LED2);
+}
+void blinkOff(){
+	PORTB &=(~1<<LED2);
+}
+
 int main() {
 	setup();
 	while(1){
-		if (detectLeakage()) {
+
+
+		blinkOn();
+		_delay_ms(250);
+		blinkOff();
+		_delay_ms(250);
+		uint8_t d=detectLeakage();
+		if (d == 1) {
 			PORTB |=(1<<LED1);
 		} else {
 			PORTB &=~(1<<LED1);
 		}
 		_delay_ms(1000);
+
 	}
 
 	return 0;

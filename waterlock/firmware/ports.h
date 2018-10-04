@@ -9,9 +9,9 @@
 #define PORTS_H_
 
 //PORTB
-#define LED1 PB6
-#define LED2 PB7
-#define BTN1 PB0
+#define LED1 PB0
+#define LED2 PB1
+#define BTN1 PB6
 #define BUZZ PB1
 
 //PORTC
