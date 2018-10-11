@@ -859,4 +859,9 @@ Connection ~ 6800 3500
 Wire Wire Line
 	6600 3700 6200 3700
 Connection ~ 6200 3700
+Wire Wire Line
+	2250 1550 2100 1550
+Wire Wire Line
+	2100 1550 2100 1450
+Connection ~ 2100 1450
 $EndSCHEMATC

@@ -9,9 +9,9 @@
 #define PORTS_H_
 
 //PORTB
-#define LED1 PB0
-#define LED2 PB1
-#define BTN1 PB6
+#define LED1 PB6 //Red
+#define LED2 PB7 //Green
+#define BTN1 PB0
 #define BUZZ PB1
 
 //PORTC
@@ -27,5 +27,12 @@
 #define M3A PD6
 #define M4A PD5
 #define EN34 PD7
+
+#define TIME2TURN 30 //seconds
+#define STATUS_LEAKAGE 1
+#define STATUS_DUTY 2
+#define STATUS_TEST 3
+#define STATUS_AC_LOW 4
+#define STATUS_BAT_LOW 5
 
 #endif /* PORTS_H_ */
