@@ -11,124 +11,149 @@
 
 void blinkOff(uint8_t);
 void blinkOn(uint8_t);
+void beep(uint16_t dur, uint8_t t);
 
-void setup(){
-	DDRB= (1<<LED1)|(1<<LED2)|(1<<BUZZ);
-	DDRB &=~(1<<BTN1);
-	PORTB |=(1<<BTN1);//pull up BTN1
-	PORTB &=~(1<<LED1);
-	PORTB &=~(1<<LED2); //LEDs off
-	PORTB |=(1<<LED1);
-	PORTB |=(1<<LED2);
+void setup() {
+	DDRB = (1 << LED1) | (1 << LED2) | (1 << BUZZ);
+	DDRB &= ~(1 << BTN1);
+	PORTB |= (1 << BTN1); //pull up BTN1
+	PORTB &= ~(1 << LED1);
+	PORTB &= ~(1 << LED2); //LEDs off
+	PORTB |= (1 << LED1);
+	PORTB |= (1 << LED2);
 	DDRD = 0b11111100;
 
 	DDRC = 0b11110000;
 
-	ADCSRA |=(1<<ADEN)|(1<<ADIE);
+	ADCSRA |= (1 << ADEN) | (1 << ADIE);
 
 }
 
-uint16_t ReadADC(uint8_t ch)
-{
-   //Select ADC Channel ch must be 0-7
-   ch=ch&0b00000111;
-   ADMUX|=ch;
+uint16_t ReadADC(uint8_t ch) {
+	//Select ADC Channel ch must be 0-7
+	ch = ch & 0b00000111;
+	ADMUX |= ch;
 
-   //Start Single conversion
-   ADCSRA|=(1<<ADSC);
+	//Start Single conversion
+	ADCSRA |= (1 << ADSC);
 
-   //Wait for conversion to complete
-   while(!(ADCSRA & (1<<ADIF)));
+	//Wait for conversion to complete
+	while (!(ADCSRA & (1 << ADIF)))
+		;
 
-   //Clear ADIF by writing one to it
-   //Note you may be wondering why we have write one to clear it
-   //This is standard way of clearing bits in io as said in datasheets.
-   //The code writes '1' but it result in setting bit to '0' !!!
+	//Clear ADIF by writing one to it
+	//Note you may be wondering why we have write one to clear it
+	//This is standard way of clearing bits in io as said in datasheets.
+	//The code writes '1' but it result in setting bit to '0' !!!
 
-   ADCSRA|=(1<<ADIF);
+	ADCSRA |= (1 << ADIF);
 
-   return(ADC);
+	return (ADC);
 }
 
-uint8_t detectLeakage(){
-	uint16_t r=0;
+uint8_t detectLeakage() {
+	uint16_t r = 0;
 	//charge remote capacitor
 //	blinkOn(LED1);
-	DDRC |= (1<<LINE1)|(1<<LINE2);
-	PORTC |=(1<<LINE1)|(1<<LINE2);
-/*
-	_delay_ms(250);
-	blinkOff(LED1);
-	_delay_ms(250);
-	blinkOn(LED1);
-*/
-	PORTC &=~(1<<LINE1);
+	DDRC |= (1 << LINE1) | (1 << LINE2);
+	PORTC |= (1 << LINE1) | (1 << LINE2);
+	_delay_ms(500);
+	/*
+	 _delay_ms(250);
+	 blinkOff(LED1);
+	 _delay_ms(250);
+	 blinkOn(LED1);
+	 */
+	PORTC &= ~(1 << LINE1);
 	//check voltage
-	DDRC &=~(1<<LINE1);
+	DDRC &= ~(1 << LINE1);
 	//DDRC &=~(1<<LINE2);
 	_delay_ms(1000);
-	r=ReadADC(LINE1);
-	uint8_t v=1;
-	if (r>500) v=0;
+	r = ReadADC(LINE1);
+	uint8_t v = 1;
+	if (r > 500)
+		v = 0;
 	//r=ReadADC(LINE2);
-	if (r>500) v=0;
+	if (r > 500)
+		v = 0;
 //	blinkOff(LED1);
 	return v;
 }
 
-uint8_t detectACPower(){
-	uint8_t v=1;
-	uint16_t r=0;
+uint8_t detectACPower() {
+	uint8_t v = 1;
+	uint16_t r = 0;
 	r = ReadADC(POWER2);
-	if (r<500) v=0;
+	if (r < 500)
+		v = 0;
 	return v;
 }
 
-uint8_t detectBATPower(){
-	uint8_t v=1;
-	uint16_t r=0;
+uint8_t detectBATPower() {
+	uint8_t v = 1;
+	uint16_t r = 0;
 	r = ReadADC(POWER1);
-	if (r<500) v=0;
+	if (r < 500)
+		v = 0;
 	return v;
 }
 
-void turnValveOff(){
-	uint16_t timer=1000*TIME2TURN;
-	PORTD &=~(1<<EN12);
-	PORTD &=~(1<<EN34); //set motors off
-	PORTD |=(1<<M1A)|(1<<M3A);
-	PORTD &=~(1<<M2A);
-	PORTD &=~(1<<M4A);
-	PORTD |=(1<<EN12)|(1<<EN34); //start motors
+void turnValveOff() {
+	uint16_t timer = 1000 * TIME2TURN;
+	PORTD &= ~(1 << EN12);
+	PORTD &= ~(1 << EN34); //set motors off
+	PORTD |= (1 << M1A) | (1 << M3A);
+	PORTD &= ~(1 << M2A);
+	PORTD &= ~(1 << M4A);
+	PORTD |= (1 << EN12) | (1 << EN34); //start motors
 	_delay_ms(timer);
-	PORTD &=~(1<<EN12);
-	PORTD &=~(1<<EN34); //set motors off
+	PORTD &= ~(1 << EN12);
+	PORTD &= ~(1 << EN34); //set motors off
 }
 
-void turnValveOn(){
-	uint16_t timer=1000*TIME2TURN;
-	PORTD &=~(1<<EN12);
-	PORTD &=~(1<<EN34); //set motors off
-	PORTD |=(1<<M2A)|(1<<M4A);
-	PORTD &=~(1<<M1A);
-	PORTD &=~(1<<M3A);
-	PORTD |=(1<<EN12)|(1<<EN34); //start motors
+void turnValveOn() {
+	uint16_t timer = 1000 * TIME2TURN;
+	PORTD &= ~(1 << EN12);
+	PORTD &= ~(1 << EN34); //set motors off
+	PORTD |= (1 << M2A) | (1 << M4A);
+	PORTD &= ~(1 << M1A);
+	PORTD &= ~(1 << M3A);
+	PORTD |= (1 << EN12) | (1 << EN34); //start motors
 	_delay_ms(timer);
-	PORTD &=~(1<<EN12);
-	PORTD &=~(1<<EN34); //set motors off
+	PORTD &= ~(1 << EN12);
+	PORTD &= ~(1 << EN34); //set motors off
 
 }
 
-
-void blinkOn(uint8_t pin){
-	PORTB |=(1<<pin);
+void blinkOn(uint8_t pin) {
+	PORTB |= (1 << pin);
 	//PORTB &=(~1<<LED1);
 }
-void blinkOff(uint8_t pin){
-	PORTB &=(~1<<pin);
+void blinkOff(uint8_t pin) {
+	PORTB &= (~1 << pin);
 	//PORTB |=(1<<LED1);
 }
-uint8_t status=STATUS_DUTY;
+
+void delay(uint16_t ms){
+	uint16_t i=ms;
+	while (i>0){
+		_delay_ms(100);
+		i--;
+	}
+}
+/**
+ * dur - 1/10 of second
+ */
+void beep(uint16_t dur, uint8_t t) {
+	for (uint8_t i = 0; i < t; i++) {
+		PORTB |= (1 << BUZZ);
+		delay(dur);
+		PORTB &= ~(1 << dur);
+		delay(dur);
+	}
+}
+
+uint8_t status = STATUS_DUTY;
 
 int main() {
 	setup();
@@ -136,10 +161,11 @@ int main() {
 //	uint8_t status=STATUS_DUTY;
 	uint8_t d;
 	while (1) {
+		d = detectLeakage();
 		switch (status) {
-		default:
+		//default:
+
 		case STATUS_DUTY:
-			d = detectLeakage();
 			if (d == 1) {
 				blinkOn(LED1);
 				status = STATUS_LEAKAGE;
@@ -148,23 +174,31 @@ int main() {
 			break;
 
 		case STATUS_LEAKAGE:
+//			d = detectLeakage();
+			beep(2, 4);
+			if (d == 1) {
+				blinkOn(LED1);
+				status = STATUS_LEAKAGE;
+				turnValveOff();
+			} else {
+				status = STATUS_DUTY;
+				blinkOff(LED1);
+			}
 
 			break;
 
 		case STATUS_TEST:
-
+			beep(10,3);
 			break;
 
 		}
 
-		blinkOff(LED2);
+		//blinkOff(LED2);
 		blinkOn(LED2);
 		_delay_ms(250);
 		blinkOff(LED2);
 		_delay_ms(250);
 		//blinkOn(LED2);
-
-
 
 		_delay_ms(1000);
 

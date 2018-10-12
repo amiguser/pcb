@@ -35,4 +35,5 @@
 #define STATUS_AC_LOW 4
 #define STATUS_BAT_LOW 5
 
+
 #endif /* PORTS_H_ */
