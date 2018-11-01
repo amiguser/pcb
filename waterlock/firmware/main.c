@@ -8,10 +8,79 @@
 #include "ports.h"
 #include <avr/io.h>
 #include <util/delay.h>
+#include <lib_eeprom.h>
+#include <avr/interrupt.h>
 
 void blinkOff(uint8_t);
 void blinkOn(uint8_t);
 void beep(uint16_t dur, uint8_t t);
+
+
+
+uint8_t status = STATUS_DUTY;
+uint8_t key_state = KEYS_NOKEY;
+uint8_t btn_pressed = 0; // is button pressed or ...
+uint8_t btn_score = 0; //...how long button pressed
+uint8_t btn_times = 0; //...times button was pressed
+uint8_t dur0=0; uint8_t dur1=0;
+
+ISR(TIMER1_OVF_vect){
+	/* timer overflow */
+	//cli();
+	uint8_t m;
+	//uint16_t k;
+	TCNT1 = 0xFFFF-0xFEBF;//init counter for 0.02s
+	m = PORTB & (1<<BTN1);
+	if (m>0) {//button down
+		if (btn_pressed == 1){
+			dur1++;
+		} else {
+			dur1=1;
+		}
+		btn_pressed = 1;
+
+	} else { //button up
+		if (btn_pressed == 1){//button released
+			if ((dur1>2) && (dur1<5)) {//short click
+				btn_times++;
+			}
+
+			dur1=0;
+		} else { //button's previous state is up btn_pressed=0
+			btn_pressed=0;
+			dur0++;
+			if (dur0>20) {
+				dur0=10;
+				btn_times=0;
+				key_state = KEYS_NOKEY;
+			}
+			if (dur0<6) {//pause between clicks
+				// yet another click
+				if (dur1>100) {
+					dur1=0;
+					key_state = KEYS_LONGPRESS;
+				}
+
+			} else {
+				// pause too long, so button was released
+				// dur0>5
+				if (3==btn_times){
+					key_state = KEYS_5PRESS;
+				}
+				if (1 == btn_times) {
+					key_state= KEYS_1PRESS;
+				}
+				dur1=0;
+				btn_times=0;
+			}
+		}
+
+		btn_pressed = 0;
+	}
+
+	//sei();
+}
+
 
 void setup() {
 	DDRB = (1 << LED1) | (1 << LED2) | (1 << BUZZ);
@@ -26,7 +95,12 @@ void setup() {
 	DDRC = 0b11110000;
 
 	ADCSRA |= (1 << ADEN) | (1 << ADIE);
-
+	//status = EEPROM_read(0);
+	status = STATUS_DUTY;
+	TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 64
+	//TCNT1 = 0xFFFF-0x0138;//25 times every second
+	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
+	sei();
 }
 
 uint16_t ReadADC(uint8_t ch) {
@@ -153,7 +227,20 @@ void beep(uint16_t dur, uint8_t t) {
 	}
 }
 
-uint8_t status = STATUS_DUTY;
+/**
+ * Detected leakage or broken wire. In both cases we must close valves and trigger alarm.
+ */
+
+void leakage(){
+	status = STATUS_LEAKAGE;
+	EEPROM_write(0, status);
+	blinkOn(LED1);
+	beep(5,3);
+	turnValveOff();
+
+
+}
+
 
 int main() {
 	setup();
@@ -161,11 +248,31 @@ int main() {
 //	uint8_t status=STATUS_DUTY;
 	uint8_t d;
 	while (1) {
-		d = detectLeakage();
+		//d = detectLeakage();
+		d=10;
 		switch (status) {
 		//default:
 
 		case STATUS_DUTY:
+			//beep(2,4);
+			if (key_state == KEYS_1PRESS) {
+				blinkOn(LED1);
+				delay(5);
+				blinkOff(LED1);
+			}
+			if (key_state == KEYS_LONGPRESS) {
+				blinkOn(LED1);
+				delay(20);
+				blinkOff(LED1);
+			}
+			if (key_state == KEYS_5PRESS) {
+				for(uint8_t l=0; l<3; l++){
+				blinkOn(LED1);
+				delay(5);
+				blinkOff(LED1);
+				}
+			}
+
 			if (d == 1) {
 				blinkOn(LED1);
 				status = STATUS_LEAKAGE;
@@ -194,13 +301,13 @@ int main() {
 		}
 
 		//blinkOff(LED2);
-		blinkOn(LED2);
-		_delay_ms(250);
-		blinkOff(LED2);
-		_delay_ms(250);
+		//blinkOn(LED2);
+		//_delay_ms(250);
+		//blinkOff(LED2);
+		//_delay_ms(250);
 		//blinkOn(LED2);
 
-		_delay_ms(1000);
+		//_delay_ms(1000);
 
 	}
 

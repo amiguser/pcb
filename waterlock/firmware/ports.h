@@ -28,12 +28,17 @@
 #define M4A PD5
 #define EN34 PD7
 
-#define TIME2TURN 30 //seconds
+#define TIME2TURN 15 //seconds
 #define STATUS_LEAKAGE 1
 #define STATUS_DUTY 2
 #define STATUS_TEST 3
 #define STATUS_AC_LOW 4
 #define STATUS_BAT_LOW 5
+
+#define KEYS_NOKEY 0
+#define KEYS_1PRESS 1
+#define KEYS_5PRESS 5
+#define KEYS_LONGPRESS 10
 
 
 #endif /* PORTS_H_ */

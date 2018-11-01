@@ -23,4 +23,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>avr-libs</name>
+			<type>2</type>
+			<location>/home/mih/backup/flash32g/workspace-avr/avr-libs</location>
+		</link>
+	</linkedResources>
 </projectDescription>
