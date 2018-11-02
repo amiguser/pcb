@@ -23,15 +23,51 @@ uint8_t btn_pressed = 0; // is button pressed or ...
 uint8_t btn_score = 0; //...how long button pressed
 uint8_t btn_times = 0; //...times button was pressed
 uint8_t dur0=0; uint8_t dur1=0;
-
+void setup() {
+	DDRB = (1 << LED1) | (1 << LED2) | (1 << BUZZ);
+	DDRB &= ~(1 << BTN1);
+	PORTB |= (1 << BTN1); //pull up BTN1
+	PORTB &= ~(1 << LED1);
+	PORTB &= ~(1 << LED2); //LEDs off
+	//PORTB |= (1 << LED1);
+	//PORTB |= (1 << LED2);
+	DDRD = 0b11111100;
+	DDRC = 0b11110000;
+	blinkOn(LED1);
+	_delay_ms(250);
+	blinkOff(LED1);
+	_delay_ms(1050);
+	ADMUX=(1<<REFS0);                         // For Aref=AVcc;
+	ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0); //Rrescalar div factor =128
+	//ADCSRA |= (1 << ADEN) | (1 << ADIE);
+	//status = EEPROM_read(0);
+	status = STATUS_DUTY;
+	TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 64
+	TCNT1 = 0xFFFF-0xFEBF;//25 times every second
+	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
+	TIMSK &=~(1<<TOIE0);
+	blinkOn(LED1);
+	_delay_ms(250);
+	blinkOff(LED1);
+	_delay_ms(1050);
+	sei();
+}
 ISR(TIMER1_OVF_vect){
 	/* timer overflow */
-	//cli();
+	uint8_t sreg;
+	sreg = SREG;
+	cli();
 	uint8_t m;
 	//uint16_t k;
 	TCNT1 = 0xFFFF-0xFEBF;//init counter for 0.02s
 	m = PORTB & (1<<BTN1);
-	if (m>0) {//button down
+	if (m==0) {
+		blinkOn(LED1);
+	} else {
+		blinkOff(LED1);
+	}
+	/*
+	if (m==0) {//button down
 		if (btn_pressed == 1){
 			dur1++;
 		} else {
@@ -77,31 +113,15 @@ ISR(TIMER1_OVF_vect){
 
 		btn_pressed = 0;
 	}
-
-	//sei();
-}
-
-
-void setup() {
-	DDRB = (1 << LED1) | (1 << LED2) | (1 << BUZZ);
-	DDRB &= ~(1 << BTN1);
-	PORTB |= (1 << BTN1); //pull up BTN1
-	PORTB &= ~(1 << LED1);
-	PORTB &= ~(1 << LED2); //LEDs off
-	PORTB |= (1 << LED1);
-	PORTB |= (1 << LED2);
-	DDRD = 0b11111100;
-
-	DDRC = 0b11110000;
-
-	ADCSRA |= (1 << ADEN) | (1 << ADIE);
-	//status = EEPROM_read(0);
-	status = STATUS_DUTY;
-	TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 64
-	//TCNT1 = 0xFFFF-0x0138;//25 times every second
-	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
+		 *
+	 */
+	SREG = sreg;
 	sei();
+
 }
+
+
+
 
 uint16_t ReadADC(uint8_t ch) {
 	//Select ADC Channel ch must be 0-7

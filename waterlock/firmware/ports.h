@@ -9,8 +9,8 @@
 #define PORTS_H_
 
 //PORTB
-#define LED1 PB6 //Red
-#define LED2 PB7 //Green
+#define LED1 PB7 //Red
+#define LED2 PB6 //Green
 #define BTN1 PB0
 #define BUZZ PB1
 
