@@ -43,13 +43,13 @@ void setup() {
 	//status = EEPROM_read(0);
 	status = STATUS_DUTY;
 	TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 64
-	TCNT1 = 0xFFFF-0xFEBF;//25 times every second
+	TCNT1 = 0xFFFF-0xFD8E;//25 times every second
 	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
-	TIMSK &=~(1<<TOIE0);
+	//TIMSK &=~(1<<TOIE0);
 	blinkOn(LED1);
 	_delay_ms(250);
 	blinkOff(LED1);
-	_delay_ms(1050);
+	_delay_ms(1000);
 	sei();
 }
 ISR(TIMER1_OVF_vect){
@@ -61,12 +61,14 @@ ISR(TIMER1_OVF_vect){
 	//uint16_t k;
 	TCNT1 = 0xFFFF-0xFEBF;//init counter for 0.02s
 	m = PORTB & (1<<BTN1);
+	/*
 	if (m==0) {
 		blinkOn(LED1);
 	} else {
 		blinkOff(LED1);
 	}
-	/*
+	*/
+
 	if (m==0) {//button down
 		if (btn_pressed == 1){
 			dur1++;
@@ -113,8 +115,6 @@ ISR(TIMER1_OVF_vect){
 
 		btn_pressed = 0;
 	}
-		 *
-	 */
 	SREG = sreg;
 	sei();
 

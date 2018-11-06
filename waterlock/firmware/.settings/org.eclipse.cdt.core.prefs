@@ -12,4 +12,4 @@ environment/project/de.innot.avreclipse.configuration.app.release.727057202/AVRT
 environment/project/de.innot.avreclipse.configuration.app.release.727057202/AVRTARGETMCUTYPE/operation=append
 environment/project/de.innot.avreclipse.configuration.app.release.727057202/AVRTARGETMCUTYPE/value=atmega8
 environment/project/de.innot.avreclipse.configuration.app.release.727057202/append=true
-environment/project/de.innot.avreclipse.configuration.app.release.727057202/appendContributed=true
+environment/project/de.innot.avreclipse.configuration.app.release.727057202/appendContributed=false

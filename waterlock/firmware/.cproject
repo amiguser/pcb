@@ -7,6 +7,12 @@
             			
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="de.innot.avreclipse.configuration.app.release.727057202" moduleId="org.eclipse.cdt.core.settings" name="Release">
                 				
+                <macros>
+                    					
+                    <stringMacro name="AVRTARGETMCU" type="VALUE_TEXT" value="atmega8"/>
+                    				
+                </macros>
+                				
                 <externalSettings/>
                 				
                 <extensions>
@@ -33,15 +39,15 @@
                         						
                         <toolChain id="de.innot.avreclipse.toolchain.winavr.app.release.1635292074" name="AVR-GCC Toolchain" superClass="de.innot.avreclipse.toolchain.winavr.app.release">
                             							
-                            <option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.flash.app.release.453495451" name="Generate HEX file for Flash memory" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.flash.app.release"/>
+                            <option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.flash.app.release.453495451" name="Generate HEX file for Flash memory" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.flash.app.release" useByScannerDiscovery="false"/>
                             							
-                            <option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release.329635856" name="Generate HEX file for EEPROM" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release"/>
+                            <option id="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release.329635856" name="Generate HEX file for EEPROM" superClass="de.innot.avreclipse.toolchain.options.toolchain.objcopy.eeprom.app.release" useByScannerDiscovery="false"/>
                             							
-                            <option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release.1059390267" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release"/>
+                            <option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release.1059390267" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.app.release" useByScannerDiscovery="false"/>
                             							
-                            <option id="de.innot.avreclipse.toolchain.options.toolchain.size.app.release.573539584" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.app.release"/>
+                            <option id="de.innot.avreclipse.toolchain.options.toolchain.size.app.release.573539584" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.app.release" useByScannerDiscovery="false"/>
                             							
-                            <option id="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release.776119675" name="AVRDude" superClass="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release"/>
+                            <option id="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release.776119675" name="AVRDude" superClass="de.innot.avreclipse.toolchain.options.toolchain.avrdude.app.release" useByScannerDiscovery="false"/>
                             							
                             <targetPlatform id="de.innot.avreclipse.targetplatform.winavr.app.release.201883955" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.app.release"/>
                             							
@@ -49,7 +55,7 @@
                             							
                             <tool id="de.innot.avreclipse.tool.assembler.winavr.app.release.2118651040" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.app.release">
                                 								
-                                <option id="de.innot.avreclipse.assembler.option.debug.level.333529794" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level" value="de.innot.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
+                                <option id="de.innot.avreclipse.assembler.option.debug.level.333529794" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level" useByScannerDiscovery="false" value="de.innot.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
                                 								
                                 <inputType id="de.innot.avreclipse.tool.assembler.input.1609893143" superClass="de.innot.avreclipse.tool.assembler.input"/>
                                 							
@@ -57,11 +63,11 @@
                             							
                             <tool id="de.innot.avreclipse.tool.compiler.winavr.app.release.1721825359" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.app.release">
                                 								
-                                <option id="de.innot.avreclipse.compiler.option.debug.level.1005411353" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" value="de.innot.avreclipse.compiler.option.debug.level.none" valueType="enumerated"/>
+                                <option id="de.innot.avreclipse.compiler.option.debug.level.1005411353" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" useByScannerDiscovery="false" value="de.innot.avreclipse.compiler.option.debug.level.none" valueType="enumerated"/>
                                 								
-                                <option id="de.innot.avreclipse.compiler.option.optimize.928886896" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
+                                <option id="de.innot.avreclipse.compiler.option.optimize.928886896" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" useByScannerDiscovery="false" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
                                 								
-                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.incpath.512259479" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.incpath.512259479" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="/home/mih/backup/flash32g/workspace-avr/avr-libs"/>
                                     								
