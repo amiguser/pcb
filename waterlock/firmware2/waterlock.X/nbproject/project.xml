@@ -12,6 +12,22 @@
             <asminc-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>../../firmware</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>production</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>compilation</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
         </data>
     </configuration>
 </project>

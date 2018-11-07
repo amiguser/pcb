@@ -60,8 +60,9 @@ ISR(TIMER1_OVF_vect){
 	uint8_t m;
 	//uint16_t k;
 	TCNT1 = 0xFD8E;//init counter for 0.02s
-	m = PINB & 0x00000001;//(1<<BTN1);
-	/*
+	m = PINB & (1<<BTN1);
+	
+    /*
 	if (m==0) {
 		blinkOn(LED1);
 	} else {
@@ -242,7 +243,7 @@ void beep(uint16_t dur, uint8_t t) {
 	for (uint8_t i = 0; i < t; i++) {
 		PORTB |= (1 << BUZZ);
 		delay(dur);
-		PORTB &= ~(1 << dur);
+		PORTB &= ~(1 << BUZZ);
 		delay(dur);
 	}
 }
@@ -267,6 +268,7 @@ int main() {
 	//DDRB = 0xFF;
 //	uint8_t status=STATUS_DUTY;
 	uint8_t d;
+    beep(2,3);
 	while (1) {
 		//d = detectLeakage();
 		d=10;
@@ -274,7 +276,7 @@ int main() {
 		//default:
 
 		case STATUS_DUTY:
-			//beep(2,4);
+			
 			if (key_state == KEYS_1PRESS) {
 				blinkOn(LED1);
 				delay(5);
