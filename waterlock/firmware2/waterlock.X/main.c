@@ -61,60 +61,47 @@ ISR(TIMER1_OVF_vect){
 	//uint16_t k;
 	TCNT1 = 0xFD8E;//init counter for 0.02s
 	m = PINB & (1<<BTN1);
-	
-    /*
-	if (m==0) {
-		blinkOn(LED1);
-	} else {
-		blinkOff(LED1);
-	}
-	*/
 
 	if (m==0) {//button down
-		if (btn_pressed == 1){
+		if (btn_pressed == 1){//button still pressed
 			dur1++;
-		} else {
+		} else {//button just pressed
 			dur1=1;
+            if (dur0<10) {
+               //btn_times++;
+            }
 		}
 		btn_pressed = 1;
+        //dur0=0;
 
 	} else { //button up
-		if (btn_pressed == 1){//button released
-			if ((dur1>2) && (dur1<5)) {//short click
-				btn_times++;
-			}
+        if (1 == btn_pressed) { //just released
+            if ((dur1>2)  ) {
+                btn_times++;
+            } 
+            //dur1= 0;
+            dur0=0;
+        } else { //button still released
+            dur0++;
+            if (dur0>20) {
+                if (dur1>19) {
+                    key_state = KEYS_LONGPRESS;
+                    dur1=0;
+                } else {
 
-			dur1=0;
-		} else { //button's previous state is up btn_pressed=0
-			btn_pressed=0;
-			dur0++;
-			if (dur0>20) {
-				dur0=10;
-				btn_times=0;
-				key_state = KEYS_NOKEY;
-			}
-			if (dur0<6) {//pause between clicks
-				// yet another click
-				if (dur1>100) {
-					dur1=0;
-					key_state = KEYS_LONGPRESS;
-				}
-
-			} else {
-				// pause too long, so button was released
-				// dur0>5
-				if (3==btn_times){
-					key_state = KEYS_5PRESS;
-				}
-				if (1 == btn_times) {
-					key_state= KEYS_1PRESS;
-				}
-				dur1=0;
-				btn_times=0;
-			}
-		}
-
-		btn_pressed = 0;
+                    if (btn_times == 1) {
+                        key_state = KEYS_1PRESS;
+                    }
+                    if (btn_times >= 3) {
+                        key_state = KEYS_5PRESS;
+                    }
+                    //btn_times = 0;
+                }
+                dur0=21;
+            }
+        }
+        btn_pressed = 0;
+        
 	}
 	SREG = sreg;
 	//sei();
@@ -268,7 +255,7 @@ int main() {
 	//DDRB = 0xFF;
 //	uint8_t status=STATUS_DUTY;
 	uint8_t d;
-    beep(2,3);
+    //beep(2,3);
 	while (1) {
 		//d = detectLeakage();
 		d=10;
@@ -281,18 +268,25 @@ int main() {
 				blinkOn(LED1);
 				delay(5);
 				blinkOff(LED1);
+                key_state = KEYS_NOKEY;
+                btn_times=0;
 			}
 			if (key_state == KEYS_LONGPRESS) {
 				blinkOn(LED1);
 				delay(20);
 				blinkOff(LED1);
+                key_state = KEYS_NOKEY;
+                btn_times=0;
 			}
 			if (key_state == KEYS_5PRESS) {
-				for(uint8_t l=0; l<3; l++){
-				blinkOn(LED1);
-				delay(5);
-				blinkOff(LED1);
+				for(uint8_t l=0; l<btn_times; l++){
+                    blinkOn(LED1);
+                    delay(2);
+                    blinkOff(LED1);
+                    delay(3);
 				}
+                key_state = KEYS_NOKEY;
+                btn_times=0;
 			}
 
 			if (d == 1) {
@@ -304,7 +298,7 @@ int main() {
 
 		case STATUS_LEAKAGE:
 //			d = detectLeakage();
-			beep(2, 4);
+			//beep(2, 4);
 			if (d == 1) {
 				blinkOn(LED1);
 				status = STATUS_LEAKAGE;
@@ -317,7 +311,7 @@ int main() {
 			break;
 
 		case STATUS_TEST:
-			beep(10,3);
+			//beep(10,3);
 			break;
 
 		}
