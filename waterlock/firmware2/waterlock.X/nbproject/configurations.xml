@@ -38,7 +38,7 @@
         <platform>2</platform>
       </toolsSet>
       <packs>
-        <pack name="ATmega_DFP" vendor="Atmel" version="1.2.258"/>
+        <pack name="ATmega_DFP" vendor="Atmel" version="1.2.285"/>
       </packs>
       <compileType>
         <linkerTool>
@@ -579,7 +579,7 @@
         <platform>2</platform>
       </toolsSet>
       <packs>
-        <pack name="ATmega_DFP" vendor="Atmel" version="1.2.258"/>
+        <pack name="ATmega_DFP" vendor="Atmel" version="1.2.285"/>
       </packs>
       <compileType>
         <linkerTool>

@@ -46,9 +46,9 @@ void setup() {
 	TCNT1 = 0xFD8E;//25 times every second
 	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
 	//TIMSK &=~(1<<TOIE0);
-	blinkOn(LED1);
+	blinkOn(LED2);
 	_delay_ms(250);
-	blinkOff(LED1);
+	blinkOff(LED2);
 	_delay_ms(1000);
 	sei();
 }
@@ -259,6 +259,7 @@ int main() {
 	while (1) {
 		//d = detectLeakage();
 		d=10;
+        
 		switch (status) {
 		//default:
 
@@ -272,9 +273,9 @@ int main() {
                 btn_times=0;
 			}
 			if (key_state == KEYS_LONGPRESS) {
-				blinkOn(LED1);
+				blinkOn(LED2);
 				delay(20);
-				blinkOff(LED1);
+				blinkOff(LED2);
                 key_state = KEYS_NOKEY;
                 btn_times=0;
 			}
