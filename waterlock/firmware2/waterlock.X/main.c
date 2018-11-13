@@ -8,8 +8,9 @@
 #include "ports.h"
 #include <avr/io.h>
 #include <util/delay.h>
-#include <lib_eeprom.h>
+#include "lib_eeprom.h"
 #include <avr/interrupt.h>
+
 
 void blinkOff(uint8_t);
 void blinkOn(uint8_t);
@@ -18,7 +19,7 @@ void blinkOn(uint8_t);
 void blink(uint8_t, uint8_t, uint8_t);
 
 void beep(uint16_t dur, uint8_t t);
-
+void delay(uint16_t ms);
 
 
 uint8_t status = STATUS_DUTY;
@@ -164,13 +165,15 @@ uint8_t detectLeakage() {
 	 blinkOn(LED1);
 	 */
 	PORTC &= ~(1 << LINE1);
+    PORTC &= ~(1 << LINE2);
 	//check voltage
 	DDRC &= ~(1 << LINE1);
-	//DDRC &=~(1<<LINE2);
+	DDRC &=~(1<<LINE2);
 	_delay_ms(1000);
 	r = ReadADC(LINE1);
 	uint8_t v = 1;
-	if (r > 500)
+	//blink(LED2, 2, r/100);
+    if (r > 500)
 		v = 0;
 	//r=ReadADC(LINE2);
 	if (r > 500)
@@ -274,9 +277,10 @@ void maintenance() {
         if (key_state == KEYS_LONGPRESS) {
             exit = 1;
             status = STATUS_DUTY;
-            key_state = KEYS_NOKEY;
+            
             btn_times = 0;
         }
+        key_state = KEYS_NOKEY;
     }
 }
 
@@ -303,8 +307,10 @@ void leakage(){
             exit=1;
         }
         //beep(5,3);
+        key_state = KEYS_NOKEY;
         blink(LED1,2,2);
     }
+    EEPROM_write(0, status);
 
 }
 
@@ -319,6 +325,7 @@ int main() {
 	while (1) {
 		
 		//d=10;
+        /*
         u1 = detectACPower();
         if (!u1) {
             status = STATUS_AC_LOW;
@@ -327,7 +334,7 @@ int main() {
         if (!u2) {
             status= STATUS_BAT_LOW;
         }
-        
+        */
         d = detectLeakage();
         if (d) {
             status = STATUS_LEAKAGE;
@@ -336,7 +343,11 @@ int main() {
 		//default:
 
 		case STATUS_DUTY:
-			
+			if (VALVES_OFF==valve) {
+                blinkOn(LED2);
+            } else {
+                blinkOff(LED2);
+            }
 			if (key_state == KEYS_1PRESS) {
                 blink(LED1, 3,3);
                 //beep(2,3);

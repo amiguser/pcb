@@ -11,8 +11,10 @@
             <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
+            <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../../firmware</sourceRootElem>
+                <sourceRootElem>/usr/lib/avr/custom</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
@@ -27,7 +29,6 @@
             <formatting>
                 <project-formatting-style>false</project-formatting-style>
             </formatting>
-            <make-dep-projects/>
         </data>
     </configuration>
 </project>
