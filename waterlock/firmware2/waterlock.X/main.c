@@ -64,7 +64,7 @@ void setup() {
 	/*
     blinkOn(LED1);
 	_delay_ms(250);
-	blinkOff(LED1);
+	blinkOff(LED2);
 	_delay_ms(1000);
      */
 	sei();
