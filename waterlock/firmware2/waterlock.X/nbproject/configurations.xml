@@ -147,7 +147,6 @@
         <property key="usersig" value="false"/>
       </AVR-Global>
       <AVR-LD>
-        <property key="eeprom-segment" value=""/>
         <property key="exclude-standard-libraries" value="false"/>
         <property key="extra-lib-directories" value=""/>
         <property key="flash-segment" value=""/>
@@ -688,7 +687,6 @@
         <property key="usersig" value="false"/>
       </AVR-Global>
       <AVR-LD>
-        <property key="eeprom-segment" value=""/>
         <property key="exclude-standard-libraries" value="false"/>
         <property key="extra-lib-directories" value=""/>
         <property key="flash-segment" value=""/>

@@ -13,11 +13,16 @@
 
 void blinkOff(uint8_t);
 void blinkOn(uint8_t);
+//void blink(uint8_t);
+//void blink(uint8_t, uint8_t);
+void blink(uint8_t, uint8_t, uint8_t);
+
 void beep(uint16_t dur, uint8_t t);
 
 
 
 uint8_t status = STATUS_DUTY;
+uint8_t valve = VALVES_ON;
 uint8_t key_state = KEYS_NOKEY;
 uint8_t btn_pressed = 0; // is button pressed or ...
 uint8_t btn_score = 0; //...how long button pressed
@@ -33,23 +38,35 @@ void setup() {
 	//PORTB |= (1 << LED2);
 	DDRD = 0b11111100;
 	DDRC = 0b11110000;
+/*
 	blinkOn(LED1);
 	_delay_ms(250);
 	blinkOff(LED1);
 	_delay_ms(1050);
+ */
 	ADMUX=(1<<REFS0);                         // For Aref=AVcc;
 	ADCSRA=(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0); //Rrescalar div factor =128
 	//ADCSRA |= (1 << ADEN) | (1 << ADIE);
-	//status = EEPROM_read(0);
-	status = STATUS_DUTY;
+	status = EEPROM_read(0);
+    if (status>0xDD) {
+        status = STATUS_DUTY;
+        EEPROM_write(0, STATUS_DUTY);
+    }
+	valve = EEPROM_read(10);
+    if (valve>0xDD) {
+        valve = VALVES_ON;
+        EEPROM_write(10, VALVES_ON);
+    }
 	TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 64
 	TCNT1 = 0xFD8E;//25 times every second
 	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
 	//TIMSK &=~(1<<TOIE0);
-	blinkOn(LED1);
+	/*
+    blinkOn(LED1);
 	_delay_ms(250);
 	blinkOff(LED1);
 	_delay_ms(1000);
+     */
 	sei();
 }
 ISR(TIMER1_OVF_vect){
@@ -175,7 +192,7 @@ uint8_t detectBATPower() {
 	uint8_t v = 1;
 	uint16_t r = 0;
 	r = ReadADC(POWER1);
-	if (r < 500)
+	if (r < 300)
 		v = 0;
 	return v;
 }
@@ -191,6 +208,8 @@ void turnValveOff() {
 	_delay_ms(timer);
 	PORTD &= ~(1 << EN12);
 	PORTD &= ~(1 << EN34); //set motors off
+    valve = VALVES_OFF;
+    EEPROM_write(10, 0x0F);  //mark as closed
 }
 
 void turnValveOn() {
@@ -204,7 +223,8 @@ void turnValveOn() {
 	_delay_ms(timer);
 	PORTD &= ~(1 << EN12);
 	PORTD &= ~(1 << EN34); //set motors off
-
+    valve = VALVES_ON;
+    EEPROM_write(10, 0x00);  //mark as opened
 }
 
 void blinkOn(uint8_t pin) {
@@ -216,6 +236,14 @@ void blinkOff(uint8_t pin) {
 	//PORTB |=(1<<LED1);
 }
 
+void blink(uint8_t led, uint8_t dur, uint8_t t){
+    for (uint8_t i =0 ; i<t; i++){
+        blinkOn(led);
+        delay(dur);
+        blinkOff(led);
+        delay(dur);
+    }
+}
 void delay(uint16_t ms){
 	uint16_t i=ms;
 	while (i>0){
@@ -235,6 +263,23 @@ void beep(uint16_t dur, uint8_t t) {
 	}
 }
 
+void maintenance() {
+    //do not detect anything and wait for longpress
+    uint8_t exit = 0;
+    blinkOn(LED1);
+    blinkOn(LED2);
+    //beep(2,5);
+    while (!exit) {
+
+        if (key_state == KEYS_LONGPRESS) {
+            exit = 1;
+            status = STATUS_DUTY;
+            key_state = KEYS_NOKEY;
+            btn_times = 0;
+        }
+    }
+}
+
 /**
  * Detected leakage or broken wire. In both cases we must close valves and trigger alarm.
  */
@@ -243,9 +288,23 @@ void leakage(){
 	status = STATUS_LEAKAGE;
 	EEPROM_write(0, status);
 	blinkOn(LED1);
-	beep(5,3);
+	//beep(5,3);
 	turnValveOff();
-
+    uint8_t exit=0, d=1;
+    while(!exit){
+        //Exit in two cases: there is no leakage; pressed button long
+        d = detectLeakage();
+        if (key_state == KEYS_LONGPRESS){
+            status = STATUS_DUTY;
+            exit=1;
+        }
+        if (0==d){
+            status = STATUS_DUTY;
+            exit=1;
+        }
+        //beep(5,3);
+        blink(LED1,2,2);
+    }
 
 }
 
@@ -254,64 +313,67 @@ int main() {
 	setup();
 	//DDRB = 0xFF;
 //	uint8_t status=STATUS_DUTY;
-	uint8_t d;
+	uint8_t d,u1,u2;
+    //uint16_t u1,u2;
     //beep(2,3);
 	while (1) {
-		//d = detectLeakage();
-		d=10;
-		switch (status) {
+		
+		//d=10;
+        u1 = detectACPower();
+        if (!u1) {
+            status = STATUS_AC_LOW;
+        }
+        u2= detectBATPower();
+        if (!u2) {
+            status= STATUS_BAT_LOW;
+        }
+        
+        d = detectLeakage();
+        if (d) {
+            status = STATUS_LEAKAGE;
+        }
+        switch (status) {
 		//default:
 
 		case STATUS_DUTY:
 			
 			if (key_state == KEYS_1PRESS) {
-				blinkOn(LED1);
-				delay(5);
-				blinkOff(LED1);
+                blink(LED1, 3,3);
+                //beep(2,3);
+                if (VALVES_OFF == valve) {
+                    turnValveOn();
+                } else {
+                    turnValveOff();
+                }
                 key_state = KEYS_NOKEY;
                 btn_times=0;
+                
 			}
 			if (key_state == KEYS_LONGPRESS) {
-				blinkOn(LED1);
-				delay(20);
-				blinkOff(LED1);
+                blink(LED2,5,2);
                 key_state = KEYS_NOKEY;
+               
                 btn_times=0;
 			}
 			if (key_state == KEYS_5PRESS) {
-				for(uint8_t l=0; l<btn_times; l++){
-                    blinkOn(LED1);
-                    delay(2);
-                    blinkOff(LED1);
-                    delay(3);
-				}
+                status=STATUS_MAINTENANCE;
                 key_state = KEYS_NOKEY;
                 btn_times=0;
 			}
-
-			if (d == 1) {
-				blinkOn(LED1);
-				status = STATUS_LEAKAGE;
-				turnValveOff();
-			}
+	
 			break;
 
 		case STATUS_LEAKAGE:
 //			d = detectLeakage();
 			//beep(2, 4);
-			if (d == 1) {
-				blinkOn(LED1);
-				status = STATUS_LEAKAGE;
-				turnValveOff();
-			} else {
-				status = STATUS_DUTY;
-				blinkOff(LED1);
-			}
-
+            blinkOn(LED1);
+            leakage();
 			break;
 
-		case STATUS_TEST:
-			//beep(10,3);
+		case STATUS_MAINTENANCE:
+            maintenance();
+			
+            //beep(10,3);
 			break;
 
 		}
