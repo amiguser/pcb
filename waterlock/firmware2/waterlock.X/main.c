@@ -29,6 +29,10 @@ uint8_t btn_pressed = 0; // is button pressed or ...
 uint8_t btn_score = 0; //...how long button pressed
 uint8_t btn_times = 0; //...times button was pressed
 uint8_t dur0=0; uint8_t dur1=0;
+uint8_t led1=0, led1_dur=0,led1_times=0,led1_count,led1_status;
+
+
+
 void setup() {
 	DDRB = (1 << LED1) | (1 << LED2) | (1 << BUZZ);
 	DDRB &= ~(1 << BTN1);
@@ -121,6 +125,39 @@ ISR(TIMER1_OVF_vect){
         btn_pressed = 0;
         
 	}
+    //LEDs control
+    if (1==led1){
+        //blinking
+        if (led1_times>0){
+            led1_count--;
+            if (0==led1_count){
+                led1_status=!led1_status;
+                if (led1_status) {
+                    blinkOn(LED1);
+                } else {
+                    blinkOff(LED1);
+                }
+                led1_times--;
+                led1_count=led1_dur;
+            }
+        }
+        led1=0;
+    }
+    if (2==led1){
+        //blinking
+        led1_count--;
+        if (0==led1_count){
+            led1_status=!led1_status;
+            if (led1_status) {
+                blinkOn(LED1);
+            } else {
+                blinkOff(LED1);
+            }
+            led1_count=led1_dur;
+        }
+        
+    }
+    
 	SREG = sreg;
 	//sei();
 
@@ -169,15 +206,15 @@ uint8_t detectLeakage() {
 	//check voltage
 	DDRC &= ~(1 << LINE1);
 	DDRC &=~(1<<LINE2);
-	_delay_ms(1000);
+	//_delay_ms(1000);
 	r = ReadADC(LINE1);
-	uint8_t v = 1;
+	uint8_t v = LEAK_OK;
 	//blink(LED2, 2, r/100);
-    if (r > 500)
-		v = 0;
+    if (r < 500)
+		v = LEAK_ALARM;
 	//r=ReadADC(LINE2);
-	if (r > 500)
-		v = 0;
+	if (r < 500)
+		v = LEAK_ALARM;
 //	blinkOff(LED1);
 	return v;
 }
@@ -284,7 +321,7 @@ void maintenance() {
     }
 }
 
-/**
+/*
  * Detected leakage or broken wire. In both cases we must close valves and trigger alarm.
  */
 
@@ -294,7 +331,20 @@ void leakage(){
 	blinkOn(LED1);
 	//beep(5,3);
 	turnValveOff();
+    if (VALVES_OFF==valve) {
+        blinkOn(LED2);
+    } else {
+        blinkOff(LED2);
+    }
+
+    blinkOff(LED1);
     uint8_t exit=0, d=1;
+    led1=0;
+    led1_dur=12;
+    led1_status=0;
+    led1_times=0;
+    led1_count=12;
+    led1=2;//start timer blinking
     while(!exit){
         //Exit in two cases: there is no leakage; pressed button long
         d = detectLeakage();
@@ -302,16 +352,18 @@ void leakage(){
             status = STATUS_DUTY;
             exit=1;
         }
-        if (0==d){
+        if (LEAK_OK==d){
             status = STATUS_DUTY;
             exit=1;
         }
         //beep(5,3);
         key_state = KEYS_NOKEY;
-        blink(LED1,2,2);
+        
+        //blink(LED1,2,2);
     }
     EEPROM_write(0, status);
-
+    led1=0;
+    blinkOff(LED1);
 }
 
 
@@ -336,21 +388,23 @@ int main() {
         }
         */
         d = detectLeakage();
-        if (d) {
+        if (LEAK_ALARM==d) {
             status = STATUS_LEAKAGE;
         }
         switch (status) {
 		//default:
 
 		case STATUS_DUTY:
+            led1=0;
 			if (VALVES_OFF==valve) {
                 blinkOn(LED2);
             } else {
                 blinkOff(LED2);
             }
 			if (key_state == KEYS_1PRESS) {
-                blink(LED1, 3,3);
+                //blink(LED1, 3,3);
                 //beep(2,3);
+                
                 if (VALVES_OFF == valve) {
                     turnValveOn();
                 } else {

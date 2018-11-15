@@ -48,4 +48,7 @@
 #define VALVES_ON 1
 #define VALVES_OFF 0x0F
 
+#define LEAK_OK 1
+#define LEAK_ALARM 0
+
 #endif /* PORTS_H_ */
