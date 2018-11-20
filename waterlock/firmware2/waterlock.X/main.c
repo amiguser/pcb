@@ -150,8 +150,10 @@ ISR(TIMER1_OVF_vect){
             led1_status=!led1_status;
             if (led1_status) {
                 blinkOn(LED1);
+                PORTB |= (1 << BUZZ);
             } else {
                 blinkOff(LED1);
+                PORTB &= ~(1 << BUZZ);
             }
             led1_count=led1_dur;
         }
@@ -194,7 +196,7 @@ uint8_t detectLeakage() {
 //	blinkOn(LED1);
 	DDRC |= (1 << LINE1) | (1 << LINE2);
 	PORTC |= (1 << LINE1) | (1 << LINE2);
-	_delay_ms(500);
+	_delay_ms(200);
 	/*
 	 _delay_ms(250);
 	 blinkOff(LED1);
@@ -206,7 +208,7 @@ uint8_t detectLeakage() {
 	//check voltage
 	DDRC &= ~(1 << LINE1);
 	DDRC &=~(1<<LINE2);
-	//_delay_ms(1000);
+	_delay_ms(2000);
 	r = ReadADC(LINE1);
 	uint8_t v = LEAK_OK;
 	//blink(LED2, 2, r/100);
@@ -328,7 +330,13 @@ void maintenance() {
 void leakage(){
 	status = STATUS_LEAKAGE;
 	EEPROM_write(0, status);
-	blinkOn(LED1);
+    led1=0;
+    led1_dur=12;
+    led1_status=0;
+    led1_times=0;
+    led1_count=12;
+    led1=2;//start timer blinking
+	//blinkOn(LED1);
 	//beep(5,3);
 	turnValveOff();
     if (VALVES_OFF==valve) {
@@ -339,12 +347,6 @@ void leakage(){
 
     blinkOff(LED1);
     uint8_t exit=0, d=1;
-    led1=0;
-    led1_dur=12;
-    led1_status=0;
-    led1_times=0;
-    led1_count=12;
-    led1=2;//start timer blinking
     while(!exit){
         //Exit in two cases: there is no leakage; pressed button long
         d = detectLeakage();
