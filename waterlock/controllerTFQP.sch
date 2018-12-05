@@ -31,12 +31,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:maxim
 LIBS:controllerTFQP-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "Water leak protection"
 Date ""
 Rev ""
@@ -871,4 +872,92 @@ Wire Wire Line
 Connection ~ 6200 4750
 Text Label 6200 4200 0    60   ~ 0
 pwr_c2
+$Sheet
+S 3350 5100 1200 1100
+U 5C0639DA
+F0 "RTC_ds1307" 60
+F1 "ds1307.sch" 60
+F2 "rtc_scl" I L 3350 5300 60 
+F3 "rtc_sda" I L 3350 5500 60 
+F4 "rtc_bat" I L 3350 5700 60 
+$EndSheet
+Entry Wire Line
+	2250 3900 2350 4000
+Entry Wire Line
+	2550 3900 2650 4000
+Entry Wire Line
+	2850 3900 2950 4000
+Entry Wire Line
+	4600 2350 4700 2250
+Entry Wire Line
+	4600 2450 4700 2350
+Wire Wire Line
+	4150 2350 4600 2350
+Wire Wire Line
+	4150 2450 4600 2450
+Text Label 4250 2350 0    60   ~ 0
+SDA
+Text Label 4250 2450 0    60   ~ 0
+SCL
+$Comp
+L +5V #PWR?
+U 1 1 5C06FAFE
+P 1550 4250
+F 0 "#PWR?" H 1550 4100 50  0001 C CNN
+F 1 "+5V" H 1550 4390 50  0000 C CNN
+F 2 "" H 1550 4250 50  0001 C CNN
+F 3 "" H 1550 4250 50  0001 C CNN
+	1    1550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C06FB93
+P 1800 4250
+F 0 "R?" V 1880 4250 50  0000 C CNN
+F 1 "10k" V 1800 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1730 4250 50  0001 C CNN
+F 3 "" H 1800 4250 50  0001 C CNN
+	1    1800 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C06FDBF
+P 1800 4500
+F 0 "R?" V 1880 4500 50  0000 C CNN
+F 1 "10k" V 1800 4500 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1730 4500 50  0001 C CNN
+F 3 "" H 1800 4500 50  0001 C CNN
+	1    1800 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 4000 2950 5300
+Wire Wire Line
+	2950 5300 3350 5300
+Wire Wire Line
+	2650 4000 2650 5500
+Wire Wire Line
+	2650 5500 3350 5500
+Wire Wire Line
+	1550 4250 1650 4250
+Wire Wire Line
+	1650 4250 1650 4500
+Wire Wire Line
+	1950 4250 2650 4250
+Connection ~ 2650 4250
+Wire Wire Line
+	1950 4500 2950 4500
+Connection ~ 2950 4500
+Text Label 3050 5300 0    60   ~ 0
+SCL
+Text Label 3050 5500 0    60   ~ 0
+SDA
+Wire Wire Line
+	2350 4000 2350 5700
+Wire Wire Line
+	2350 5700 3350 5700
+Text Label 2900 5700 0    60   ~ 0
+pwr_c1
 $EndSCHEMATC

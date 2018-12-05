@@ -1,6 +1,6 @@
-update=Mon 31 Jul 2017 10:04:56 AM MDT
+update=Вт 04 дек 2018 11:26:50
 version=1
-last_client=kicad
+last_client=eeschema
 [general]
 version=1
 RootSch=
@@ -63,3 +63,4 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+LibName33=maxim
