@@ -70,28 +70,6 @@ F 3 "" H 6500 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x02 J3
-U 1 1 5B7A7357
-P 8600 1300
-F 0 "J3" H 8600 1400 50  0000 C CNN
-F 1 "m1" H 8600 1100 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB132_02x5mm_Straight" H 8600 1300 50  0001 C CNN
-F 3 "" H 8600 1300 50  0001 C CNN
-	1    8600 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x02 J4
-U 1 1 5B7A7664
-P 8600 2050
-F 0 "J4" H 8600 2150 50  0000 C CNN
-F 1 "m2" H 8600 1850 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB132_02x5mm_Straight" H 8600 2050 50  0001 C CNN
-F 3 "" H 8600 2050 50  0001 C CNN
-	1    8600 2050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Conn_01x02 J2
 U 1 1 5B7A7726
 P 9050 700
@@ -118,19 +96,17 @@ Wire Wire Line
 Wire Wire Line
 	8000 1400 8000 1300
 Wire Wire Line
-	8000 1300 8400 1300
+	8000 1300 8600 1300
 Wire Wire Line
-	8400 1400 8150 1400
+	8150 1400 8600 1400
 Wire Wire Line
 	8150 1400 8150 1600
 Wire Wire Line
 	8150 1600 7300 1600
 Wire Wire Line
-	7300 2000 8400 2000
+	7300 2000 8600 2000
 Wire Wire Line
-	8400 2000 8400 2050
-Wire Wire Line
-	8400 2150 7300 2150
+	7300 2150 8450 2150
 Wire Wire Line
 	7300 2150 7300 2200
 $Comp
@@ -735,58 +711,10 @@ Wire Wire Line
 Wire Wire Line
 	1300 2400 1750 2400
 Connection ~ 1750 2400
-$Comp
-L Conn_01x02 J10
-U 1 1 5BFE94F1
-P 8900 2800
-F 0 "J10" H 8900 2900 50  0000 C CNN
-F 1 "m1-sensor" H 8900 2600 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB132_02x5mm_Straight" H 8900 2800 50  0001 C CNN
-F 3 "" H 8900 2800 50  0001 C CNN
-	1    8900 2800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Conn_01x02 J9
-U 1 1 5BFE95A9
-P 8900 2500
-F 0 "J9" H 8900 2600 50  0000 C CNN
-F 1 "m2-sensor" H 8900 2300 50  0000 C CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB132_02x5mm_Straight" H 8900 2500 50  0001 C CNN
-F 3 "" H 8900 2500 50  0001 C CNN
-	1    8900 2500
-	-1   0    0    1   
-$EndComp
-$Sheet
-S 9850 2250 1200 1400
-U 5BFF3A10
-F0 "Postion_control" 60
-F1 "file5BFF3A0F.sch" 60
-F2 "Left_pos_sens_1" I L 9850 2400 60 
-F3 "Left_pos_sens_2" I L 9850 2700 60 
-F4 "Right_pos_sens_2" I L 9850 2850 60 
-F5 "Right_pos_sens_1" I L 9850 2550 60 
-F6 "Left_pos_read_1" I L 9850 3050 60 
-F7 "Left_pos_read_2" I L 9850 3350 60 
-F8 "Right_pos_read_2" I L 9850 3500 60 
-F9 "Right_pos_read_1" I L 9850 3200 60 
-$EndSheet
-Wire Wire Line
-	9100 2400 9850 2400
-Wire Wire Line
-	9100 2500 9700 2500
-Wire Wire Line
-	9700 2500 9700 2550
-Wire Wire Line
-	9700 2550 9850 2550
-Wire Wire Line
-	9100 2700 9850 2700
-Wire Wire Line
-	9100 2800 9500 2800
 Wire Wire Line
 	9500 2800 9500 2850
 Wire Wire Line
-	9500 2850 9850 2850
+	9500 2850 10050 2850
 Wire Bus Line
 	9000 3950 8900 3950
 Wire Bus Line
@@ -806,9 +734,9 @@ Wire Wire Line
 Wire Wire Line
 	9450 3200 9850 3200
 Wire Wire Line
-	9450 3350 9850 3350
+	9450 3350 10050 3350
 Wire Wire Line
-	9450 3500 9850 3500
+	9450 3500 10050 3500
 Text Label 9550 3050 0    60   ~ 0
 SS
 Text Label 9550 3200 0    60   ~ 0
@@ -881,4 +809,184 @@ F2 "rtc_scl" I L 3350 5300 60
 F3 "rtc_sda" I L 3350 5500 60 
 F4 "rtc_bat" I L 3350 5700 60 
 $EndSheet
+Entry Wire Line
+	2250 3900 2350 4000
+Entry Wire Line
+	2550 3900 2650 4000
+Entry Wire Line
+	2850 3900 2950 4000
+Entry Wire Line
+	4600 2350 4700 2250
+Entry Wire Line
+	4600 2450 4700 2350
+Wire Wire Line
+	4150 2350 4600 2350
+Wire Wire Line
+	4150 2450 4600 2450
+Text Label 4250 2350 0    60   ~ 0
+SDA
+Text Label 4250 2450 0    60   ~ 0
+SCL
+$Comp
+L +5V #PWR?
+U 1 1 5C06FAFE
+P 1550 4250
+F 0 "#PWR?" H 1550 4100 50  0001 C CNN
+F 1 "+5V" H 1550 4390 50  0000 C CNN
+F 2 "" H 1550 4250 50  0001 C CNN
+F 3 "" H 1550 4250 50  0001 C CNN
+	1    1550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C06FB93
+P 1800 4250
+F 0 "R?" V 1880 4250 50  0000 C CNN
+F 1 "10k" V 1800 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1730 4250 50  0001 C CNN
+F 3 "" H 1800 4250 50  0001 C CNN
+	1    1800 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C06FDBF
+P 1800 4500
+F 0 "R?" V 1880 4500 50  0000 C CNN
+F 1 "10k" V 1800 4500 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 1730 4500 50  0001 C CNN
+F 3 "" H 1800 4500 50  0001 C CNN
+	1    1800 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 4000 2950 5300
+Wire Wire Line
+	2950 5300 3350 5300
+Wire Wire Line
+	2650 4000 2650 5500
+Wire Wire Line
+	2650 5500 3350 5500
+Wire Wire Line
+	1550 4250 1650 4250
+Wire Wire Line
+	1650 4250 1650 4500
+Wire Wire Line
+	1950 4250 2650 4250
+Connection ~ 2650 4250
+Wire Wire Line
+	1950 4500 2950 4500
+Connection ~ 2950 4500
+Text Label 3050 5300 0    60   ~ 0
+SCL
+Text Label 3050 5500 0    60   ~ 0
+SDA
+Wire Wire Line
+	2350 4000 2350 5700
+Wire Wire Line
+	2350 5700 3350 5700
+Text Label 2900 5700 0    60   ~ 0
+pwr_c1
+$Sheet
+S 10050 2300 900  1350
+U 5C1B51FD
+F0 "MotorsShield" 60
+F1 "Motors.sch" 60
+F2 "GND" I R 10950 3550 60 
+F3 "d1sensor" I L 10050 3500 60 
+F4 "m1black" I L 10050 2550 60 
+F5 "m1sensor" I L 10050 2400 60 
+F6 "d2sensor" I L 10050 3350 60 
+F7 "m2black" I L 10050 2850 60 
+F8 "m2sensor" I L 10050 2700 60 
+F9 "vcc-in" I R 10950 3400 60 
+$EndSheet
+$Comp
+L +5V #PWR?
+U 1 1 5C1BAB66
+P 11100 3300
+F 0 "#PWR?" H 11100 3150 50  0001 C CNN
+F 1 "+5V" H 11100 3440 50  0000 C CNN
+F 2 "" H 11100 3300 50  0001 C CNN
+F 3 "" H 11100 3300 50  0001 C CNN
+	1    11100 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C1BD542
+P 11100 3600
+F 0 "#PWR?" H 11100 3350 50  0001 C CNN
+F 1 "GND" H 11100 3450 50  0000 C CNN
+F 2 "" H 11100 3600 50  0001 C CNN
+F 3 "" H 11100 3600 50  0001 C CNN
+	1    11100 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 3400 11100 3400
+Wire Wire Line
+	11100 3400 11100 3300
+Wire Wire Line
+	11100 3600 11100 3550
+Wire Wire Line
+	11100 3550 10950 3550
+Connection ~ 8300 1400
+Connection ~ 8250 2150
+Wire Wire Line
+	9250 2800 9250 3050
+Wire Wire Line
+	9250 3050 8250 3050
+Wire Wire Line
+	8250 3050 8250 2150
+Connection ~ 9250 2800
+$Comp
+L Conn_01x03 J?
+U 1 1 5C1C6C52
+P 8800 1400
+F 0 "J?" H 8800 1600 50  0000 C CNN
+F 1 "m1" H 8800 1200 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB133_03x5mm_Straight" H 8800 1400 50  0001 C CNN
+F 3 "" H 8800 1400 50  0001 C CNN
+	1    8800 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03 J?
+U 1 1 5C1C7E9F
+P 8800 2100
+F 0 "J?" H 8800 2300 50  0000 C CNN
+F 1 "m2" H 8800 1900 50  0000 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB133_03x5mm_Straight" H 8800 2100 50  0001 C CNN
+F 3 "" H 8800 2100 50  0001 C CNN
+	1    8800 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 1500 8600 1650
+Wire Wire Line
+	8600 1650 9900 1650
+Wire Wire Line
+	9900 1650 9900 2400
+Wire Wire Line
+	9900 2400 10050 2400
+Wire Wire Line
+	10050 2550 9800 2550
+Wire Wire Line
+	9800 2550 9800 1700
+Wire Wire Line
+	9800 1700 8300 1700
+Wire Wire Line
+	8300 1700 8300 1400
+Wire Wire Line
+	8450 2150 8450 2100
+Wire Wire Line
+	8450 2100 8600 2100
+Wire Wire Line
+	8600 2200 8600 2700
+Wire Wire Line
+	8600 2700 10050 2700
+Wire Wire Line
+	9500 2800 9250 2800
 $EndSCHEMATC
