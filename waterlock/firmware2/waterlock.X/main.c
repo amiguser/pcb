@@ -194,8 +194,8 @@ uint8_t detectLeakage() {
 	uint16_t r = 0;
 	//charge remote capacitor
 //	blinkOn(LED1);
-	DDRC |= (1 << LINE1) | (1 << LINE2);
-	PORTC |= (1 << LINE1) | (1 << LINE2);
+	DDRC |= (1 << LINE1) ;
+	PORTC |= (1 << LINE1);
 	_delay_ms(200);
 	/*
 	 _delay_ms(250);
@@ -204,10 +204,10 @@ uint8_t detectLeakage() {
 	 blinkOn(LED1);
 	 */
 	PORTC &= ~(1 << LINE1);
-    PORTC &= ~(1 << LINE2);
+    //PORTC &= ~(1 << LINE2);
 	//check voltage
 	DDRC &= ~(1 << LINE1);
-	DDRC &=~(1<<LINE2);
+	//DDRC &=~(1<<LINE2);
 	_delay_ms(2000);
 	r = ReadADC(LINE1);
 	uint8_t v = LEAK_OK;
@@ -241,17 +241,30 @@ uint8_t detectBATPower() {
 
 void turnValveOff() {
 	uint16_t timer = 1000 * TIME2TURN;
-	PORTD &= ~(1 << EN12);
+	uint16_t tick=0;
+    DDRC &=~(1<<LINE2);
+    
+    PORTD &= ~(1 << EN12);
 	PORTD &= ~(1 << EN34); //set motors off
 	PORTD |= (1 << M1A) | (1 << M3A);
 	PORTD &= ~(1 << M2A);
 	PORTD &= ~(1 << M4A);
 	PORTD |= (1 << EN12) | (1 << EN34); //start motors
-	_delay_ms(timer);
-	PORTD &= ~(1 << EN12);
-	PORTD &= ~(1 << EN34); //set motors off
-    valve = VALVES_OFF;
-    EEPROM_write(10, 0x0F);  //mark as closed
+	while (tick < TIME2TURN){
+        _delay_ms(1000);
+        tick++;
+        if ((PINC & (1<<LINE2))==0) {
+            break;
+        }
+    }
+	if (tick<TIME2TURN) {
+        PORTD &= ~(1 << EN12);
+        PORTD &= ~(1 << EN34); //set motors off
+        valve = VALVES_OFF;
+        EEPROM_write(10, 0x0F);  //mark as closed
+    } else {
+        
+    }
 }
 
 void turnValveOn() {
