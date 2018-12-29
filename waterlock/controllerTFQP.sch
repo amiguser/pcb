@@ -989,4 +989,12 @@ Wire Wire Line
 	8600 2700 10050 2700
 Wire Wire Line
 	9500 2800 9250 2800
+Wire Wire Line
+	4150 2650 4600 2650
+Wire Wire Line
+	4150 2750 4600 2750
+Text Label 4250 2650 0    60   ~ 0
+RX
+Text Label 4250 2750 0    60   ~ 0
+TX
 $EndSCHEMATC
