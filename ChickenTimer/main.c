@@ -6,6 +6,7 @@
  */
 #define TM1637_DISPLAY
 #define F_CPU 8000000
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
@@ -55,7 +56,7 @@ uint8_t keys_status=0;
 uint8_t keys[4];
 uint8_t keys_clear=0;
 uint8_t gHour, gMin;
-
+uint16_t counter=0;
 inline void clearStr(char* str)
 {
 	for(IT=0;IT<LEN;IT++)
@@ -109,9 +110,14 @@ ISR(TIMER1_OVF_vect){
 	gMin = ds1302_read_byte(min_r);
 	//m = (m & 0xF0)*10 + (m & 0x0F);
 	k= gHour*100+gMin;
-    TM1637_point(point);
-    point++;
-    point=point & 0x01;
+    
+    //counter++;
+    //if (counter>2) {
+        point++;
+        TM1637_point(point&0x01);
+        
+      //  counter=0;
+    //}
 	TM1637_display_int_decimal(k);
 	//sei();
 

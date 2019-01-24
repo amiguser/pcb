@@ -80,13 +80,13 @@ _delay_us(2);
 void TM1637_coding_all(uint8_t DispData[])//шифратор
 {
 	uint8_t PointData;
-	PointData = 0x80;
-	//if(_PointFlag == POINT_ON)PointData = 0x80;	else PointData = 0;
+	//PointData = 0x80;
+	if(_PointFlag == POINT_ON) PointData = 0x80;	else PointData = 0;
 	for(uint8_t i = 0;i < 4;i ++)
 	{
 		if(DispData[i] == 0x7f)DispData[i] = 0x00;
-		else DispData[i] = TubeTab[DispData[i]];// + PointData; // закоментированно, так как у моего дисплея нет десятичных точек
-	DispData[i] += 0x80;
+		else DispData[i] = TubeTab[DispData[i]] + PointData; // закоментированно, так как у моего дисплея нет десятичных точек
+        //DispData[i] |= 0x80;
 	}
 	if((_DispType == D4056A)&&(DecPoint != 3))
 	{
@@ -97,10 +97,11 @@ void TM1637_coding_all(uint8_t DispData[])//шифратор
 int8_t TM1637_coding(uint8_t DispData)// шифратор всех знакомест
 {
 	uint8_t PointData;
-	PointData = 0x80;
-	//if(_PointFlag == POINT_ON)PointData = 0x80;else PointData = 0;
+	PointData = 0x00;
+	if(_PointFlag == POINT_ON)PointData = 0x00;else PointData = 0x00;
 	if(DispData == 0x7f) DispData = 0x00 + PointData;
 	else DispData = TubeTab[DispData] + PointData;
+    //DispData|=PointData;
 	return DispData;
 }
 
@@ -246,6 +247,6 @@ void TM1637_set(uint8_t brightness,uint8_t SetData,uint8_t SetAddr)// по бо�
 }
 void TM1637_point(uint8_t PointFlag)//не знаю зачем скопировал, пусть будет
 {
-  if(_DispType == D4036B) _PointFlag = PointFlag;
+  _PointFlag = PointFlag;
 }
 

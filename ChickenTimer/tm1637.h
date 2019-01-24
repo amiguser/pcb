@@ -38,8 +38,8 @@
 #define INDEX_NEGATIVE_SIGN	16
 #define INDEX_BLANK			17
 /************definitions for type of the 4-Digit Display*********************/
-#define D4036B 1
-#define D4056A 0
+#define D4036B 0
+#define D4056A 1
 
 void TM1637_writeByte(int8_t wr_data);
 void TM1637_start(void);
