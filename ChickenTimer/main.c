@@ -52,11 +52,14 @@ uint8_t point=1;
 register unsigned char IT asm("r16");
 uint8_t mode = MODE_KEYS;
 uint8_t menu_on=0;
+uint8_t enc_old=0;
+uint8_t EncData=128;
 uint8_t keys_status=0;
 uint8_t keys[4];
 uint8_t keys_clear=0;
 uint8_t gHour, gMin;
 uint16_t counter=0;
+uint8_t timerMode=0;//0-show time: duty, 1-management: keys.
 inline void clearStr(char* str)
 {
 	for(IT=0;IT<LEN;IT++)
@@ -103,7 +106,7 @@ ISR(TIMER1_OVF_vect){
 	uint16_t k;
 	TCNT1 = 0xFFFF-0xC800;//init counter for 1s
 	//keyScan();
-
+    
 	gHour = ds1302_read_byte(hour_r);
 	gHour = (gHour & 0x3F);
 	//h = (h & 0xF0)*10 + (h & 0x0F);
@@ -122,47 +125,41 @@ ISR(TIMER1_OVF_vect){
 	//sei();
 
 }
-
+/**
+ * encoder read
+ */
 void keyScan(){
-	uint8_t i = 0;
-	for (i=0; i<4; i++){
-		keys[i]=0;
+	uint8_t enc_new = KEY_PIN & 0x0E;
+    enc_new=enc_new>>2;
+    switch(enc_old)
+	{
+	case 2:
+		{
+		if(enc_new == 3) EncData++;
+		if(enc_new == 0) EncData--; 
+		break;
+		}
+ 
+	case 0:
+		{
+		if(enc_new == 2) EncData++;
+		if(enc_new == 1) EncData--; 
+		break;
+		}
+	case 1:
+		{
+		if(enc_new == 0) EncData++;
+		if(enc_new == 3) EncData--; 
+		break;
+		}
+	case 3:
+		{
+		if(enc_new == 1) EncData++;
+		if(enc_new == 2) EncData--; 
+		break;
+		}
 	}
-	for (uint8_t j = 0; j < 2; j++) {
-		if (!(bit_is_set(PIND, KEY_1))) {
-			keys[0]++;
-		}
-
-		if (!(bit_is_set(KEY_PIN, KEY_1))) {
-			keys[1]++;
-		}
-		if (!(bit_is_set(KEY_PIN, KEY_2))) {
-			keys[2]++;
-		}
-		if (!(bit_is_set(KEY_PIN, KEY_3))) {
-			keys[3]++;
-		}
-		_delay_ms(20);
-	}
-	keys_status=0;
-
-	for (i=0; i<4; i++){
-		if (keys[i]>1){
-			sbi(keys_status, i);
-			//keys_status|=(1<<(i));
-		}
-	}
-/*
-	keys_clear++;
-	//Clear keys status after ~3s
-	if (keys_clear>150) {
-		for (i=0; i<4; i++){
-			keys[i]=0;
-		}
-		keys_status=0;
-		keys_clear=0;
-	}
-*/
+    enc_old = enc_new;
 }
 
 void menuKeyScan(){
@@ -447,8 +444,8 @@ int main(void) {
 			}
 		}
 		if (MODE_KEYS == mode) {
-			//keyScan();
-            keys_status=0;
+			keyScan();
+            //keys_status=0;
 			if (keys_status){
 				TM1637_display_int_decimal(keys_status);
 //				_delay_ms(50);
@@ -492,7 +489,7 @@ int main(void) {
 			PORTD &= ~(1 << RELAY_PORT);
 		}
 
-			_delay_ms(500);
+			_delay_ms(1);
 	}
 }
 

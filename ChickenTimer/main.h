@@ -53,7 +53,7 @@
 /*
  * definitions for keyboard
  */
-#define KEY_1 PB0
+#define KEY_1 PB1
 #define KEY_2 PB2
 #define KEY_3 PB3
 //#define KEY_0 PD2 //Menu key (INT0)
