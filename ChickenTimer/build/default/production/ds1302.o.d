@@ -1,60 +1,62 @@
 build/default/production/ds1302.o.d build/default/production/ds1302.o: \
- ds1302.c /usr/lib/avr/toolchain-avr-linux/avr/include/util/delay.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/inttypes.h \
- /usr/lib/avr/toolchain-avr-linux/lib/gcc/avr/5.4.0/include/stdint.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/stdint.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/util/delay_basic.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/math.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/stdio.h \
- /usr/lib/avr/toolchain-avr-linux/lib/gcc/avr/5.4.0/include/stdarg.h \
- /usr/lib/avr/toolchain-avr-linux/lib/gcc/avr/5.4.0/include/stddef.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/stdlib.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/io.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/sfr_defs.h \
- /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/include/avr/iom8.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/portpins.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/common.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/version.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/fuse.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/lock.h \
- /usr/lib/avr/toolchain-avr-linux/avr/include/avr/interrupt.h ds1302.h
+ ds1302.c \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/inttypes.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stdint.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdint.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdio.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stdarg.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdlib.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/sfr_defs.h \
+ /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/include/avr/iom8.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/portpins.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/common.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/version.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/fuse.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h \
+ ds1302.h
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/util/delay.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/inttypes.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/inttypes.h:
 
-/usr/lib/avr/toolchain-avr-linux/lib/gcc/avr/5.4.0/include/stdint.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stdint.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/stdint.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdint.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/util/delay_basic.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/math.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/stdio.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdio.h:
 
-/usr/lib/avr/toolchain-avr-linux/lib/gcc/avr/5.4.0/include/stdarg.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stdarg.h:
 
-/usr/lib/avr/toolchain-avr-linux/lib/gcc/avr/5.4.0/include/stddef.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/stdlib.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdlib.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/io.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/sfr_defs.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/sfr_defs.h:
 
-/opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/include/avr/iom8.h:
+/opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/include/avr/iom8.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/portpins.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/portpins.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/common.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/common.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/version.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/version.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/fuse.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/fuse.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/lock.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h:
 
-/usr/lib/avr/toolchain-avr-linux/avr/include/avr/interrupt.h:
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h:
 
 ds1302.h:

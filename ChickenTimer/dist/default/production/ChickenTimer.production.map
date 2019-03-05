@@ -1,49 +1,49 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
                               build/default/production/tm1637.o (__subsf3)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o) (__addsf3x)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o) (__addsf3x)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
                               build/default/production/tm1637.o (__ltsf2)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
                               build/default/production/tm1637.o (__fixsfsi)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o) (__fixunssfsi)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o) (__fixunssfsi)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
                               build/default/production/tm1637.o (__floatsisf)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o) (__fp_cmp)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_inf)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_nan)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_pscA)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_pscB)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o) (__fp_round)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_split3)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_zero)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o) (__fp_cmp)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_inf)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_nan)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_pscA)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_pscB)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o) (__fp_round)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_split3)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o) (__fp_zero)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
                               build/default/production/tm1637.o (__gtsf2)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
                               build/default/production/tm1637.o (__mulsf3)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o) (__mulsf3x)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o) (__mulsf3x)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
                               build/default/production/main.o (__divmodhi4)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
-                              /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o (exit)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                              /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o (exit)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
                               build/default/production/main.o (__do_copy_data)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
                               build/default/production/ds1302.o (__do_clear_bss)
-/usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
-                              /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                              /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o) (__udivmodhi4)
 
 Allocating common symbols
 Common symbol       size              file
@@ -68,8 +68,8 @@ bt_buffer           0x10              build/default/production/main.o
 
 Discarded input sections
 
- .data          0x0000000000000000        0x0 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
- .bss           0x0000000000000000        0x0 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .data          0x0000000000000000        0x0 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
+ .bss           0x0000000000000000        0x0 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
  .text          0x0000000000000000        0x0 build/default/production/ds1302.o
  .data          0x0000000000000000        0x0 build/default/production/ds1302.o
  .bss           0x0000000000000000        0x0 build/default/production/ds1302.o
@@ -79,19 +79,24 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/lib_eeprom.o
  .data          0x0000000000000000        0x0 build/default/production/lib_eeprom.o
  .bss           0x0000000000000000        0x0 build/default/production/lib_eeprom.o
+ .text.EEPROM_write
+                0x0000000000000000       0x18 build/default/production/lib_eeprom.o
  .text          0x0000000000000000        0x0 build/default/production/main.o
  .data          0x0000000000000000        0x0 build/default/production/main.o
  .bss           0x0000000000000000        0x0 build/default/production/main.o
- .text.menuKeyScan
-                0x0000000000000000        0x4 build/default/production/main.o
+ .text.save_eeprom
+                0x0000000000000000       0x38 build/default/production/main.o
  .text.m_delay_ms
                 0x0000000000000000       0x28 build/default/production/main.o
  .text.digit_code
                 0x0000000000000000       0x26 build/default/production/main.o
- .bss.r.1890    0x0000000000000000        0x2 build/default/production/main.o
+ .bss.r.1899    0x0000000000000000        0x2 build/default/production/main.o
+ .bss.timerMode
+                0x0000000000000000        0x1 build/default/production/main.o
  .bss.counter   0x0000000000000000        0x2 build/default/production/main.o
  .bss.keys_clear
                 0x0000000000000000        0x1 build/default/production/main.o
+ .bss.menu_on   0x0000000000000000        0x1 build/default/production/main.o
  .text          0x0000000000000000        0x0 build/default/production/tm1637.o
  .data          0x0000000000000000        0x0 build/default/production/tm1637.o
  .bss           0x0000000000000000        0x0 build/default/production/tm1637.o
@@ -99,174 +104,174 @@ Discarded input sections
                 0x0000000000000000       0x14 build/default/production/tm1637.o
  .text.TM1637_display_float_decimal
                 0x0000000000000000      0x194 build/default/production/tm1637.o
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xa /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
+                0x0000000000000000        0xa /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0xc0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
+                0x0000000000000000       0xc0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(addsf3x.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0x8 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
+                0x0000000000000000        0x8 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(cmpsf2.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xa /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
+                0x0000000000000000        0xa /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixsfsi.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x58 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
+                0x0000000000000000       0x58 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fixunssfsi.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x7a /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
+                0x0000000000000000       0x7a /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x48 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
+                0x0000000000000000       0x48 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_cmp.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xc /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
+                0x0000000000000000        0xc /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0x6 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
+                0x0000000000000000        0x6 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
+                0x0000000000000000        0xe /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
+                0x0000000000000000        0xe /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x22 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
+                0x0000000000000000       0x22 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_round.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0x44 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
+                0x0000000000000000       0x44 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0xe /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
+                0x0000000000000000        0xe /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0x8 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
+                0x0000000000000000        0x8 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(gesf2.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
  .text.avr-libc.fplib
-                0x0000000000000000        0x4 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
+                0x0000000000000000        0x4 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
  .text.avr-libc.fplib
-                0x0000000000000000       0xc2 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x0000000000000000       0xc2 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
- .text          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
- .data          0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
- .bss           0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
 text             0x0000000000000000 0x0000000000002000 xr
-data             0x0000000000800060 0x0000000000000400 rw !x
-eeprom           0x0000000000810000 0x0000000000000200 rw !x
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
 fuse             0x0000000000820000 0x0000000000000002 rw !x
 lock             0x0000000000830000 0x0000000000000400 rw !x
 signature        0x0000000000840000 0x0000000000000400 rw !x
@@ -275,24 +280,24 @@ user_signatures  0x0000000000850000 0x0000000000000400 rw !x
 
 Linker script and memory map
 
-LOAD /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+LOAD /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
 LOAD build/default/production/ds1302.o
 LOAD build/default/production/lib_eeprom.o
 LOAD build/default/production/main.o
 LOAD build/default/production/tm1637.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
 START GROUP
-LOAD /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a
+LOAD /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a
 END GROUP
 START GROUP
-LOAD /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a
-LOAD /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a
-LOAD /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a
-LOAD /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/libatmega8.a
+LOAD /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a
+LOAD /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a
+LOAD /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a
+LOAD /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/libatmega8.a
 END GROUP
-                [0x0000000000002000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x2000
-                [0x0000000000000400]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
-                [0x0000000000000200]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                0x0000000000002000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x2000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
                 [0x0000000000000002]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
                 0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
                 0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
@@ -388,9 +393,9 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0xc10
+.text           0x0000000000000000      0x924
  *(.vectors)
- .vectors       0x0000000000000000       0x26 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .vectors       0x0000000000000000       0x26 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
                 0x0000000000000000                __vectors
                 0x0000000000000000                __vector_default
  *(.vectors)
@@ -418,20 +423,20 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000026        0x0 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .init0         0x0000000000000026        0x0 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
                 0x0000000000000026                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000000026        0xc /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .init2         0x0000000000000026        0xc /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000032       0x16 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .init4         0x0000000000000032       0x16 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
                 0x0000000000000032                __do_copy_data
- .init4         0x0000000000000048       0x10 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .init4         0x0000000000000048       0x10 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
                 0x0000000000000048                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -443,10 +448,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000058        0x4 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .init9         0x0000000000000058        0x4 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
  *(.init9)
  *(.text)
- .text          0x000000000000005c        0x2 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .text          0x000000000000005c        0x2 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
                 0x000000000000005c                __vector_1
                 0x000000000000005c                __vector_12
                 0x000000000000005c                __bad_interrupt
@@ -481,79 +486,76 @@ END GROUP
  .text.ds1302_write_byte
                 0x00000000000000f8       0x1c build/default/production/ds1302.o
                 0x00000000000000f8                ds1302_write_byte
- .text.EEPROM_write
-                0x0000000000000114       0x18 build/default/production/lib_eeprom.o
-                0x0000000000000114                EEPROM_write
  .text.EEPROM_read
-                0x000000000000012c       0x18 build/default/production/lib_eeprom.o
-                0x000000000000012c                EEPROM_read
+                0x0000000000000114       0x18 build/default/production/lib_eeprom.o
+                0x0000000000000114                EEPROM_read
  .text.usart_init
-                0x0000000000000144       0x16 build/default/production/main.o
-                0x0000000000000144                usart_init
+                0x000000000000012c       0x16 build/default/production/main.o
+                0x000000000000012c                usart_init
  .text.__vector_11
-                0x000000000000015a       0x4e build/default/production/main.o
-                0x000000000000015a                __vector_11
+                0x0000000000000142       0x4e build/default/production/main.o
+                0x0000000000000142                __vector_11
  .text.__vector_8
-                0x00000000000001a8       0x8a build/default/production/main.o
-                0x00000000000001a8                __vector_8
- .text.keyScan  0x0000000000000232       0xa0 build/default/production/main.o
-                0x0000000000000232                keyScan
- .text.save_eeprom
-                0x00000000000002d2       0x38 build/default/production/main.o
-                0x00000000000002d2                save_eeprom
- .text.setup    0x000000000000030a       0xa4 build/default/production/main.o
-                0x000000000000030a                setup
- .text.dec2bcd  0x00000000000003ae       0x26 build/default/production/main.o
-                0x00000000000003ae                dec2bcd
- .text.menu     0x00000000000003d4      0x2b0 build/default/production/main.o
-                0x00000000000003d4                menu
- .text.main     0x0000000000000684      0x15a build/default/production/main.o
-                0x0000000000000684                main
+                0x0000000000000190       0x92 build/default/production/main.o
+                0x0000000000000190                __vector_8
+ .text.keyScan  0x0000000000000222       0xa0 build/default/production/main.o
+                0x0000000000000222                keyScan
+ .text.menuKeyScan
+                0x00000000000002c2       0x22 build/default/production/main.o
+                0x00000000000002c2                menuKeyScan
+ .text.setup    0x00000000000002e4       0xa4 build/default/production/main.o
+                0x00000000000002e4                setup
+ .text.dec2bcd  0x0000000000000388       0x26 build/default/production/main.o
+                0x0000000000000388                dec2bcd
+ .text.menu     0x00000000000003ae       0xe0 build/default/production/main.o
+                0x00000000000003ae                menu
+ .text.main     0x000000000000048e       0x64 build/default/production/main.o
+                0x000000000000048e                main
  .text.TM1637_writeByte
-                0x00000000000007de      0x10c build/default/production/tm1637.o
-                0x00000000000007de                TM1637_writeByte
+                0x00000000000004f2      0x10c build/default/production/tm1637.o
+                0x00000000000004f2                TM1637_writeByte
  .text.TM1637_start
-                0x00000000000008ea       0x4a build/default/production/tm1637.o
-                0x00000000000008ea                TM1637_start
+                0x00000000000005fe       0x4a build/default/production/tm1637.o
+                0x00000000000005fe                TM1637_start
  .text.TM1637_stop
-                0x0000000000000934       0x6a build/default/production/tm1637.o
-                0x0000000000000934                TM1637_stop
+                0x0000000000000648       0x6a build/default/production/tm1637.o
+                0x0000000000000648                TM1637_stop
  .text.TM1637_coding_all
-                0x000000000000099e       0x5a build/default/production/tm1637.o
-                0x000000000000099e                TM1637_coding_all
+                0x00000000000006b2       0x5a build/default/production/tm1637.o
+                0x00000000000006b2                TM1637_coding_all
  .text.TM1637_display_all
-                0x00000000000009f8       0x76 build/default/production/tm1637.o
-                0x00000000000009f8                TM1637_display_all
+                0x000000000000070c       0x76 build/default/production/tm1637.o
+                0x000000000000070c                TM1637_display_all
  .text.TM1637_display
-                0x0000000000000a6e       0x3e build/default/production/tm1637.o
-                0x0000000000000a6e                TM1637_display
+                0x0000000000000782       0x3e build/default/production/tm1637.o
+                0x0000000000000782                TM1637_display
  .text.TM1637_display_int_decimal
-                0x0000000000000aac       0xa2 build/default/production/tm1637.o
-                0x0000000000000aac                TM1637_display_int_decimal
+                0x00000000000007c0       0xa2 build/default/production/tm1637.o
+                0x00000000000007c0                TM1637_display_int_decimal
  .text.TM1637_clearDisplay
-                0x0000000000000b4e       0x1a build/default/production/tm1637.o
-                0x0000000000000b4e                TM1637_clearDisplay
+                0x0000000000000862       0x1a build/default/production/tm1637.o
+                0x0000000000000862                TM1637_clearDisplay
  .text.TM1637_init
-                0x0000000000000b68       0x40 build/default/production/tm1637.o
-                0x0000000000000b68                TM1637_init
+                0x000000000000087c       0x40 build/default/production/tm1637.o
+                0x000000000000087c                TM1637_init
  .text.TM1637_set
-                0x0000000000000ba8       0x10 build/default/production/tm1637.o
-                0x0000000000000ba8                TM1637_set
+                0x00000000000008bc       0x10 build/default/production/tm1637.o
+                0x00000000000008bc                TM1637_set
  .text.TM1637_point
-                0x0000000000000bb8        0x6 build/default/production/tm1637.o
-                0x0000000000000bb8                TM1637_point
+                0x00000000000008cc        0x6 build/default/production/tm1637.o
+                0x00000000000008cc                TM1637_point
  .text.libgcc.div
-                0x0000000000000bbe       0x26 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
-                0x0000000000000bbe                __divmodhi4
-                0x0000000000000bbe                _div
+                0x00000000000008d2       0x26 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x00000000000008d2                __divmodhi4
+                0x00000000000008d2                _div
  .text.libgcc.div
-                0x0000000000000be4       0x28 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
-                0x0000000000000be4                __udivmodhi4
-                0x0000000000000c0c                . = ALIGN (0x2)
+                0x00000000000008f8       0x28 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x00000000000008f8                __udivmodhi4
+                0x0000000000000920                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000c0c        0x0 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
-                0x0000000000000c0c                exit
-                0x0000000000000c0c                _exit
+ .fini9         0x0000000000000920        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000920                exit
+                0x0000000000000920                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -572,72 +574,76 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000c0c        0x4 /usr/lib/avr/toolchain-avr-linux/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .fini0         0x0000000000000920        0x4 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000c10                _etext = .
+                0x0000000000000924                _etext = .
 
-.data           0x0000000000800060       0x16 load address 0x0000000000000c10
+.data           0x0000000000800060       0x1a load address 0x0000000000000924
                 0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.mode     0x0000000000800060        0x1 build/default/production/main.o
-                0x0000000000800060                mode
- .data.point    0x0000000000800061        0x1 build/default/production/main.o
-                0x0000000000800061                point
+ .data.EncData  0x0000000000800060        0x1 build/default/production/main.o
+                0x0000000000800060                EncData
+ .data.mmode    0x0000000000800061        0x1 build/default/production/main.o
+                0x0000000000800061                mmode
+ .data.mode     0x0000000000800062        0x1 build/default/production/main.o
+                0x0000000000800062                mode
+ .data.lampMode
+                0x0000000000800063        0x1 build/default/production/main.o
+                0x0000000000800063                lampMode
+ .data.point    0x0000000000800064        0x1 build/default/production/main.o
+                0x0000000000800064                point
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.TubeTab
-                0x0000000000800062       0x14 build/default/production/tm1637.o
+                0x0000000000800065       0x14 build/default/production/tm1637.o
  *(.gnu.linkonce.r*)
-                0x0000000000800076                . = ALIGN (0x2)
-                0x0000000000800076                _edata = .
-                0x0000000000800076                PROVIDE (__data_end, .)
+                0x000000000080007a                . = ALIGN (0x2)
+ *fill*         0x0000000000800079        0x1 
+                0x000000000080007a                _edata = .
+                0x000000000080007a                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800076       0x30
-                0x0000000000800076                PROVIDE (__bss_start, .)
+.bss            0x000000000080007a       0x2e
+                0x000000000080007a                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.keys_status
-                0x0000000000800076        0x1 build/default/production/main.o
-                0x0000000000800076                keys_status
- .bss.EncData   0x0000000000800077        0x1 build/default/production/main.o
-                0x0000000000800077                EncData
- .bss.enc_old   0x0000000000800078        0x1 build/default/production/main.o
-                0x0000000000800078                enc_old
- .bss.menu_on   0x0000000000800079        0x1 build/default/production/main.o
-                0x0000000000800079                menu_on
- .bss.done      0x000000000080007a        0x1 build/default/production/main.o
-                0x000000000080007a                done
- .bss.IDX       0x000000000080007b        0x1 build/default/production/main.o
-                0x000000000080007b                IDX
+                0x000000000080007a        0x1 build/default/production/main.o
+                0x000000000080007a                keys_status
+ .bss.enc_old   0x000000000080007b        0x1 build/default/production/main.o
+                0x000000000080007b                enc_old
+ .bss.done      0x000000000080007c        0x1 build/default/production/main.o
+                0x000000000080007c                done
+ .bss.IDX       0x000000000080007d        0x1 build/default/production/main.o
+                0x000000000080007d                IDX
  *(COMMON)
- COMMON         0x000000000080007c       0x21 build/default/production/main.o
-                0x000000000080007c                gMin
-                0x000000000080007d                gHour
-                0x000000000080007e                timerOn
-                0x0000000000800082                ctime
-                0x0000000000800089                keys
-                0x000000000080008d                bt_buffer
- COMMON         0x000000000080009d        0x9 build/default/production/tm1637.o
-                0x000000000080009d                DecPoint
-                0x000000000080009e                Clkpin
-                0x000000000080009f                Cmd_SetAddr
-                0x00000000008000a0                Cmd_SetData
-                0x00000000008000a1                _DispType
-                0x00000000008000a2                BlankingFlag
-                0x00000000008000a3                Cmd_DispCtrl
-                0x00000000008000a4                Datapin
-                0x00000000008000a5                _PointFlag
-                0x00000000008000a6                PROVIDE (__bss_end, .)
-                0x0000000000000c10                __data_load_start = LOADADDR (.data)
-                0x0000000000000c26                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x000000000080007e       0x21 build/default/production/main.o
+                0x000000000080007e                gMin
+                0x000000000080007f                gHour
+                0x0000000000800080                timerOn
+                0x0000000000800084                ctime
+                0x000000000080008b                keys
+                0x000000000080008f                bt_buffer
+ COMMON         0x000000000080009f        0x9 build/default/production/tm1637.o
+                0x000000000080009f                DecPoint
+                0x00000000008000a0                Clkpin
+                0x00000000008000a1                Cmd_SetAddr
+                0x00000000008000a2                Cmd_SetData
+                0x00000000008000a3                _DispType
+                0x00000000008000a4                BlankingFlag
+                0x00000000008000a5                Cmd_DispCtrl
+                0x00000000008000a6                Datapin
+                0x00000000008000a7                _PointFlag
+                0x00000000008000a8                PROVIDE (__bss_end, .)
+                0x0000000000000924                __data_load_start = LOADADDR (.data)
+                0x000000000000093e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00000000008000a6        0x0
+.noinit         0x00000000008000a8        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x00000000008000a6                _end = .
+                0x00000000008000a8                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
@@ -688,7 +694,7 @@ END GROUP
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c
  .note.gnu.avr.deviceinfo
-                0x0000000000000000       0x3c /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+                0x0000000000000000       0x3c /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -713,22 +719,22 @@ END GROUP
 
 .debug_info     0x0000000000000000      0x48c
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000      0x48c /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .debug_info    0x0000000000000000      0x48c /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
 
 .debug_abbrev   0x0000000000000000      0x44e
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0x44e /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .debug_abbrev  0x0000000000000000      0x44e /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
 
 .debug_line     0x0000000000000000      0x109
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000      0x109 /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .debug_line    0x0000000000000000      0x109 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
 
 .debug_frame
  *(.debug_frame)
 
 .debug_str      0x0000000000000000      0x17a
  *(.debug_str)
- .debug_str     0x0000000000000000      0x17a /opt/microchip/mplabx/v5.10/packs/Atmel/ATmega_DFP/1.2.285/gcc/dev/atmega8/avr4/crtatmega8.o
+ .debug_str     0x0000000000000000      0x17a /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
 
 .debug_loc
  *(.debug_loc)

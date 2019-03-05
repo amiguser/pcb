@@ -53,19 +53,32 @@
 /*
  * definitions for keyboard
  */
-#define KEY_1 PB1
-#define KEY_2 PB2
-#define KEY_3 PB3
+#define KEY_1 PB1 //button
+#define KEY_2 PB2 //right
+#define KEY_3 PB3 //left
 //#define KEY_0 PD2 //Menu key (INT0)
 #define KEY_DDR DDRB
 #define KEY_PORT PORTB
 #define KEY_PIN PINB
-#define MENU_MODE_TIME 1
-#define MENU_MODE_ON1 2
-#define MENU_MODE_ON2 3
-#define MENU_MODE_OFF1 4
-#define MENU_MODE_OFF2 5
-#define MENU_MODE_EXIT 6
+#define MENU_TUNE_HOUR 1
+#define MENU_TUNE_MIN 2
+#define MENU_TUNE_ON 3
+#define MENU_TUNE_OFF 4
+#define MENU_TUNE_ON2 5
+#define MENU_TUNE_OFF2 6
+
+
+#define MENU_MODE_EXIT 0
+#define MENU_MODE_TIME 0
+
+#define MODE_MENU 11
+#define MODE_DUTY 12
+
+#define MODE_FADE_IN 7
+#define MODE_FADE_OUT 8
+#define MODE_LIGHT_ON 9
+#define MODE_LIGHT_OFF 10
+
 
 #define cbi(port,pin) port &= ~(1<<pin)
 #define sbi(port,pin) port |= (1<<pin)
