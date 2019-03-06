@@ -47,7 +47,9 @@
  */
 
 
-#define RELAY_PORT PD7
+#define RELAY_PORT PORTD
+#define RELAY_1 PD7
+
 //#define LED PC4
 
 /*

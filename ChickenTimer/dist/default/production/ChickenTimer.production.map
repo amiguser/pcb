@@ -90,13 +90,13 @@ Discarded input sections
                 0x0000000000000000       0x28 build/default/production/main.o
  .text.digit_code
                 0x0000000000000000       0x26 build/default/production/main.o
- .bss.r.1899    0x0000000000000000        0x2 build/default/production/main.o
+ .bss.r.1902    0x0000000000000000        0x2 build/default/production/main.o
  .bss.timerMode
                 0x0000000000000000        0x1 build/default/production/main.o
- .bss.counter   0x0000000000000000        0x2 build/default/production/main.o
  .bss.keys_clear
                 0x0000000000000000        0x1 build/default/production/main.o
  .bss.menu_on   0x0000000000000000        0x1 build/default/production/main.o
+ .bss.lampFade  0x0000000000000000        0x1 build/default/production/main.o
  .text          0x0000000000000000        0x0 build/default/production/tm1637.o
  .data          0x0000000000000000        0x0 build/default/production/tm1637.o
  .bss           0x0000000000000000        0x0 build/default/production/tm1637.o
@@ -393,7 +393,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x924
+.text           0x0000000000000000      0x996
  *(.vectors)
  .vectors       0x0000000000000000       0x26 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
                 0x0000000000000000                __vectors
@@ -496,66 +496,66 @@ END GROUP
                 0x0000000000000142       0x4e build/default/production/main.o
                 0x0000000000000142                __vector_11
  .text.__vector_8
-                0x0000000000000190       0x92 build/default/production/main.o
+                0x0000000000000190       0xb4 build/default/production/main.o
                 0x0000000000000190                __vector_8
- .text.keyScan  0x0000000000000222       0xa0 build/default/production/main.o
-                0x0000000000000222                keyScan
+ .text.keyScan  0x0000000000000244       0xa0 build/default/production/main.o
+                0x0000000000000244                keyScan
  .text.menuKeyScan
-                0x00000000000002c2       0x22 build/default/production/main.o
-                0x00000000000002c2                menuKeyScan
- .text.setup    0x00000000000002e4       0xa4 build/default/production/main.o
-                0x00000000000002e4                setup
- .text.dec2bcd  0x0000000000000388       0x26 build/default/production/main.o
-                0x0000000000000388                dec2bcd
- .text.menu     0x00000000000003ae       0xe0 build/default/production/main.o
-                0x00000000000003ae                menu
- .text.main     0x000000000000048e       0x64 build/default/production/main.o
-                0x000000000000048e                main
+                0x00000000000002e4       0x22 build/default/production/main.o
+                0x00000000000002e4                menuKeyScan
+ .text.setup    0x0000000000000306       0xac build/default/production/main.o
+                0x0000000000000306                setup
+ .text.dec2bcd  0x00000000000003b2       0x26 build/default/production/main.o
+                0x00000000000003b2                dec2bcd
+ .text.menu     0x00000000000003d8      0x126 build/default/production/main.o
+                0x00000000000003d8                menu
+ .text.main     0x00000000000004fe       0x66 build/default/production/main.o
+                0x00000000000004fe                main
  .text.TM1637_writeByte
-                0x00000000000004f2      0x10c build/default/production/tm1637.o
-                0x00000000000004f2                TM1637_writeByte
+                0x0000000000000564      0x10c build/default/production/tm1637.o
+                0x0000000000000564                TM1637_writeByte
  .text.TM1637_start
-                0x00000000000005fe       0x4a build/default/production/tm1637.o
-                0x00000000000005fe                TM1637_start
+                0x0000000000000670       0x4a build/default/production/tm1637.o
+                0x0000000000000670                TM1637_start
  .text.TM1637_stop
-                0x0000000000000648       0x6a build/default/production/tm1637.o
-                0x0000000000000648                TM1637_stop
+                0x00000000000006ba       0x6a build/default/production/tm1637.o
+                0x00000000000006ba                TM1637_stop
  .text.TM1637_coding_all
-                0x00000000000006b2       0x5a build/default/production/tm1637.o
-                0x00000000000006b2                TM1637_coding_all
+                0x0000000000000724       0x5a build/default/production/tm1637.o
+                0x0000000000000724                TM1637_coding_all
  .text.TM1637_display_all
-                0x000000000000070c       0x76 build/default/production/tm1637.o
-                0x000000000000070c                TM1637_display_all
+                0x000000000000077e       0x76 build/default/production/tm1637.o
+                0x000000000000077e                TM1637_display_all
  .text.TM1637_display
-                0x0000000000000782       0x3e build/default/production/tm1637.o
-                0x0000000000000782                TM1637_display
+                0x00000000000007f4       0x3e build/default/production/tm1637.o
+                0x00000000000007f4                TM1637_display
  .text.TM1637_display_int_decimal
-                0x00000000000007c0       0xa2 build/default/production/tm1637.o
-                0x00000000000007c0                TM1637_display_int_decimal
+                0x0000000000000832       0xa2 build/default/production/tm1637.o
+                0x0000000000000832                TM1637_display_int_decimal
  .text.TM1637_clearDisplay
-                0x0000000000000862       0x1a build/default/production/tm1637.o
-                0x0000000000000862                TM1637_clearDisplay
+                0x00000000000008d4       0x1a build/default/production/tm1637.o
+                0x00000000000008d4                TM1637_clearDisplay
  .text.TM1637_init
-                0x000000000000087c       0x40 build/default/production/tm1637.o
-                0x000000000000087c                TM1637_init
+                0x00000000000008ee       0x40 build/default/production/tm1637.o
+                0x00000000000008ee                TM1637_init
  .text.TM1637_set
-                0x00000000000008bc       0x10 build/default/production/tm1637.o
-                0x00000000000008bc                TM1637_set
+                0x000000000000092e       0x10 build/default/production/tm1637.o
+                0x000000000000092e                TM1637_set
  .text.TM1637_point
-                0x00000000000008cc        0x6 build/default/production/tm1637.o
-                0x00000000000008cc                TM1637_point
+                0x000000000000093e        0x6 build/default/production/tm1637.o
+                0x000000000000093e                TM1637_point
  .text.libgcc.div
-                0x00000000000008d2       0x26 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
-                0x00000000000008d2                __divmodhi4
-                0x00000000000008d2                _div
+                0x0000000000000944       0x26 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x0000000000000944                __divmodhi4
+                0x0000000000000944                _div
  .text.libgcc.div
-                0x00000000000008f8       0x28 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
-                0x00000000000008f8                __udivmodhi4
-                0x0000000000000920                . = ALIGN (0x2)
+                0x000000000000096a       0x28 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x000000000000096a                __udivmodhi4
+                0x0000000000000992                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000920        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
-                0x0000000000000920                exit
-                0x0000000000000920                _exit
+ .fini9         0x0000000000000992        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000992                exit
+                0x0000000000000992                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -574,76 +574,78 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000920        0x4 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .fini0         0x0000000000000992        0x4 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000924                _etext = .
+                0x0000000000000996                _etext = .
 
-.data           0x0000000000800060       0x1a load address 0x0000000000000924
+.data           0x0000000000800060       0x1c load address 0x0000000000000996
                 0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.EncData  0x0000000000800060        0x1 build/default/production/main.o
-                0x0000000000800060                EncData
- .data.mmode    0x0000000000800061        0x1 build/default/production/main.o
-                0x0000000000800061                mmode
- .data.mode     0x0000000000800062        0x1 build/default/production/main.o
-                0x0000000000800062                mode
+ .data.counter  0x0000000000800060        0x2 build/default/production/main.o
+                0x0000000000800060                counter
+ .data.EncData  0x0000000000800062        0x1 build/default/production/main.o
+                0x0000000000800062                EncData
+ .data.mmode    0x0000000000800063        0x1 build/default/production/main.o
+                0x0000000000800063                mmode
+ .data.mode     0x0000000000800064        0x1 build/default/production/main.o
+                0x0000000000800064                mode
  .data.lampMode
-                0x0000000000800063        0x1 build/default/production/main.o
-                0x0000000000800063                lampMode
- .data.point    0x0000000000800064        0x1 build/default/production/main.o
-                0x0000000000800064                point
+                0x0000000000800065        0x1 build/default/production/main.o
+                0x0000000000800065                lampMode
+ .data.point    0x0000000000800066        0x1 build/default/production/main.o
+                0x0000000000800066                point
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.TubeTab
-                0x0000000000800065       0x14 build/default/production/tm1637.o
+                0x0000000000800067       0x14 build/default/production/tm1637.o
  *(.gnu.linkonce.r*)
-                0x000000000080007a                . = ALIGN (0x2)
- *fill*         0x0000000000800079        0x1 
-                0x000000000080007a                _edata = .
-                0x000000000080007a                PROVIDE (__data_end, .)
+                0x000000000080007c                . = ALIGN (0x2)
+ *fill*         0x000000000080007b        0x1 
+                0x000000000080007c                _edata = .
+                0x000000000080007c                PROVIDE (__data_end, .)
 
-.bss            0x000000000080007a       0x2e
-                0x000000000080007a                PROVIDE (__bss_start, .)
+.bss            0x000000000080007c       0x2e
+                0x000000000080007c                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.keys_status
-                0x000000000080007a        0x1 build/default/production/main.o
-                0x000000000080007a                keys_status
- .bss.enc_old   0x000000000080007b        0x1 build/default/production/main.o
-                0x000000000080007b                enc_old
- .bss.done      0x000000000080007c        0x1 build/default/production/main.o
-                0x000000000080007c                done
- .bss.IDX       0x000000000080007d        0x1 build/default/production/main.o
-                0x000000000080007d                IDX
+                0x000000000080007c        0x1 build/default/production/main.o
+                0x000000000080007c                keys_status
+ .bss.enc_old   0x000000000080007d        0x1 build/default/production/main.o
+                0x000000000080007d                enc_old
+ .bss.done      0x000000000080007e        0x1 build/default/production/main.o
+                0x000000000080007e                done
+ .bss.IDX       0x000000000080007f        0x1 build/default/production/main.o
+                0x000000000080007f                IDX
  *(COMMON)
- COMMON         0x000000000080007e       0x21 build/default/production/main.o
-                0x000000000080007e                gMin
-                0x000000000080007f                gHour
-                0x0000000000800080                timerOn
-                0x0000000000800084                ctime
-                0x000000000080008b                keys
-                0x000000000080008f                bt_buffer
- COMMON         0x000000000080009f        0x9 build/default/production/tm1637.o
-                0x000000000080009f                DecPoint
-                0x00000000008000a0                Clkpin
-                0x00000000008000a1                Cmd_SetAddr
-                0x00000000008000a2                Cmd_SetData
-                0x00000000008000a3                _DispType
-                0x00000000008000a4                BlankingFlag
-                0x00000000008000a5                Cmd_DispCtrl
-                0x00000000008000a6                Datapin
-                0x00000000008000a7                _PointFlag
-                0x00000000008000a8                PROVIDE (__bss_end, .)
-                0x0000000000000924                __data_load_start = LOADADDR (.data)
-                0x000000000000093e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000800080       0x21 build/default/production/main.o
+                0x0000000000800080                gMin
+                0x0000000000800081                gHour
+                0x0000000000800082                timerOn
+                0x0000000000800086                ctime
+                0x000000000080008d                keys
+                0x0000000000800091                bt_buffer
+ COMMON         0x00000000008000a1        0x9 build/default/production/tm1637.o
+                0x00000000008000a1                DecPoint
+                0x00000000008000a2                Clkpin
+                0x00000000008000a3                Cmd_SetAddr
+                0x00000000008000a4                Cmd_SetData
+                0x00000000008000a5                _DispType
+                0x00000000008000a6                BlankingFlag
+                0x00000000008000a7                Cmd_DispCtrl
+                0x00000000008000a8                Datapin
+                0x00000000008000a9                _PointFlag
+                0x00000000008000aa                PROVIDE (__bss_end, .)
+                0x0000000000000996                __data_load_start = LOADADDR (.data)
+                0x00000000000009b2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00000000008000a8        0x0
+.noinit         0x00000000008000aa        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x00000000008000a8                _end = .
+                0x00000000008000aa                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0

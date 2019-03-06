@@ -9,6 +9,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/wdt.h>
 #include <avr/interrupt.h>
 #include "lib_eeprom.h"
 
@@ -50,6 +51,7 @@ uint8_t IDX=0;
 uint8_t done=0;
 uint8_t point=1;
 uint8_t lampMode=MODE_LIGHT_OFF;
+uint8_t lampFade=0;
 register unsigned char IT asm("r16");
 uint8_t mode = MODE_KEYS;
 uint8_t mmode = MODE_DUTY;
@@ -60,7 +62,7 @@ uint8_t keys_status=0;
 uint8_t keys[4];
 uint8_t keys_clear=0;
 uint8_t gHour, gMin;
-uint16_t counter=0;
+uint16_t counter=500;
 uint8_t timerMode=0;//0-show time: duty, 1-management: keys.
 inline void clearStr(char* str)
 {
@@ -104,28 +106,32 @@ ISR(USART_RXC_vect)
 ISR(TIMER1_OVF_vect){
 	/* timer overflow */
 	//cli();
-	uint8_t h,m;
+	//uint8_t h,m;
 	uint16_t k;
-    TCNT1 = 0xFFFF-0xF800;//init counter for 1s
+    TCNT1 = 0xFFFF-0x03E8;//init counter for 1000 per s
 	if (mmode==MODE_DUTY){
     //TCNT1 = 0xFFFF-0x7800;//init counter for 1s
 	//keyScan();
-    
-	gHour = ds1302_read_byte(hour_r);
-	gHour = (gHour & 0x3F);
-	//h = (h & 0xF0)*10 + (h & 0x0F);
-	gMin = ds1302_read_byte(min_r);
-	//m = (m & 0xF0)*10 + (m & 0x0F);
-	k= gHour*100+gMin;
-    
-    //counter++;
-    //if (counter>2) {
-        point++;
-        TM1637_point(point&0x01);
         
-      //  counter=0;
-    //}
-	TM1637_display_int_decimal(k);
+        counter--;
+        if (counter == 0) { //display time
+            gHour = ds1302_read_byte(hour_r);
+            gHour = (gHour & 0x3F);
+            //h = (h & 0xF0)*10 + (h & 0x0F);
+            gMin = ds1302_read_byte(min_r);
+            //m = (m & 0xF0)*10 + (m & 0x0F);
+            k = gHour * 100 + gMin;
+
+            //counter++;
+            //if (counter>2) {
+            point++;
+            TM1637_point(point & 0x01);
+
+            //  counter=0;
+            //}
+            TM1637_display_int_decimal(k);
+            counter=1000;
+        }
 	//sei();
     }
 
@@ -179,37 +185,38 @@ void menuKeyScan(){
 }
 
 void menu() {
-	uint8_t key = 0, mode, timerPos = 0, sym = 0;
+	uint8_t lmode;
 	uint8_t disp[4];
-	uint16_t tt;
-	uint8_t h, m10, m1, exp = 0, time_modified = 0,timed_mod=0;
-	cli();
+	//uint16_t tt;
+	uint8_t h,h1, m10, m11, exp = 0, time_modified = 0;
+	//cli();
     TM1637_clearDisplay();
     mmode=MODE_MENU;
-	h = gHour;
+	h = gHour;h1=h;
 	//h = (h & 0x3F);
 	//h = (h & 0xF0)*10 + (h & 0x0F);
-	m10 = gMin;
+	m10 = gMin;m11=m10;
     //m10 = ds1302_read_byte(min_r);
 	//m1 = m10 % 10;
 	//m10 = m10 / 10;
-	mode = MENU_TUNE_HOUR;
+	lmode = MENU_TUNE_HOUR;
+    TM1637_display_int_decimal(h);
 	uint8_t flash = 0;
 	_delay_ms(500);
-	while (MENU_MODE_EXIT != mode) {
+	while (MENU_MODE_EXIT != lmode) {
 //TM1637_display_int_decimal(keys_status);
 		
         menuKeyScan();
 		_delay_ms(1);
 		flash++;
 		if (keys_status) {
-			//_delay_ms(100);
+			_delay_ms(200);
             //go to the next mode
-            mode++;
-            if (mode>6) {
-                mode=MENU_MODE_EXIT;
+            lmode++;
+            if (lmode>6) {
+                lmode=MENU_MODE_EXIT;
             }
-            switch (mode){
+            switch (lmode){
                 case MENU_TUNE_HOUR: 
                     TM1637_display_int_decimal(h);
                     break;
@@ -217,24 +224,27 @@ void menu() {
                     TM1637_display_int_decimal(m10);
                     break;
             }
-
+            
             keys_status=0;
         }
         keyScan();
         if (EncData!=0){
             // encoder has rotated
             time_modified=1;
-            switch (mode){
+            switch (lmode){
                 case MENU_TUNE_HOUR: 
                     h+=EncData; 
-                    if (h>23) h=0;
-                    
+                    if ((h>23)&&(h>h1)) h=0;
+                    if ((h>23)&&(h<h1)) h=23;
                     TM1637_display_int_decimal(h);
+                    h1=h;
                     break;
                 case MENU_TUNE_MIN:
                     m10+=EncData;
-                    if (m10>59) m10=0;
+                    if ((m10>59)&&(m10>m11)) m10=0;
+                    if ((m10>59)&&(m10<m11)) m10=59;
                     TM1637_display_int_decimal(m10);
+                    m11=m10;
                     break;
             }
             EncData=0;
@@ -251,7 +261,7 @@ void menu() {
 				//_delay_ms(100);
 	exp++;
     mmode=MODE_DUTY;
-    sei();
+    //sei();
 	return;
 }
 
@@ -263,7 +273,8 @@ void save_eeprom(){
 }
 
 void setup() {
-	DDRD |= (1<<RELAY_PORT);
+    
+    RELAY_PORT |= (1<<RELAY_1);
 
 	if (MODE_BT == mode) {
 		usart_init();
@@ -327,6 +338,9 @@ cli();
 		//TCNT1 = 0xFFFF-0x0138;//25 times every second
 	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
     sei();
+  	WDTCR=0x1F;
+    WDTCR=0x0F;
+
 
 }
 void m_delay_ms(int m) {
@@ -362,7 +376,7 @@ int main(void) {
 	//ds_time tt;
 	//uint8_t *d;
 	while (1 == 1) {
-
+        
             menuKeyScan();
             //keys_status=0;
 			if (keys_status){
@@ -395,7 +409,9 @@ int main(void) {
 		} else {
 			PORTD &= ~(1 << RELAY_PORT);
 		}
-*/
+*/      
+            wdt_reset();
+
 			_delay_ms(50);
 	}
 }

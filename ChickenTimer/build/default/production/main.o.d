@@ -13,6 +13,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h \
+ /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/wdt.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h \
  lib_eeprom.h main.h tm1637.h ds1302.h
 
@@ -43,6 +44,8 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h:
 
 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h:
+
+/home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/wdt.h:
 
 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h:
 
