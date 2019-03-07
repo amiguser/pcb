@@ -130,7 +130,7 @@ ISR(TIMER1_OVF_vect){
             //  counter=0;
             //}
             TM1637_display_int_decimal(k);
-            counter=1000;
+            counter=4000;
         }
 	//sei();
     }
@@ -202,15 +202,19 @@ void menu() {
 	lmode = MENU_TUNE_HOUR;
     TM1637_display_int_decimal(h);
 	uint8_t flash = 0;
+     wdt_reset();
 	_delay_ms(500);
+     wdt_reset();
 	while (MENU_MODE_EXIT != lmode) {
 //TM1637_display_int_decimal(keys_status);
 		
         menuKeyScan();
 		_delay_ms(1);
+         wdt_reset();
 		flash++;
 		if (keys_status) {
 			_delay_ms(200);
+             wdt_reset();
             //go to the next mode
             lmode++;
             if (lmode>6) {
@@ -261,6 +265,7 @@ void menu() {
 				//_delay_ms(100);
 	exp++;
     mmode=MODE_DUTY;
+     wdt_reset();
     //sei();
 	return;
 }
@@ -380,8 +385,8 @@ int main(void) {
             menuKeyScan();
             //keys_status=0;
 			if (keys_status){
-				TM1637_display_int_decimal(keys_status);
-				_delay_ms(500);
+				//TM1637_display_int_decimal(keys_status);
+				_delay_ms(100);
 
 				if (1==keys_status){
 					keys_status=0;

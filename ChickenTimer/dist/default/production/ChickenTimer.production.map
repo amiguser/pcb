@@ -393,7 +393,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x996
+.text           0x0000000000000000      0x99c
  *(.vectors)
  .vectors       0x0000000000000000       0x26 /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/gcc/dev/atmega8/avr4/crtatmega8.o
                 0x0000000000000000                __vectors
@@ -507,55 +507,55 @@ END GROUP
                 0x0000000000000306                setup
  .text.dec2bcd  0x00000000000003b2       0x26 build/default/production/main.o
                 0x00000000000003b2                dec2bcd
- .text.menu     0x00000000000003d8      0x126 build/default/production/main.o
+ .text.menu     0x00000000000003d8      0x130 build/default/production/main.o
                 0x00000000000003d8                menu
- .text.main     0x00000000000004fe       0x66 build/default/production/main.o
-                0x00000000000004fe                main
+ .text.main     0x0000000000000508       0x62 build/default/production/main.o
+                0x0000000000000508                main
  .text.TM1637_writeByte
-                0x0000000000000564      0x10c build/default/production/tm1637.o
-                0x0000000000000564                TM1637_writeByte
+                0x000000000000056a      0x10c build/default/production/tm1637.o
+                0x000000000000056a                TM1637_writeByte
  .text.TM1637_start
-                0x0000000000000670       0x4a build/default/production/tm1637.o
-                0x0000000000000670                TM1637_start
+                0x0000000000000676       0x4a build/default/production/tm1637.o
+                0x0000000000000676                TM1637_start
  .text.TM1637_stop
-                0x00000000000006ba       0x6a build/default/production/tm1637.o
-                0x00000000000006ba                TM1637_stop
+                0x00000000000006c0       0x6a build/default/production/tm1637.o
+                0x00000000000006c0                TM1637_stop
  .text.TM1637_coding_all
-                0x0000000000000724       0x5a build/default/production/tm1637.o
-                0x0000000000000724                TM1637_coding_all
+                0x000000000000072a       0x5a build/default/production/tm1637.o
+                0x000000000000072a                TM1637_coding_all
  .text.TM1637_display_all
-                0x000000000000077e       0x76 build/default/production/tm1637.o
-                0x000000000000077e                TM1637_display_all
+                0x0000000000000784       0x76 build/default/production/tm1637.o
+                0x0000000000000784                TM1637_display_all
  .text.TM1637_display
-                0x00000000000007f4       0x3e build/default/production/tm1637.o
-                0x00000000000007f4                TM1637_display
+                0x00000000000007fa       0x3e build/default/production/tm1637.o
+                0x00000000000007fa                TM1637_display
  .text.TM1637_display_int_decimal
-                0x0000000000000832       0xa2 build/default/production/tm1637.o
-                0x0000000000000832                TM1637_display_int_decimal
+                0x0000000000000838       0xa2 build/default/production/tm1637.o
+                0x0000000000000838                TM1637_display_int_decimal
  .text.TM1637_clearDisplay
-                0x00000000000008d4       0x1a build/default/production/tm1637.o
-                0x00000000000008d4                TM1637_clearDisplay
+                0x00000000000008da       0x1a build/default/production/tm1637.o
+                0x00000000000008da                TM1637_clearDisplay
  .text.TM1637_init
-                0x00000000000008ee       0x40 build/default/production/tm1637.o
-                0x00000000000008ee                TM1637_init
+                0x00000000000008f4       0x40 build/default/production/tm1637.o
+                0x00000000000008f4                TM1637_init
  .text.TM1637_set
-                0x000000000000092e       0x10 build/default/production/tm1637.o
-                0x000000000000092e                TM1637_set
+                0x0000000000000934       0x10 build/default/production/tm1637.o
+                0x0000000000000934                TM1637_set
  .text.TM1637_point
-                0x000000000000093e        0x6 build/default/production/tm1637.o
-                0x000000000000093e                TM1637_point
+                0x0000000000000944        0x6 build/default/production/tm1637.o
+                0x0000000000000944                TM1637_point
  .text.libgcc.div
-                0x0000000000000944       0x26 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
-                0x0000000000000944                __divmodhi4
-                0x0000000000000944                _div
+                0x000000000000094a       0x26 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_divmodhi4.o)
+                0x000000000000094a                __divmodhi4
+                0x000000000000094a                _div
  .text.libgcc.div
-                0x000000000000096a       0x28 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
-                0x000000000000096a                __udivmodhi4
-                0x0000000000000992                . = ALIGN (0x2)
+                0x0000000000000970       0x28 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x0000000000000970                __udivmodhi4
+                0x0000000000000998                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000992        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
-                0x0000000000000992                exit
-                0x0000000000000992                _exit
+ .fini9         0x0000000000000998        0x0 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000998                exit
+                0x0000000000000998                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -574,11 +574,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000992        0x4 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .fini0         0x0000000000000998        0x4 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000996                _etext = .
+                0x000000000000099c                _etext = .
 
-.data           0x0000000000800060       0x1c load address 0x0000000000000996
+.data           0x0000000000800060       0x1c load address 0x000000000000099c
                 0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -638,8 +638,8 @@ END GROUP
                 0x00000000008000a8                Datapin
                 0x00000000008000a9                _PointFlag
                 0x00000000008000aa                PROVIDE (__bss_end, .)
-                0x0000000000000996                __data_load_start = LOADADDR (.data)
-                0x00000000000009b2                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000000099c                __data_load_start = LOADADDR (.data)
+                0x00000000000009b8                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00000000008000aa        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
