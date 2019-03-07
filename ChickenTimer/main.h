@@ -44,6 +44,10 @@
  *  IRQ =     (PB2 - pin16)
  *  CE  =     (PB0 - pin14)******=>confirmed
  *  CSN =     (PB1 - pin15)
+ * 
+ * OPT RESISTOR
+ * AN_1 =     (PC1 - pin24)
+ * 
  */
 
 
@@ -69,6 +73,10 @@
 #define MENU_TUNE_ON2 5
 #define MENU_TUNE_OFF2 6
 
+#define OPT_DDR DDRC
+#define OPT_PORT PORTC
+#define OPT_PIN PINC
+#define OPT_AN1 PC1 
 
 #define MENU_MODE_EXIT 0
 #define MENU_MODE_TIME 0
