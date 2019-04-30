@@ -13,13 +13,23 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>ds1302.c</itemPath>
-      <itemPath>ds1302.h</itemPath>
       <itemPath>lib_eeprom.c</itemPath>
       <itemPath>lib_eeprom.h</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>main.h</itemPath>
       <itemPath>tm1637.c</itemPath>
       <itemPath>tm1637.h</itemPath>
+      <itemPath>max7221drv.c</itemPath>
+      <itemPath>max7221drv.h</itemPath>
+      <itemPath>lcdtwi.c</itemPath>
+      <itemPath>lcdtwi.h</itemPath>
+      <itemPath>twi.c</itemPath>
+      <itemPath>twi.h</itemPath>
+      <itemPath>hd44780i2c.c</itemPath>
+      <itemPath>ds1302.h</itemPath>
+      <itemPath>hd44780i2c.h</itemPath>
+      <itemPath>main.h</itemPath>
+      <itemPath>ds18b20.c</itemPath>
+      <itemPath>ds18b20.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -196,6 +206,46 @@
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
       </AtmelIceTool>
+      <item path="lcdtwi.c" ex="true" overriding="false">
+      </item>
+      <item path="lcdtwi.h" ex="true" overriding="false">
+      </item>
+      <item path="tm1637.c" ex="true" overriding="false">
+        <AVR-AR>
+        </AVR-AR>
+        <AVR-AS>
+        </AVR-AS>
+        <AVR-AS-PRE>
+        </AVR-AS-PRE>
+        <AVR-CPP>
+        </AVR-CPP>
+        <AVR-GCC>
+        </AVR-GCC>
+        <AVR-Global>
+        </AVR-Global>
+        <AVR-LD>
+        </AVR-LD>
+      </item>
+      <item path="tm1637.h" ex="true" overriding="false">
+        <AVR-AR>
+        </AVR-AR>
+        <AVR-AS>
+        </AVR-AS>
+        <AVR-AS-PRE>
+        </AVR-AS-PRE>
+        <AVR-CPP>
+        </AVR-CPP>
+        <AVR-GCC>
+        </AVR-GCC>
+        <AVR-Global>
+        </AVR-Global>
+        <AVR-LD>
+        </AVR-LD>
+      </item>
+      <item path="twi.c" ex="true" overriding="false">
+      </item>
+      <item path="twi.h" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

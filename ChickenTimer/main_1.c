@@ -63,7 +63,7 @@ uint8_t keys_status=0;
 uint8_t keys[4];
 uint8_t keys_clear=0;
 uint8_t gHour, gMin;
-uint16_t counter=10;
+uint16_t counter=500;
 uint8_t timerMode=0;//0-show time: duty, 1-management: keys.
 inline void clearStr(char* str)
 {
@@ -131,7 +131,7 @@ ISR(TIMER1_OVF_vect){
             //  counter=0;
             //}
             TM1637_display_int_decimal(k);
-            counter=100;
+            counter=4000;
         }
 	//sei();
     }
@@ -308,7 +308,7 @@ void setup() {
 
 
 	}
-//cli();
+cli();
 
 	//PORTC |= (1 << LED);
 	TMDDR |= (1 << CLK) | (1 << DIO);
@@ -340,12 +340,12 @@ void setup() {
 	ds1302_write_byte(min_w, dec2bcd(12));
 	ds1302_write_byte(sec_w, dec2bcd(1));
 */
-    TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 1
+    TCCR1B = (0 << CS12) | (0 << CS11) | (1 << CS10); // настраиваем делитель 1
 		//TCNT1 = 0xFFFF-0x0138;//25 times every second
-	//TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
-    //sei();
-  	//WDTCR=0x1F;
-    //WDTCR=0x0F;
+	TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
+    sei();
+  	WDTCR=0x1F;
+    WDTCR=0x0F;
 
 
 }
@@ -376,17 +376,16 @@ int main(void) {
 	setup();
 
 	//_delay_ms(1000);
-	uint16_t k;
+	//uint8_t h,m;
 	uint8_t relay=0;
 	//uint16_t k;
 	//ds_time tt;
 	//uint8_t *d;
 	while (1 == 1) {
         
-            //menuKeyScan();
+            menuKeyScan();
             //keys_status=0;
-/*
-        if (keys_status){
+			if (keys_status){
 				//TM1637_display_int_decimal(keys_status);
 				_delay_ms(100);
 
@@ -410,35 +409,16 @@ int main(void) {
 		if (gHour>=timerOn[3]){
 			relay=0;
 		}
-*/
- /*
+/*
 		if (1==relay) {
 			PORTD |= (1 << RELAY_PORT);
 		} else {
 			PORTD &= ~(1 << RELAY_PORT);
 		}
 */      
-            //wdt_reset();
-            gHour = ds1302_read_byte(hour_r);
-            gHour = (gHour & 0x3F);
-            //h = (h & 0xF0)*10 + (h & 0x0F);
-            gMin = ds1302_read_byte(min_r);
-            //m = (m & 0xF0)*10 + (m & 0x0F);
-            k = gHour * 100 + gMin;
+            wdt_reset();
 
-            //counter++;
-            //if (counter>2) {
-            point++;
-            TM1637_point(point & 0x01);
-            if (point & 0x10) {
-                RELAY_PORT |= (1 << RELAY_1);
-            } else {
-                RELAY_PORT &= ~(1 << RELAY_1);
-            }
-            //  counter=0;
-            //}
-            TM1637_display_int_decimal(k);
-			_delay_ms(1000);
+			_delay_ms(50);
 	}
 }
 

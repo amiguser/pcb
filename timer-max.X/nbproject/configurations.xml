@@ -12,14 +12,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Makefile</itemPath>
       <itemPath>ds1302.c</itemPath>
       <itemPath>ds1302.h</itemPath>
-      <itemPath>lib_eeprom.c</itemPath>
-      <itemPath>lib_eeprom.h</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>main.h</itemPath>
-      <itemPath>tm1637.c</itemPath>
-      <itemPath>tm1637.h</itemPath>
+      <itemPath>max7221drv.c</itemPath>
+      <itemPath>max7221drv.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -27,9 +26,6 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>../../../../../ownCloud/gr/workspace-avr/Atmega8-proto</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -153,7 +149,6 @@
         <property key="usersig" value="false"/>
       </AVR-Global>
       <AVR-LD>
-        <property key="eeprom-segment" value=""/>
         <property key="exclude-standard-libraries" value="false"/>
         <property key="extra-lib-directories" value=""/>
         <property key="flash-segment" value=""/>
@@ -194,7 +189,6 @@
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.programuserotp" value="false"/>
       </AtmelIceTool>
     </conf>
   </confs>

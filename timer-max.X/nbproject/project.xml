@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>ChickenTimer</name>
-            <creation-uuid>75c0ab92-463d-4857-8eb3-403482560bd6</creation-uuid>
+            <name>timer-max</name>
+            <creation-uuid>5886f9e8-3851-44c5-8f8b-c94bec0fa8bf</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -12,9 +12,7 @@
             <asminc-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>../../../../../ownCloud/gr/workspace-avr/Atmega8-proto</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>default</name>

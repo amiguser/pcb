@@ -4,7 +4,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/inttypes.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stdint.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdint.h \
- /opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/include/avr/iom8.h \
+ /opt/microchip/mplabx/v5.15/packs/Microchip/ATmega_DFP/2.0.2/include/avr/iom8.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/portpins.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/common.h \
  /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/version.h \
@@ -27,7 +27,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
 
 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/stdint.h:
 
-/opt/microchip/mplabx/v5.05/packs/Atmel/ATmega_DFP/1.2.258/include/avr/iom8.h:
+/opt/microchip/mplabx/v5.15/packs/Microchip/ATmega_DFP/2.0.2/include/avr/iom8.h:
 
 /home/mih/install/linux/IDE/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/portpins.h:
 

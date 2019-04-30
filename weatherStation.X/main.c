@@ -3,28 +3,31 @@
  *
  *  Created on: 26 сент. 2017 г.
  *      Author: mih
- */
-#define TM1637_DISPLAY
-#define F_CPU 8000000
 
-#include <avr/io.h>
-#include <util/delay.h>
-#include <avr/wdt.h>
-#include <avr/interrupt.h>
-#include "lib_eeprom.h"
+ * #include "main.h" */
+//#define TM1637_DISPLAY
+#define F_CPU 8000000
+#include "main.h"
+
+
+
 
 #define SPI_PORT PORTB
 #define SPI_DDR  DDRB
 #define SPI_CS   PB2
 
 //#include "ds1302.h"
-#include "main.h"
+
 
 #ifdef TM1637_DISPLAY
 #include "tm1637.h"
 #endif
 
-#include "ds1302.h"
+#ifdef MAX7221_DISPLAY
+#include "max7221drv.h"
+#endif
+
+
 
 
 #define BAUD 9600
@@ -65,6 +68,9 @@ uint8_t keys_clear=0;
 uint8_t gHour, gMin;
 uint16_t counter=10;
 uint8_t timerMode=0;//0-show time: duty, 1-management: keys.
+
+
+
 inline void clearStr(char* str)
 {
 	for(IT=0;IT<LEN;IT++)
@@ -126,11 +132,11 @@ ISR(TIMER1_OVF_vect){
             //counter++;
             //if (counter>2) {
             point++;
-            TM1637_point(point & 0x01);
+            //TM1637_point(point & 0x01);
 
             //  counter=0;
             //}
-            TM1637_display_int_decimal(k);
+            MAX7221_display_int(k);
             counter=100;
         }
 	//sei();
@@ -191,7 +197,7 @@ void menu() {
 	//uint16_t tt;
 	uint8_t h,h1, m10, m11, exp = 0, time_modified = 0;
 	//cli();
-    TM1637_clearDisplay();
+    //TM1637_clearDisplay();
     mmode=MODE_MENU;
 	h = gHour;h1=h;
 	//h = (h & 0x3F);
@@ -201,7 +207,7 @@ void menu() {
 	//m1 = m10 % 10;
 	//m10 = m10 / 10;
 	lmode = MENU_TUNE_HOUR;
-    TM1637_display_int_decimal(h);
+    //TM1637_display_int_decimal(h);
 	uint8_t flash = 0;
      wdt_reset();
 	_delay_ms(500);
@@ -223,10 +229,10 @@ void menu() {
             }
             switch (lmode){
                 case MENU_TUNE_HOUR: 
-                    TM1637_display_int_decimal(h);
+                    //TM1637_display_int_decimal(h);
                     break;
                 case MENU_TUNE_MIN:
-                    TM1637_display_int_decimal(m10);
+                    //TM1637_display_int_decimal(m10);
                     break;
             }
             
@@ -241,14 +247,14 @@ void menu() {
                     h+=EncData; 
                     if ((h>23)&&(h>h1)) h=0;
                     if ((h>23)&&(h<h1)) h=23;
-                    TM1637_display_int_decimal(h);
+                    //TM1637_display_int_decimal(h);
                     h1=h;
                     break;
                 case MENU_TUNE_MIN:
                     m10+=EncData;
                     if ((m10>59)&&(m10>m11)) m10=0;
                     if ((m10>59)&&(m10<m11)) m10=59;
-                    TM1637_display_int_decimal(m10);
+                    //TM1637_display_int_decimal(m10);
                     m11=m10;
                     break;
             }
@@ -279,6 +285,21 @@ void save_eeprom(){
 }
 
 void setup() {
+#ifdef MAX7221_DISPLAY 
+    MAX7221_init_simple();
+
+	MAX7221_send(0x0c01);// Sleep off
+	MAX7221_send(0x0B03);// Scan limit = 4 digits
+	MAX7221_send(0x090F);//BCD\Normal
+	MAX7221_send(0x0A05);//Bright Level
+    
+    MAX7221_display_int(0xFF);
+#endif
+    // I2C setup
+    TWBR = (F_CPU / 100000UL - 16)/2; // TWI bitrate
+    // main loop
+    init_lcd();
+    send_lcd(LCD_CLEAR,CMD);
     
     RELAY_PORT |= (1<<RELAY_1);
 
@@ -311,9 +332,6 @@ void setup() {
 //cli();
 
 	//PORTC |= (1 << LED);
-	TMDDR |= (1 << CLK) | (1 << DIO);
-	TM1637_init(0, CLK, DIO); //устанавливаем пины SCL и SDA
-	TM1637_set(2, 0, 0xC0); // ставим яркость 2
 
 	
 	timerOn[0]=EEPROM_read(0);
@@ -327,23 +345,24 @@ void setup() {
 	}
 	*/
 	for(uint8_t i=0; i<4;i++){
-		TM1637_display_int_decimal(timerOn[i]);
-		TM1637_display(0, i);
-		_delay_ms(1000);
+		//MAX7221_display_int(i);
+		//MAX7221_display_int(0, i);
+		_delay_ms(500);
 	}
    
 	//DS1302_DDR|=(1<<clk)|(1<<rst);
 	//DS1302_PORT|=(1<<io);
 	ds1302_reset();
 /*
-	ds1302_write_byte(hour_w,dec2bcd(23));
-	ds1302_write_byte(min_w, dec2bcd(12));
-	ds1302_write_byte(sec_w, dec2bcd(1));
+	ds1302_write_byte(hour_w,dec2bcd(11));
+	ds1302_write_byte(min_w, dec2bcd(34));
+	//ds1302_write_byte(sec_w, 0x00);
+    ds1302_write_byte(sec_w, 0x01);
 */
-    TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 1
+    //TCCR1B = (0 << CS12) | (1 << CS11) | (1 << CS10); // настраиваем делитель 1
 		//TCNT1 = 0xFFFF-0x0138;//25 times every second
 	//TIMSK |= (1 << TOIE1); //разрешить прерывание по переполнению таймера1 счетчика
-    //sei();
+    sei();
   	//WDTCR=0x1F;
     //WDTCR=0x0F;
 
@@ -374,13 +393,20 @@ int main(void) {
 
 
 	setup();
-
-	//_delay_ms(1000);
+    print_lcd("Hello!");
+	_delay_ms(5000);
 	uint16_t k;
 	uint8_t relay=0;
+    uint8_t gMin_old=0;
 	//uint16_t k;
+    unsigned char Temp_H, Temp_L, OK_Flag, temp_flag;
+    char ttt[10];
 	//ds_time tt;
 	//uint8_t *d;
+    send_lcd(LCD_CLEAR,CMD);
+    send_lcd(0x80,CMD); // position on second line
+    print_lcd("Time:");
+
 	while (1 == 1) {
         
             //menuKeyScan();
@@ -424,12 +450,42 @@ int main(void) {
             //h = (h & 0xF0)*10 + (h & 0x0F);
             gMin = ds1302_read_byte(min_r);
             //m = (m & 0xF0)*10 + (m & 0x0F);
-            k = gHour * 100 + gMin;
+            //k = gHour * 100 + gMin;
+            OK_Flag = DS18B20_init();        // Инициализация DS18B20
+            write_18b20(0xCC);     // Проверка кода датчика
+            write_18b20(0x44);     // Запуск температурного преобразования
+            _delay_ms(1000);       // Задержка на опрос датчика
+            DS18B20_init();        // Инициализация DS18B20
+            write_18b20(0xCC);     // Проверка кода датчика
+            write_18b20(0xBE);     // Считываем содержимое ОЗУ
+            Temp_L = read_18b20(); // Читаем первые 2 байта блокнота
+            Temp_H = read_18b20();
+            temp_flag = 1;         // Флаг знака температуры равен 1(плюс)
+            
+            // Вычисляем отрицательную температуру
+            if(Temp_H &(1 << 3))   // Проверяем бит знака температуры на равенство единице
+            {         
+            signed int temp;
+            temp_flag = 0;      // Флаг знака равен 0(минус)
+            temp = (Temp_H << 8)|Temp_L;
+            temp = -temp; // Переводим дополнительный код в прямой
+            Temp_L = temp;
+            Temp_H = temp >> 8;
+            }     
 
+            // Вычисляем целое значение температуры
+            k = ((Temp_H << 4) & 0x70)|(Temp_L >> 4);
+            
+            itoa(k, ttt, 10);
+            send_lcd(0x88,CMD);
+            print_lcd(ttt);
+            //itoa(Temp_L, ttt, 10);
+            //send_lcd(0x8B,CMD);
+            //print_lcd(ttt);
             //counter++;
             //if (counter>2) {
             point++;
-            TM1637_point(point & 0x01);
+            //TM1637_point(point & 0x01);
             if (point & 0x10) {
                 RELAY_PORT |= (1 << RELAY_1);
             } else {
@@ -437,9 +493,22 @@ int main(void) {
             }
             //  counter=0;
             //}
-            TM1637_display_int_decimal(k);
+            //if (point& 0x01) k=0;
+            //MAX7221_display_int(k);
+            if (gMin!=gMin_old) {
+                send_lcd(0xC0,CMD); // position on second line
+                sprintf(ttt, "%0.2d", gHour);
+                //itoa(gHour,ttt,10);
+                print_lcd(ttt);
+                print_lcd(":");
+                sprintf(ttt, "%0.2d", gMin);
+                //itoa(gMin,ttt,10);
+                print_lcd(ttt);
+                gMin_old=gMin;
+            }
+
 			_delay_ms(1000);
 	}
 }
 
-
+// LCD //////////////////////////////////////////////
